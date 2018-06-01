@@ -23,11 +23,13 @@ $gray:                   #ADADB0;
 $gray-dark:              #595D64;
 $gray-darker:            #444951;
 $gray-darkest:           #2f353e;
+$near-black: 						#191e27;
+$border-color: 					rgba(black, .1);
 
 // Classic brand colors
-$color-green: #00d1b2;
-$color-blue: #79cbca;
-$color-pink: #e684ae;
+$color-green: 					#00d1b2;
+$color-blue: 						#79cbca;
+$color-pink: 						#e684ae;
 
 $color-primary:         $color-blue;
 $color-primary--dark:   darken($color-primary, 5%) !default;
@@ -62,6 +64,10 @@ $font-sans-serif: 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-base:        $font-sans-serif;
 $font-color:       $text-color;
+
+// Dark Mode
+$text-dark: $white;
+$background-dark: $near-black;
 
 $font-size:                1.6rem !default;
 $font-size--lg:            ceil($font-size * 1.23); // ~20px

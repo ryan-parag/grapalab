@@ -41,16 +41,20 @@ body {
   font-family: $font-base;
   color: $font-color;
 	background: $white;
+	&.dark {
+		color: $text-dark;
+		background: $background-dark;
+	}
 }
 
 // Links
 a {
-  color: $color-link;
+  color: inherit;
   text-decoration: none;
   word-wrap: break-word;
 
   &:hover {
-    color: shade($color-link, 15%);
+    color: $color-blue;
   }
 }
 

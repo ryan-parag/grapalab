@@ -11,46 +11,44 @@
       <div class="header__stripe"></div>
       <div class="header__body">
         <div class="container">
-          <div class="flex-grid">
-            <div class="flex-grid__col header__col header__col--left">
-              <div class="logo"><a href="#">
-                  <svg class="logo__icon" id="grapalab_icon" data-name="Grapa_lab_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-                    <path d="M0,0V48H48V0ZM29.27,38.61a27.35,27.35,0,0,1-4.61.39C15.56,39,9,33,9,24,9,14.84,15.76,9,24.45,9c4.47,0,8.61,1.49,11,3.78l-4.35,4.95a8.45,8.45,0,0,0-6.4-2.66c-4.83,0-8.37,3.78-8.37,8.89s3.1,9,8.69,9a11,11,0,0,0,4.25-.74Zm6.37-6.47H29.32V27H23.89V21.44H35.64Z"></path>
-                  </svg><span class="logo__wordmark">Ryan Parag</span></a></div>
-            </div>
-            <div class="flex-grid__col header__col header__col--right">
-              <ul class="nav">
-                <li class="nav__item"><a class="nav__link" href="#">Link 1</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Link 2</a></li>
-                <li class="nav__item">
-                  <div class="toggle">
-                    <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <div class="toggle__input"><span class="toggle__handle"></span></div>
-                    <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="5"></circle>
-                      <line x1="12" y1="1" x2="12" y2="3"></line>
-                      <line x1="12" y1="21" x2="12" y2="23"></line>
-                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                      <line x1="1" y1="12" x2="3" y2="12"></line>
-                      <line x1="21" y1="12" x2="23" y2="12"></line>
-                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <div class="flex-grid header__grid">
+            <div class="logo"><a href="#">
+                <svg class="logo__icon" id="grapalab_icon" data-name="Grapa_lab_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                  <path d="M0,0V48H48V0ZM29.27,38.61a27.35,27.35,0,0,1-4.61.39C15.56,39,9,33,9,24,9,14.84,15.76,9,24.45,9c4.47,0,8.61,1.49,11,3.78l-4.35,4.95a8.45,8.45,0,0,0-6.4-2.66c-4.83,0-8.37,3.78-8.37,8.89s3.1,9,8.69,9a11,11,0,0,0,4.25-.74Zm6.37-6.47H29.32V27H23.89V21.44H35.64Z"></path>
+                </svg><span class="logo__wordmark">Ryan Parag</span></a></div>
+            <ul class="nav">
+              <li class="nav__item"><a class="nav__link" href="#">Link 1</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Link 2</a></li>
+              <li class="nav__item">
+                <div class="toggle">
+                  <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                  </svg>
+                  <div class="toggle__input"><span class="toggle__handle"></span></div>
+                  <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                  </svg>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
     <script>
       const toggle = document.querySelector('.toggle');
+      const body = document.querySelector('body');
       toggle.addEventListener('click', () => {
       	toggle.classList.toggle('active');
+      	body.classList.toggle('dark');
       });
     </script>
   </body>
