@@ -12,14 +12,15 @@ var gulp = require('gulp'),
 	notify = require('gulp-notify'),
 	plumber = require('gulp-plumber'),
 	stripCssComments = require ('gulp-strip-css-comments'),
-	sourcemaps  = require('gulp-sourcemaps');
+	sourcemaps  = require('gulp-sourcemaps'),
+	rename = require('gulp-rename');
 
 var paths = {
   public: './dist/',
   sass: './src/scss/',
   css: './dist/css/',
   data: './src/_data/',
-		pug: './src/*.pug'
+	pug: './src/*.pug'
 };
 
 var displayError = function(error) {
@@ -60,15 +61,17 @@ var prefixerOptions = {
 /* SCSS
 ---------------------------------------------*/
 gulp.task('sass', function (){
-	return gulp.src(paths.sass + 'styles.scss')
+	return gulp.src(paths.sass + 'main.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(plumber({errorHandler: onError}))
-  .pipe(sourcemaps.init())
-  .pipe(sass(sassOptions))
-  .pipe(prefix(prefixerOptions))
-		.pipe(concat('styles.css'))
+		.pipe(sass(sassOptions))
+		.pipe(prefix(prefixerOptions))
+		.pipe(concat('main.css'))
 		.pipe(stripCssComments({ preserve: false }))
-  .pipe(minifyCSS())
+		.pipe(minifyCSS())
+		.pipe(rename('main.min.css'))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(paths.css));
 });
 

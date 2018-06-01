@@ -1,0 +1,30 @@
+.logo {
+	display: inline-block;
+	font-weight: 900;
+	text-transform: uppercase;
+  letter-spacing: .2em;
+	a {
+		display: block;
+		color: $gray-darkest;
+	}
+	a:hover {
+		transform: scale(1.02);
+		transition: all 150ms ease-in-out;
+		.logo__icon {
+			color: $color-blue;
+			transition: all 150ms ease-in-out;
+		}
+	}
+	&__icon {
+		width: 40px;
+    margin-right: 1rem;
+    fill: currentColor;
+		vertical-align: middle;
+	}
+	&__wordmark {
+		display: none;
+		@media (#{$bp-larger-than-phablet}) {
+			display: inline;
+		}
+	}
+}

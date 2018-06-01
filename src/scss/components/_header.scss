@@ -1,0 +1,28 @@
+.header {
+	width: 100%;
+	height: 80px;
+	background: $white;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	border-bottom: 1px solid $gray-lighter;
+	&__stripe {
+		height: 4px;
+		width: 100%;
+		background: $color-blue;
+		background: linear-gradient(to right, $color-green, $color-blue, $color-pink);
+	}
+	&__body {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+	&__col {
+		display: flex;
+		&--left {
+		justify-content: flex-start;
+		}
+		&--right {
+		justify-content: flex-end;
+		}
+	}
+}
