@@ -1,0 +1,52 @@
+.toggle {
+	display:flex;
+	align-items: center;
+	max-width: 110px;
+	width: 100%;
+	justify-content: space-between;
+	&__input {
+		position: relative;
+		width: 46px;
+		height: 26px;
+		background: $gray-light;
+		border-radius: 20px;
+		cursor: pointer;
+		margin: 0 .5rem;
+	}
+	&__handle {
+		position: absolute;
+		z-index: 1;
+		margin: 2px;
+		display: block;
+		width: 22px;
+		height: 22px;
+		background: $white;
+		border-radius: 50%;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		transform: translateX(20px);
+		transition: all 0.4s ease;
+	}
+	.icon {
+		width: 18px;
+		transition: all 200ms ease-in-out;
+		&--moon {
+			opacity: .5
+		}
+	}
+	&.active {
+		.toggle__input {
+			background: $color-blue;
+		}
+		.toggle__handle {
+			transform: translateX(0);
+		}
+		.icon {
+			&--sun {
+				opacity: .5;
+			}
+			&--moon {
+				opacity: 1;
+			}
+		}
+	}
+}

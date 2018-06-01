@@ -6,4 +6,8 @@ block head_end
 
 block content
 	include _partials/_header
-	h1 Hello
+	script.
+		const toggle = document.querySelector('.toggle');
+		toggle.addEventListener('click', () => {
+			toggle.classList.toggle('active');
+		});
