@@ -92,7 +92,7 @@ gulp.task('pug',function (){
 		.pipe(gulp.dest(paths.public));
 });
 
-gulp.task('rebuild', ['pug'], function () {
+gulp.task('rebuild', ['pug', 'sass'], function () {
   browserSync.reload();
 });
 

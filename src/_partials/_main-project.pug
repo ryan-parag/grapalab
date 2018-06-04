@@ -1,0 +1,10 @@
+mixin mainProject(link,img,title,content)
+	a(href= link).main-project.container
+		.row
+			.col.col--6
+				.main-project__hero
+					img(src= img)
+			.col.col--6
+				.main-project__content
+					h4.main-project__title= title
+					p= content

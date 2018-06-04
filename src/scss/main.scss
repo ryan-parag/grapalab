@@ -9,6 +9,7 @@
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
+@import "abstracts/animations";
 
 //-------------------------
 // 🕶 BASE
@@ -36,3 +37,8 @@
 @import "components/logo";
 @import "components/nav";
 @import "components/toggle";
+@import "components/intro";
+@import "components/connect";
+@import "components/main-project";
+@import "components/sub-project";
+@import "components/project";

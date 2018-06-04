@@ -5,8 +5,9 @@
 	top: 0;
 	z-index: 100;
 	border-bottom: 1px solid $border-color;
+	background: $white;
 	&__stripe {
-		height: 4px;
+		height: 5px;
 		width: 100%;
 		background: $color-blue;
 		background: linear-gradient(to right, $color-green, $color-blue, $color-pink);

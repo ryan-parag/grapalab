@@ -1,0 +1,6 @@
+mixin subProject(link, projectTitle, content, projectClass)
+	a.sub-project(class=projectClass href=link)
+		.sub-project__body
+			h5.sub-project__title= projectTitle
+				label.sub-project__label View Project
+			p= content

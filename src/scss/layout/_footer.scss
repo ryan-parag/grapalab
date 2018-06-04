@@ -1,0 +1,15 @@
+.footer {
+	width: 100%;
+	border-top: 1px solid $border-color;
+	background: $white;
+	&__body {
+		padding: 1.5rem 0;
+	}
+	&__grid {
+		justify-content: space-between;
+	}
+	&__text {
+		opacity: .75;
+		font-size: 85%;
+	}
+}

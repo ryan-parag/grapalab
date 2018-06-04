@@ -44,6 +44,27 @@ body {
 	&.dark {
 		color: $text-dark;
 		background: $background-dark;
+		h1,h2,h3,h4,h5,h6,.title {
+			color: $white;
+		}
+		.link {
+			color: $color-green;
+			&:hover, &:focus {
+				color: lighten($color-green, 10%);
+				transition: all 100ms ease-in-out;
+			}
+		}
+		.header, .footer {
+			background: $background-dark;
+		}
+		.intro, .header, .main-project, .footer {
+			border-color: $gray-darkest
+		}
+		.main-project, .sub-project {
+			&:hover, &:focus {
+				border-color: $color-green;
+			}
+		}
 	}
 }
 
@@ -54,7 +75,7 @@ a {
   word-wrap: break-word;
 
   &:hover {
-    color: $color-blue;
+    color: $color-green;
   }
 }
 
@@ -65,7 +86,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid $gray-light;
+  border-top: 1px solid $border-color;
 }
 
 // Lists

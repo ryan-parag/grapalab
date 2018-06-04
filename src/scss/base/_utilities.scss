@@ -35,6 +35,24 @@
   }
 }
 
+.spacer {
+	display: block;
+	&--25{
+		height: 2.5rem;
+	}
+	&--50{
+		height: 5rem;
+	}
+	&--75{
+		height: 7.5rem;
+	}
+	&--100{
+		height: 7.5rem;
+		@media (#{$bp-larger-than-phablet}) {
+			height: 10rem;
+		}
+	}
+}
 
 /**
  * Hide text while making it readable for screen readers

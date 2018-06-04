@@ -1,0 +1,14 @@
+.connect {
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	justify-content: flex-start;
+	&__icon {
+		&:not(:last-of-type) {
+			margin-right: 1em;
+		}
+		&:hover, &:focus {
+			animation: bump 300ms;
+		}
+	}
+}
