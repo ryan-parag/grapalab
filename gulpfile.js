@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	stripCssComments = require ('gulp-strip-css-comments'),
 	sourcemaps  = require('gulp-sourcemaps'),
+	path = require('path'),
 	rename = require('gulp-rename');
 
 var paths = {
@@ -86,9 +87,13 @@ gulp.task('pug',function (){
         md: pug_markdown_filter
       }
     }))
-				.on('error', notify.onError(function (error) {
-    return 'An error occurred while compiling pug.\nLook in the console for details.\n' + error;
-}))
+			.on('error', notify.onError(function (error) {
+    		return 'An error occurred while compiling pug.\nLook in the console for details.\n' + error;
+			}))
+		.pipe(rename(function(file) {
+      file.dirname = path.join(file.dirname, file.basename);
+      file.basename = 'index';
+    }))
 		.pipe(gulp.dest(paths.public));
 });
 
