@@ -1,0 +1,72 @@
+mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
+	li
+		strong= paramPos + ', ' + paramCo
+		span= '   ' + timeStart + " - " + timeEnd
+		br
+		span= content
+		.spacer.spacer--25
+
+.container
+	.spacer.spacer--100
+	.row
+		.col.col--8
+			:markdown-it
+				### Hello, I'm Ryan. I'm a multidisciplinary designer and problem solver.
+				I’m driven to learn why people do what they do so I can create experiences that are intuitive and successful. I’ve helped rethink, prototype and design solutions to help bring empathy and simplicty into complex problems.
+			.row
+				ul
+					li(style="display: inline-block; margin-right: 1.5rem;")
+						a(href="mailto: parag.ryan@gmail.com")
+							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:relative; top: 6px; margin-right: 8px;")
+								path(d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z")
+								polyline(points="22,6 12,13 2,6")
+							span parag.ryan@gmail.com
+					li(style="display: inline-block; margin-right: 1.5rem;")
+						a(href="tel:941-735-6602")
+							svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:relative; top: 6px; margin-right: 8px;")
+								path(d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z")
+							span 941.735.6602
+					li(style="display: inline-block;")
+						a(href="http://grapalab.com")
+							svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:relative; top: 6px; margin-right: 8px;")
+								circle(cx="12" cy="12" r="10")
+								line(x1="2" y1="12" x2="22" y2="12")
+								path(d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z")
+							span grapalab.com
+	.spacer.spacer--50
+	.row
+		.col.col--6
+			h5 Professional Experience
+			ul(style="list-style-type: none;")
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+		.col.col--5.col--offset-1
+			h5 Skills
+			ul(style="list-style-type: none;")
+				li Interface Design
+				li Interaction Design
+				li Visual Design
+				li HTML/CSS/JS
+				li Branding
+				li User Research
+				li Usability Testing
+				li Communication Design
+	.row
+		.col.col--6
+			h5 Education
+			ul(style="list-style-type: none;")
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+		.col.col--5.col--offset-1
+			h5 Tools
+			ul(style="list-style-type: none;")
+				li Adobe Creative Suite
+				li Bohemian Coding Sketch
+				li HTML/CSS/JS
+				li Principle
+				li Framer
+				li Invision
+				li SQL
+				li CMS platforms

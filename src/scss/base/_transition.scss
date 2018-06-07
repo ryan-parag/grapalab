@@ -1,0 +1,15 @@
+body {
+    opacity: 0;
+    animation: pageTransition 1s ease 300ms forwards;
+}
+
+@keyframes pageTransition {
+	from {
+		opacity: 0;
+		top: 2rem;
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+}

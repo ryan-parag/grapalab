@@ -1,6 +1,16 @@
 extends _layouts/_base
 
+block variables
+	- var pageID ="Work";
+
 block content
-		include _partials/_header
-		include _partials/_work
-		include _partials/_footer
+	.container
+		.row
+			.spacer.spacer--50
+			.col.col--12
+				:markdown-it
+					## Work
+					Here are some case studies and work samples of projects that I’ve been involved with.
+				.project__border
+				.spacer.spacer--50
+	include _partials/_work

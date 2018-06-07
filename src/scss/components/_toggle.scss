@@ -4,6 +4,11 @@
 	max-width: 110px;
 	width: 100%;
 	justify-content: space-between;
+	cursor: pointer;
+	&:hover, &:focus {
+		opacity: .84;
+		transition: all 150ms ease;
+	}
 	&__input {
 		position: relative;
 		width: 46px;
