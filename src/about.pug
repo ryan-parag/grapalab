@@ -1,7 +1,21 @@
 extends _layouts/_base
 
 block variables
-	- var pageID ="About";
+  - var pageID ="About";
 
 block content
-	include _partials/_about
+  include _partials/_about
+block body_end
+  script.
+    (function() {
+      var roles = [
+      {
+        text: "gummy-eating champ",
+      },
+      {
+        text: "your friendly neighborhood Spider-Man",
+      }
+    ];
+      var roleRandom = roles[Math.floor(Math.random() * roles.length)];
+      document.getElementById("textRotate").innerHTML = roleRandom.text;
+    })();

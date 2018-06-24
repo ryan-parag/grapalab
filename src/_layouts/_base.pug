@@ -8,6 +8,13 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
 		link(rel="stylesheet" href="../css/main.min.css")
 		link(rel="stylesheet" href="../css/zoom.css")
+		link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png")
+		link(rel="manifest" href="./images/favicons/site.webmanifest")
+		link(rel="mask-icon" href="../images/favicons/.safari-pinned-tab.svg" color="#00d1b2")
+		meta(name="msapplication-TileColor" content="#ffffff")
+		meta(name="theme-color" content="#ffffff")
 		block head_end
 
 	body
@@ -26,3 +33,17 @@ html
 				toggle.classList.toggle('active');
 				body.classList.toggle('dark');
 			});
+		script.
+			$(function() {
+			// Get page title
+				var pageTitle = $("title").text();
+				// Change page title on blur
+				$(window).blur(function() {
+					$("title").text("Collecting tabs I see... Welcome to the dark side :: Ryan Parag - Product Designer");
+				});
+				// Change page title back on focus
+				$(window).focus(function() {
+					$("title").text(pageTitle);
+				});
+			});
+

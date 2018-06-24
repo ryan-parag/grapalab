@@ -8,6 +8,7 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
 
 .container
 	.spacer.spacer--100
+	.spacer.spacer--100
 	.row
 		.col.col--8
 			:markdown-it
@@ -33,10 +34,14 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
 								line(x1="2" y1="12" x2="22" y2="12")
 								path(d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z")
 							span grapalab.com
+		.col.col--3.col--offset-1
+			.spacer.spacer--25
+			button.btn.btn--primary(type="button") Download PDF
 	.spacer.spacer--50
 	.row
 		.col.col--6
-			h5 Professional Experience
+			:markdown-it
+				##### Professional Experience
 			ul(style="list-style-type: none;")
 				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
 				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
@@ -54,13 +59,15 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
 				li Communication Design
 	.row
 		.col.col--6
-			h5 Education
+			:markdown-it
+				##### Education
 			ul(style="list-style-type: none;")
 				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
 				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
 				+xp('paramPos', 'paramCo', 'ABC 1234', 'ABC 1234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
 		.col.col--5.col--offset-1
-			h5 Tools
+			:markdown-it
+				##### Tools
 			ul(style="list-style-type: none;")
 				li Adobe Creative Suite
 				li Bohemian Coding Sketch

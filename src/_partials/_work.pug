@@ -1,7 +1,8 @@
 include _main-project
 include _sub-project
-+mainProject("../project/", "http://via.placeholder.com/700x300", "Hello", "Lorem ipsum dolor sit amet")
-+mainProject("../project/", "http://via.placeholder.com/700x300", "World", "Lorem ipsum dolor sit amet")
++mainProject("../project/", "../images/chargebacks911-preview.png", "Chargebacks911", "Icons inspired by the world of Mobile Suit Gundam")
++mainProject("../zakucons/", "../images/zakucons-preview.png", "Zakucons", "Icons inspired by the world of Mobile Suit Gundam")
++mainProject("../project/", "../images/capsule-preview.png", "Capsule Corp.", "A case study and rebrand of a fictional entity")
 +mainProject("../project/", "http://via.placeholder.com/700x300", "World", "Lorem ipsum dolor sit amet")
 hr
 .container
@@ -9,7 +10,7 @@ hr
 		.col.col--6
 			+subProject('../project/', 'Utility Board Shop', 'A collection of printed assets for the a California-based skate shop', 'utility')
 		.col.col--6
-			+subProject('../project/', 'Tampa Redevelopment', 'Making information more accessible and engaging', 'tampa')
+			+subProject('../tampa-redevelopment/', 'Tampa Redevelopment', 'Making information more accessible and engaging', 'tampa')
 	.row
 		.col.col--6
 			+subProject('../project/', "Patellini's Pizza", 'Rebranding a family-owned restaurant', 'patellinis')

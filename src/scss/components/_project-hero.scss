@@ -1,0 +1,10 @@
+@mixin gradient($color1, $color2) {
+	background: $color1;
+	background: linear-gradient(60deg, $color1, $color2);
+}
+
+.project__hero {
+	&--tampa {
+		@include gradient(#b8e3e5, #3bc1cd);
+	}
+}

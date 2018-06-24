@@ -1,11 +1,16 @@
 .intro {
-	min-height: 700px;
+	min-height: 620px;
 	display: flex;
 	width: 100%;
 	align-items: center;
 	border-bottom: 1px solid $border-color;
 	@media (#{$bp-larger-than-phablet}) {
 		font-size: 2rem;
+		min-height: 700px;
+	}
+	&__hero-icon {
+		font-size: 15rem;
+		line-height: 1;
 	}
 	&__body {
 		max-width: 875px;

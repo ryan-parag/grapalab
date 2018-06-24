@@ -13,3 +13,17 @@
 		font-size: 85%;
 	}
 }
+
+.footer__grid {
+  align-items: center;
+  .connect {
+    float: right;
+  }
+  @media screen and (max-width: 549px) {
+    text-align: center;
+    .connect {
+      margin: 1.5rem auto 0;
+      float: inherit;
+    }
+  }
+}

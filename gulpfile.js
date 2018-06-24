@@ -97,11 +97,28 @@ gulp.task('pug',function (){
 		.pipe(gulp.dest(paths.public));
 });
 
-gulp.task('rebuild', ['pug', 'sass'], function () {
+/* PUG -index
+---------------------------------------------*/
+gulp.task('pugIndex',function (){
+	return gulp.src("./src/index.pug")
+		.pipe(pug({
+      pretty: true,
+      filters: {
+        md: pug_markdown_filter
+      }
+    }))
+			.on('error', notify.onError(function (error) {
+    		return 'An error occurred while compiling pug.\nLook in the console for details.\n' + error;
+			}))
+		.pipe(gulp.dest(paths.public));
+});
+
+
+gulp.task('rebuild', ['pug', 'sass', 'pugIndex'], function () {
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'pug'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'pugIndex'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -128,7 +145,7 @@ gulp.task('watch', function (){
 
 /* BUILD
 ---------------------------------------------*/
-gulp.task('build', ['sass', 'pug']);
+gulp.task('build', ['sass', 'pug', 'pugIndex']);
 
 /* BROWSER SYNC
 ---------------------------------------------*/

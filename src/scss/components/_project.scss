@@ -9,4 +9,36 @@
 	img {
 		margin-bottom: 2rem;
 	}
+	&__hero {
+		width: 100%;
+		background: $gray-lighter;
+		height: 300px;
+		position: relative;
+		margin-top: 7rem;
+	}
+	&__hero-image {
+		width: 150px;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+  &__role {
+    padding: 1.5rem;
+    box-shadow: 0px 5px 12px rgba($near-black, .12);
+    border: 1px solid $gray-lighter;
+    border-radius: $global-radius;
+    margin-bottom: 1.5rem;
+  }
+  &__icon {
+    $size: 30px;
+    width: $size;
+    height: $size;
+    color: $color-primary;
+    svg {
+      width: $size;
+      height: $size;
+    }
+  }
 }

@@ -95,3 +95,53 @@
 .u-ta-right {
   text-align: right;
 }
+
+.u-align-center {
+  align-items: center;
+}
+
+// Display
+
+.u-display-block {
+  display: block;
+}
+
+// Color
+
+.u-text-green {
+  color: $color-green !important;
+}
+
+.u-text-blue {
+  color: $color-blue !important;
+}
+
+.u-text-pink {
+  color: $color-pink !important;
+}
+
+// Project Links
+
+.link--cb911 {
+  $color: #c80000;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}
+
+.link--disputelab {
+  $color: #3870c4;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}
+
+.link--zakucons {
+  $color: #c62942;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}
