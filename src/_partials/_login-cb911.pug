@@ -1,0 +1,28 @@
+block variables
+  - var ppageDest = "../about";
+  
+- var protectedPage = 'Chargebacks911';
+
+.container
+  .row
+    .spacer.spacer--100
+    .spacer.spacer--100
+  .row
+    .col.col--4.col--offset-4
+      .login
+        .login__card
+          h4 Sorry, this page is protected
+          p The content for the following project is protected:
+            br
+            strong.u-text-pink= protectedPage
+          .form-group
+            label(for="password") Project Password:
+            input#password(name="password" type="password" placeholder="Password")
+            small.error-text.u-text-pink#passwordError
+            #errorHero
+          .spacer.spacer--25
+          button.btn.btn--primary.u-display-block#submitForm(type="button") View the Project
+.container
+  .row
+    .spacer.spacer--100
+    .spacer.spacer--100

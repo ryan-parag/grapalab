@@ -44,6 +44,25 @@ body {
 	&.dark {
 		color: $text-dark;
 		background: $background-dark;
+    input {
+      &[type="email"],
+      &[type="number"],
+      &[type="search"],
+      &[type="text"],
+      &[type="tel"],
+      &[type="url"],
+      &[type="password"] {
+        background-color: $near-black;
+        color: $white;
+        border-color:$gray-dark;
+        &:focus {
+          border-color: $color-primary;
+        }
+      }
+    }
+    .login {
+      border-color: $gray-dark;
+    }
 		h1,h2,h3,h4,h5,h6,.title {
 			color: $white;
 		}
@@ -68,7 +87,7 @@ body {
 				border-color: $color-green;
 			}
 		}
-	}
+  }
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -235,7 +254,7 @@ input {
   &[type="url"],
   &[type="password"] {
     appearance: none;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: $global-radius;
     border: 1px solid lighten($border-color, 8.8%);
     box-shadow: none;

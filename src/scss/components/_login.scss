@@ -1,0 +1,20 @@
+.login {
+  padding: 3rem;
+  border: 1px solid $gray-light;
+  border-radius: $global-radius;
+  box-shadow: 0px 5px 12px rgba($near-black, .12);
+  &__card {
+    margin-bottom: 0;
+  }
+  input{
+    width: 100%;
+  }
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.error-text {
+  font-size: 1.4rem;
+}
