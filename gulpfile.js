@@ -14,14 +14,16 @@ var gulp = require('gulp'),
 	stripCssComments = require ('gulp-strip-css-comments'),
 	sourcemaps  = require('gulp-sourcemaps'),
 	path = require('path'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+  minify = require('gulp-minify');
 
 var paths = {
   public: './dist/',
   sass: './src/scss/',
   css: './dist/css/',
   data: './src/_data/',
-	pug: './src/*.pug'
+	pug: './src/*.pug',
+  js: './src/js/*.js'
 };
 
 var displayError = function(error) {
@@ -118,7 +120,7 @@ gulp.task('rebuild', ['pug', 'sass', 'pugIndex'], function () {
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'pug', 'pugIndex'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'pugIndex', 'scripts'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -136,16 +138,25 @@ gulp.task('lint:template', function () {
     .pipe(pugLinter.reporter());
 });
 
+/* JS
+---------------------------------------------*/
+gulp.task('scripts', function (){
+	return gulp.src(paths.js)
+		.pipe(minify())
+		.pipe(gulp.dest(paths.public + 'js'))
+});
+
 /* WATCH
 ---------------------------------------------*/
 gulp.task('watch', function (){
 	gulp.watch(paths.sass + '**/*.scss',['sass']);
 	gulp.watch('./src/**/*.pug', ['rebuild']);
+  gulp.watch('./src/js/*.js', ['scripts']);
 });
 
 /* BUILD
 ---------------------------------------------*/
-gulp.task('build', ['sass', 'pug', 'pugIndex']);
+gulp.task('build', ['sass', 'pug', 'pugIndex','scripts']);
 
 /* BROWSER SYNC
 ---------------------------------------------*/

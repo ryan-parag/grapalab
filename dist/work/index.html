@@ -203,27 +203,6 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="../js/zoom.min.js"></script>
     <script src="../js/transition.js"></script>
-    <script>
-      const toggle = document.querySelector('.toggle');
-      const body = document.querySelector('body');
-      toggle.addEventListener('click', () => {
-      	toggle.classList.toggle('active');
-      	body.classList.toggle('dark');
-      });
-    </script>
-    <script>
-      $(function() {
-      // Get page title
-      	var pageTitle = $("title").text();
-      	// Change page title on blur
-      	$(window).blur(function() {
-      		$("title").text("Collecting tabs I see... Welcome to the dark side :: Ryan Parag - Product Designer");
-      	});
-      	// Change page title back on focus
-      	$(window).focus(function() {
-      		$("title").text(pageTitle);
-      	});
-      });
-    </script>
+    <script src="../js/index.js"></script>
   </body>
 </html>
