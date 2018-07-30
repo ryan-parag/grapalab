@@ -3,29 +3,40 @@
     .spacer.spacer--100
     .spacer.spacer--100
   .row
-    .col.col--6
+    .col.col--10.col--offset-1
       h1 Hey, I'm Ryan
       h3 Designer,  problem solver, and 
         span.u-text-green#textRotate
-      .spacer.spacer--25
-        include _connect-bar
-      .spacer.spacer--25
+  .spacer.spacer--25
+  .row
+    .col.col--10.col--offset-1
+      img(src="http://via.placeholder.com/1000x300")
+  .spacer.spacer--50
+  .row
+    .col.col--6.col--offset-1
       :markdown-it
         **I'm a product designer that helps sketch, prototype, and design digital solutions, product experiences, and visual assets.**
         
         I currently reside in Tampa,FL, where I help build a problem-solving platform for payments @ [Chargebacks911](https://chargebacks911.com)  
-        
+
         I’m driven to learn why people do what they do so I can create experiences that are intuitive and successful. I’ve helped rethink, prototype and design solutions to help bring empathy and simplicty into complex problems - *which is a fancier way of saying I help things make sense*.
-        
+
         If you'd like to learn more about my experience or challenge me to a few laps in Gran Turismo 🕹, [view my résumé](../resume/), or [get in touch](mailto:parag.ryan@gmail.com).
-        
-        PS. Ever since the Arizona Beverage Company decided that [Arizona Black & White Iced Tead](https://www.drinkarizona.com/product/black-white-tea), a.k.a. the nectar of the gods, was too expensive to produce and distribute to every one of their vendors, I've been on the hunt for a can of this not-so-sweet tea blend made by those professional alchemists/wizards. If you ever spot the a can, please let me know.
+    .col.col--4.col--offset-1
+      include _connect-bar
+      .spacer.spacer--25
+      a.link(href="mailto:parag.ryan@gmail.com") parag.ryan@gmail.com
+      .spacer.spacer--25
+      a.link(href="tel:9417356602") 941.735.6602
+      .spacer.spacer--25
+      a.link(href="../resume/") My Résumé
+      .spacer.spacer--50
   hr
   .row
-    .col.col--6
+    .col.col--5.col--offset-1
       include _more-work
       .spacer.spacer--100
-    .col.col--6
+    .col.col--5
       h5 Current Interests:
       .project__role.flex-grid.u-align-center
         .project__icon

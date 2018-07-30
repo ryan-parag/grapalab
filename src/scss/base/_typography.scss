@@ -38,6 +38,12 @@ p {
 	line-height: 1.8;
 }
 
+.lead {
+  @media (#{$bp-larger-than-phablet}) {
+		font-size: 2rem;
+	}
+}
+
 .link, p a {
 	border-bottom: 1px solid currentColor;
 	padding-bottom: .2em;
