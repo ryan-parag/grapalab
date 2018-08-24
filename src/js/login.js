@@ -10,9 +10,11 @@ function clicked() {
     location.href = pageDest;
   } else if (password.value.length == 0) {
     $('#passwordError').text('It seems that no password was entered. Try again.');
+    $('#password').addClass('form--error');
   } else {
     $('#errorHero').prepend('<img style="width:100%;" src="../images/pass-fail.gif" />')
     $('#passwordError').append('<p class="error-text">Oops, you might have forgot the password. For access, <a class="link" href="mailto:parag.ryan@gmail.com">contact me</a>.</p>')
+    $('#password').addClass('form--error');
   }
 }
 password.addEventListener("keydown", function (e) {

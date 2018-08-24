@@ -70,13 +70,6 @@ body {
     .project__role {
       border-color: $gray-darkest;
     }
-		.link {
-			color: $color-green;
-			&:hover, &:focus {
-				color: lighten($color-green, 10%);
-				transition: all 100ms ease-in-out;
-			}
-		}
 		.header, .footer {
 			background: $background-dark;
 		}

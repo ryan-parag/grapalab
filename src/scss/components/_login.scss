@@ -19,3 +19,9 @@
 .error-text {
   font-size: 1.4rem;
 }
+
+.form {
+    &--error {
+      border-color: $color-pink !important;
+    }
+}
