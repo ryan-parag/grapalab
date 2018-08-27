@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	stripCssComments = require ('gulp-strip-css-comments'),
 	sourcemaps  = require('gulp-sourcemaps'),
+  uglify = require('gulp-uglify'),
 	path = require('path'),
 	rename = require('gulp-rename'),
   minify = require('gulp-minify');

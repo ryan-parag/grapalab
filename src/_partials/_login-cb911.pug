@@ -18,6 +18,9 @@ block variables
           .form-group
             label(for="password") Project Password:
             input#password(name="password" type="password" placeholder="Password")
+            .view-password#viewPass
+              include _icon-eye
+              span View Password
             small.error-text.u-text-pink#passwordError
             #errorHero
           .spacer.spacer--25

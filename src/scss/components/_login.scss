@@ -25,3 +25,20 @@
       border-color: $color-pink !important;
     }
 }
+
+.view-password {
+  font-size: 1.4rem;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  svg {
+    margin-right: .7rem;
+    width: 1.2em;
+    top: 3px;
+    height: 1.2em;
+    position: relative;
+  }
+  &:hover, &:focus {
+    color: $color-green;
+  }
+}

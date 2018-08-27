@@ -1,4 +1,5 @@
 var password = document.getElementById('password');
+var viewPasswordButton = document.getElementById('viewPass');
 var submit = document.getElementById('submitForm');
 
 function clicked() {
@@ -17,6 +18,18 @@ function clicked() {
     $('#password').addClass('form--error');
   }
 }
+
+function viewPass() {
+  if($(password).is('input:password')) {
+    $(password).prop('type', 'text');
+    $('.view-password span').text('Hide Password');
+  }
+  else {
+    $(password).prop('type', 'password');
+    $('.view-password span').text('View Password');
+  }
+}
+
 password.addEventListener("keydown", function (e) {
   if (e.keyCode === 13) {
     clicked();
@@ -24,4 +37,7 @@ password.addEventListener("keydown", function (e) {
 });
 submit.addEventListener("click", function () {
   clicked();
+});
+viewPasswordButton.addEventListener("click", function () {
+  viewPass();
 });
