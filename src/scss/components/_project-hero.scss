@@ -8,3 +8,15 @@
 		@include gradient(#b8e3e5, #3bc1cd);
 	}
 }
+
+.project__hero {
+	&--cb911 {
+		@include gradient(#000, #1f2024);
+	}
+}
+
+.project__hero {
+	&--disputelab {
+		@include gradient(darken($color-disputelab, 15%), lighten($color-disputelab, 15%));
+	}
+}

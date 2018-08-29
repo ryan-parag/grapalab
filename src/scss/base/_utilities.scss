@@ -128,7 +128,7 @@
 // Project Links
 
 .link--cb911 {
-  $color: #c80000;
+  $color: $color-cb911;
   &:hover, &:focus {
     border-color: $color !important;
     color: $color !important;
@@ -136,7 +136,7 @@
 }
 
 .link--disputelab {
-  $color: #3870c4;
+  $color: $color-disputelab;
   &:hover, &:focus {
     border-color: $color !important;
     color: $color !important;
@@ -144,7 +144,7 @@
 }
 
 .link--zakucons {
-  $color: #c62942;
+  $color: $color-zakucons;
   &:hover, &:focus {
     border-color: $color !important;
     color: $color !important;

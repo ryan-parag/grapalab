@@ -1916,6 +1916,16 @@ there.
   background: #b8e3e5;
   background: linear-gradient(60deg, #b8e3e5, #3bc1cd); }
 
+/* line 13, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--cb911 {
+  background: #000;
+  background: linear-gradient(60deg, #000, #1f2024); }
+
+/* line 19, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--disputelab {
+  background: #274e89;
+  background: linear-gradient(60deg, #274e89, #729ad7); }
+
 /* line 1, /Users/ryan/grapalab/src/scss/components/_login.scss */
 .login {
   padding: 3rem;
