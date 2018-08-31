@@ -445,6 +445,12 @@ template {
   100% {
     transform: scale(1); } }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 /* line 25, /Users/ryan/grapalab/src/scss/base/_base.scss */
 html {
   box-sizing: border-box;
@@ -1891,9 +1897,11 @@ there.
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 500ms ease-in 500ms forwards; }
 
-/* line 27, /Users/ryan/grapalab/src/scss/components/_project.scss */
+/* line 29, /Users/ryan/grapalab/src/scss/components/_project.scss */
 .project__role {
   padding: 1.5rem;
   box-shadow: 0px 5px 12px rgba(25, 30, 39, 0.12);
@@ -1901,12 +1909,12 @@ there.
   border-radius: 0.2rem;
   margin-bottom: 1.5rem; }
 
-/* line 34, /Users/ryan/grapalab/src/scss/components/_project.scss */
+/* line 36, /Users/ryan/grapalab/src/scss/components/_project.scss */
 .project__icon {
   width: 30px;
   height: 30px;
   color: #00d1b2; }
-  /* line 39, /Users/ryan/grapalab/src/scss/components/_project.scss */
+  /* line 41, /Users/ryan/grapalab/src/scss/components/_project.scss */
   .project__icon svg {
     width: 30px;
     height: 30px; }
