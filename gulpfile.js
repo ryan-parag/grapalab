@@ -16,6 +16,7 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
 	path = require('path'),
 	rename = require('gulp-rename'),
+  imagemin = require('gulp-imagemin'),
   minify = require('gulp-minify');
 
 var paths = {
@@ -147,17 +148,26 @@ gulp.task('scripts', function (){
 		.pipe(gulp.dest(paths.public + 'js'))
 });
 
+/* Imagemin
+---------------------------------------------*/
+gulp.task('imageOpt', function () {
+    return gulp.src('./src/images/**/*.{gif,png,jpg,svg}')
+       // .pipe(imagemin())
+        .pipe(gulp.dest('./dist/images'));
+});
+
 /* WATCH
 ---------------------------------------------*/
 gulp.task('watch', function (){
 	gulp.watch(paths.sass + '**/*.scss',['sass']);
 	gulp.watch('./src/**/*.pug', ['rebuild']);
   gulp.watch('./src/js/*.js', ['scripts']);
+  gulp.watch('./src/images/**/*.{gif,png,jpg,svg}', ['imageOpt']);
 });
 
 /* BUILD
 ---------------------------------------------*/
-gulp.task('build', ['sass', 'pug', 'pugIndex','scripts']);
+gulp.task('build', ['sass', 'pug', 'pugIndex','scripts','imageOpt']);
 
 /* BROWSER SYNC
 ---------------------------------------------*/
