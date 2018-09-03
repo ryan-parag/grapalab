@@ -122,7 +122,7 @@ gulp.task('rebuild', ['pug', 'sass', 'pugIndex'], function () {
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'pug', 'pugIndex', 'scripts'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'pugIndex', 'scripts','imageOpt'], function () {
   browserSync({
     server: {
       baseDir: paths.public
