@@ -118,7 +118,7 @@ gulp.task('pugIndex',function (){
 });
 
 
-gulp.task('rebuild', ['pug', 'sass', 'pugIndex'], function () {
+gulp.task('rebuild', ['pug', 'sass', 'pugIndex','imageOpt'], function () {
   browserSync.reload();
 });
 

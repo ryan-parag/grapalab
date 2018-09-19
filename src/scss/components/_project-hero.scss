@@ -7,16 +7,25 @@
 	&--tampa {
 		@include gradient(#b8e3e5, #3bc1cd);
 	}
-}
-
-.project__hero {
-	&--cb911 {
+  &--cb911 {
 		@include gradient(#000, #1f2024);
 	}
-}
-
-.project__hero {
-	&--disputelab {
+  &--disputelab {
 		@include gradient(darken($color-disputelab, 15%), lighten($color-disputelab, 15%));
+	}
+  &--capsule, &--utility {
+		@include gradient(hsl(0,0,0), hsl(0,0,10));
+	}
+  &--world-rugby {
+		@include gradient(#49aa00, #1e009b);
+	}
+  &--patellinis {
+		@include gradient(darken(#bf001b,10%), lighten(#bf001b,10%));
+	}
+  &--linkme {
+		@include gradient(#2196f3, #9c27b0);
+	}
+   &--illustrations {
+		@include gradient($color-green, $color-pink);
 	}
 }

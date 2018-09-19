@@ -1,9 +1,18 @@
 // Toggle
-const toggle = document.querySelector('.toggle');
-const body = document.querySelector('body');
+
+var toggle = document.querySelector('.toggle');
+var body = document.querySelector('body');
+body.classList = sessionStorage.getItem('bg');
 toggle.addEventListener('click', () => {
   toggle.classList.toggle('active');
   body.classList.toggle('dark');
+  
+  if (sessionStorage.getItem('bg') === 'dark') {
+    sessionStorage.setItem('bg', '');
+  } else {
+    sessionStorage.setItem('bg', 'dark');
+  }
+  body.classList = sessionStorage.getItem('bg');
 });
 
 // Page Title
@@ -18,6 +27,10 @@ $(function () {
   $(window).focus(function () {
     $("title").text(pageTitle);
   });
+  
+  if($(body).hasClass('dark')) {
+    $(toggle).addClass('active');
+  }
 });
 
 window.addEventListener('load', function(){
@@ -28,3 +41,5 @@ window.addEventListener('load', function(){
         }
     }
 }, false)
+
+console.log('%c It seems like Ryan\'s code is working. If you\'d like to learn more about my experience, get in touch at parag.ryan@gmail.com ', 'background: #05ffda; color: #191e27; font-size: 18px;');

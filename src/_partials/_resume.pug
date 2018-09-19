@@ -5,7 +5,7 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
     strong= paramPos
     span= '   (' + timeStart + " - " + timeEnd + ")"
     br
-    span= content
+    p= content
     .spacer.spacer--25
 
 .container
@@ -38,15 +38,17 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
               span grapalab.com
     .col.col--3.col--offset-1
       .spacer.spacer--25
-      button.btn.btn--primary(type="button") Download PDF
+      a.btn.btn--primary(role="button" href="../images/ryan-parag-resume.pdf" target="_blank") Download PDF
+      .spacer.spacer--25
+      include _connect-bar
   .spacer.spacer--50
   .row
     .col.col--8
       :markdown-it
         ##### Professional Experience
       ul(style="list-style-type: none;")
-        +xp('Product Designer', 'Chargebacks911', 'May 2016', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
-        +xp('Freelance', 'GrapaLab', '2009', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar massa et consectetur vestibulum. Lorem ipsum dolor sit amet.')
+        +xp('Product Designer', 'Chargebacks911', 'May 2016', '', 'Lead designer working between multiple engineering, executive, and marketing teams. Led the design of two legacy applications and one new application for clients in the enterprise payments space. Worked on UX flows, design systems, rapid prototyping, user journeys, marketing assets, and live product. Increased qualified web traffic by 400% and inbound leads by 250%.')
+        +xp('Freelance', 'GrapaLab', '2009', '', 'Managed  product  and  branding  projects  for  clients  like  World Rugby,  the governing body of rugby ,  LinkMe,  a meeting app startup,  and  Patellini\'s,  an Italian restaurant chain')
         +xp('Healthcare Analyst', 'Xcenda', 'June 2015', 'May 2016', 'Analyzed data to measure pharmaceutical outcomes, investigated key business problems through quantitative analyses of  pharmaceutical cost data. ')
   .row
     .col.col--3
@@ -55,7 +57,8 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
         li Interface Design
         li Interaction Design
         li Visual Design
-        li HTML/CSS/JS
+        li UX, ideation and Workflows
+        li Interaction and UI design
         li Branding
         li User Research
         li Usability Testing

@@ -5,9 +5,8 @@ var submit = document.getElementById('submitForm');
 function clicked() {
   $('#errorHero').empty();
   $('#passwordError').empty();
-  var pageKey = '123456';
-
-  if (password.value == pageKey) {
+  var send = 'guyfieri';
+  if (password.value == send) {
     var cardContent = document.querySelector('.login__card');
     var delay = 2000;
     $(cardContent).empty();

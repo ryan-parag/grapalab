@@ -16,23 +16,216 @@
           include ../_icon-user
         .flex-grid__col
           strong.u-display-block My Role
-          span Conduct user research, sketch, mockup static interfaces, illustrate icons, and code the real thing.
+          span Conduct user research, sketch, mockup static interfaces, illustrate icons, outline usability testing, and code the real thing.
     .spacer.spacer--50
     .row
       .col.col--12
         :markdown-it
           ##### Overview
-          With the spur of economic interest and rebounding economy in Tampa Bay, the City of Tampa's Community Redevelopment Agency created a strategy to target and proliferate the growth in specific areas of the Tampa locale. The City's proposal can be found here. Shown below is a re-interpretation of this proposal so that the information can be presented in a more accessible, fun, and engaging format. The structure of the print and web piece divides sections using bold colors, making for an easier navigating experience.
-        .spacer.spacer--100
+          One of my major responsibilities whilst at Chargebacks911 was the designing the UI system and features for DisputeLab — a new dispute optimization and productivity tool aimed at large banks. DisputeLab's readily-integrated platform allows for the sorting, filtering, and optimizing of millions of transactions and disputes. By integrating directly to credit card schemes, users can eliminate the need for jumping to each credit card's proprietary applications to add dispute information.
+          
+          DisputeLab also gives users the power to:
+          - **Manage small teams**
+          - **Filter cases using rules**
+          - **Custom-tailor the antiquated process of handling the disputed transactions their clients receive**
+          
+          Over several months, I, along with a small team of 5, worked to produce a fresh new take on enterprise banking software for disputes.
+        .spacer.spacer--50
     .project__content
       .row
-        .col.col--4
-          img(src="http://via.placeholder.com/900x700" data-action="zoom")
-        .col.col--4
-          img(src="http://via.placeholder.com/900x700" data-action="zoom")
-        .col.col--4
-          img(src="http://via.placeholder.com/900x700" data-action="zoom")
+        .col.col--12
+          img(src="../images/disputelab/dl-dashboard.png" data-action="zoom")
+          figcaption (Above) Dashboard
+          .spacer.spacer--50
+      .row
+        .col.col--12
+          img(src="../images/disputelab/dl-process.png" data-action="zoom")
+          figcaption (Above) Early exploration of process architecture
+          .spacer.spacer--50
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Design System
+            One of the pain points I came across designing the [applications for merchants](../chargebacks911) was the inconsistency in experience and unorganized styles for components. I thought if the DisputeLab team had access to a source of truth for the design of the UI, we could aim for consistency and can embed UX principles directly in our component design. Finding time to document our UI while still designing features was another story - it was simply going to take a little extra effort. I rolled up my sleeves and began building a unified style guide for our product.
+            
+            It was clear that as the devlopment team and volume of work was growing, the inconsistencies across the product were as well. Not only that, but newer parts of the product clashed with the legacy features, making the ecosystem kind of jarring for the end-user. If I could build a style guide and a source of truth with our UI components, we could help stop the use of bespoke code while still increasing the speed at which we can develop.
+            
+            **So I created Prelude Design System** as a style guide for DisputeLab's UI.
+        .row
+          .col.col--4.col--offset-4
+            .spacer.spacer--50
+            img(src="../images/disputelab/prelude-logo.svg" data-action="zoom")
+            figcaption (Above) logo for the design system
+            .spacer.spacer--100
+        .row
+          .col.col--12
+            img(src="../images/disputelab/dl-prelude-1.png" data-action="zoom")
+            .spacer.spacer--50
+        .row
+          .col.col--12
+            :markdown-it
+              Inside the documentation, we not only laid out the foundation for how our components should look and operate, but also how our CSS and JS should be written - thereby creating a standardization for a growing team. We decided we would utilize BEM and OOCSS for our stylesheets and abide by AirBnb's rules for writing our JS.
+              
+              We also ket a running state of the progress of our components within the documentation (below)
+            blockquote
+              h5
+                a.link(href="https://ryan-parag.github.io/drm-docs/index/" target="_blank") Take a look at the design system
+        .row
+          .col.col--12
+            img(src="../images/disputelab/dl-prelude-2.png" data-action="zoom")
+            .spacer.spacer--50
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-prelude-3.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-prelude-4.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-prelude-5.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Build case documents
+              Users can utilize the template editor to create rich text documents to supplement their clients' dispute cases. Users have the ability to type rich text, insert images, drag merchant and case tokens (placeholder data pull from the clients' data).
+            img(src="../images/disputelab/dl-template.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Finalize dispute cases and send
+              Users can compile documents for their clients' dispute cases, edit individual pdf pages, redact information, add notes, review information, route cases to a queue, and send to the credit card company directly through DisputeLab.
+        .row
+          .col.col--6
+            img(src="../images/disputelab/dl-cm.png" data-action="zoom")
+            figcaption Table view of dispute cases
+          .col.col--6
+            img(src="../images/disputelab/dl-work.png" data-action="zoom")
+            figcaption Early exploration of working a case
+        .spacer.spacer--25
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-work-1.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-work-2.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-work-3.png" data-action="zoom")
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-work-4.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-work-5.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-work-6.png" data-action="zoom")
+        .row
+          .col.col--12
+            a(target="_blank" href="https://codepen.io/ryanparag/pen/bxjgXo")
+              img(src="../images/disputelab/dl-work-7.png")
+              figcaption Click to view layout markup
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Reconfiguring the navigation
+              As more and more features are added by stakeholders, we needed a way to organize the navigation items in the sidebar navigation. We didn't want to hide prominent items offscreen, so we came up with a solution to have drawers for our navigation items in the sidebar.
+        .row
+          .col.col--12
+            img(src="../images/disputelab/dl-sidebar.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Merchant Admin
+              Our users needed a way to manage their clients, in this case an acquiring bank's clients are retailers and merchants. With the Merchant Admin page, clients can:
+              - Select communication methods
+              - View communication history
+              - View merchant details
+              - Create notes that would tag all disputes from that merchant
+              
+            p
+              a(href="https://codepen.io/ryanparag/pen/eLNvRO" target="_blank") View the markup of the admin page
+              | or 
+              a(href="https://codepen.io/ryanparag/pen/rZLRQj" target="_blank") view the communication component
+              | .
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-1.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-2.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-3.png" data-action="zoom")
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-4.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-5.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-6.png" data-action="zoom")
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-7.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-8.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-9.png" data-action="zoom")
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-10.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-11.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-merchant-12.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Pend Cases
+              Since credit card companies have deadlines on dispute cases, banks felt the need to prioritize the workload of dispute cases efficiently. We created the Pend feature to allow users to pause cases and remove it from their personal bucket of working cases. When pausing a case, they can choose when it would pop back into their bucket of working cases, and even add it back into the bucket of working cases for a team or group.
+        .row
+          .col.col--12
+            a(href="https://codepen.io/ryanparag/pen/bxgzGN" target="_blank")
+              img(src="../images/disputelab/dl-pend-main.png")
+              figcaption View a static prototype of the form
+              .spacer.spacer--50
+        .row
+          .col.col--4
+            img(src="../images/disputelab/dl-pend-1.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-pend-2.png" data-action="zoom")
+          .col.col--4
+            img(src="../images/disputelab/dl-pend-3.png" data-action="zoom")
+        .row
+          .col.col--6
+            img(src="../images/disputelab/dl-pend-4.png" data-action="zoom")
+          .col.col--6
+            img(src="../images/disputelab/dl-pend-5.png" data-action="zoom")
+        .row
+          .col.col--12
+            img(src="../images/disputelab/dl-pend-grid.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Email Notifications
+            p We used 
+              a(href="https://mjml.io/" target="_blank") MJML
+              | &nbsp;, a React-based email syntax that build builletproof emails, to build our emil notifications for:
+            ul
+              li Password changes
+              li Account creations
+              li Letter emails
+              li Task alerts
+              li Account changes
+            img(src="../images/disputelab/dl-email-1.png" data-action="zoom")
+            .spacer.spacer--25
+            img(src="../images/disputelab/dl-email-2.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Errors
+              In case a user encountered a missing link, they would be forwarded to an error page, while also pinging our support teams of an error
+            img(src="../images/disputelab/dl-prelude-6.png" data-action="zoom")
 .container
   .row
-    .col.col--12
-      .spacer.spacer--75
+    .col.col--6.col--offset-3
+      include ../_more-work

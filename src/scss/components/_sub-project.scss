@@ -3,6 +3,7 @@
 	display: block;
 	background-color: $gray-darkest;
 	background-size: cover;
+  background-position: center;
 	color: $white;
 	margin-bottom: 2rem;
 	border-radius: .2em;
@@ -63,7 +64,7 @@
 		}
 	}
 	&.tampa {
-		background-image: url('../images/tampa-preview.jpg');
+		background-image: url('../images/tampa-preview.png');
 	}
 	&.utility {
 		background-image: url('../images/utility-preview.jpg');
@@ -72,9 +73,12 @@
 		background-image: url('../images/patellinis-preview.png');
 	}
 	&.rugby {
-		background-image: url('../images/womens-rugby-preview.jpg');
+		background-image: url('../images/womens-rugby-preview.png');
 	}
 	&.linkme {
 		background-image: url('../images/linkme-preview.jpg');
+	}
+  &.illust{
+		background-image: url('../images/illust-preview.png');
 	}
 }

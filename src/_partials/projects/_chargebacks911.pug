@@ -16,7 +16,7 @@
           include ../_icon-user
         .flex-grid__col
           strong.u-display-block My Role
-          span Lead and sole designer responsible for UI/UX of products, website design, marketing page/email templates, printed assets, etc.
+          span Lead designer responsible for UI/UX of products, website design, marketing page/email templates, printed assets, etc.
     .row
       .spacer.spacer--50
       .col.col--12
@@ -24,8 +24,8 @@
     .row
       .col.col--6
         ul
-          li Designed visual assets (flyers, videos, ads, tradeshow displays, pitch decks)
           li Lead UX & UI design for onboarding wizard app and merchant dashboard
+          li Designed visual assets (flyers, videos, ads, tradeshow displays, pitch decks)
           li Standardized brand through a newly-built style guide
           li Refactored UI of internal CRM product
       .col.col--6
@@ -42,7 +42,7 @@
           ##### Overview
           Chargebacks911® provides cutting-edge, highly-scalable enterprise solutions and specialized consulting for chargeback compliance, risk mitigation, and dispute management - **which simply means providing solutions for businesses dealing with falsely protested credit card charges**. The company’s dynamic technologies and tactical data analysis help decrease the negative impacts of chargebacks and disputes, thereby increasing customer retention and revenues. Chargebacks911 is recognized as the world’s leading service provider for comprehensive dispute mitigation and remediation technology.
           
-          Although I juggled between marketing design and the design for the merchant applications, it came as a blessing in disguise - it allowed me to see exacly how we could reach companies who needed a profit-optimizing solution, and how we could develop a solution to do just that. While at Chargebacks911, [**I was also chosen to join a small team to develop a dispute management application for enterprise banks. Check it out!**](../disputelab)
+          Although I juggled between a role as the designer on the marketing team and the sole designer on our application development team (30+ team members), it came as a blessing in disguise - it allowed me to see exacly how we could reach companies who needed a profit-optimizing solution, and how we could develop a solution to do just that. While at Chargebacks911, [**I was also chosen to join a small team to develop a dispute management application for enterprise banks. Check it out!**](../disputelab)
           
         .spacer.spacer--50
     .project__content
@@ -50,41 +50,12 @@
         .col.col--12
           .spacer.spacer--50
           :markdown-it
-            ##### Marketing Design Assets
-            Some of my time was spent redesigning all of our marketing assets per our newly-documented visual styles. Those responsibilities consisted of redesigning our tradeshow booths, flyers, banner ads, pitch decks, etc. Due to our increased marketing traction, we began seeing it was getting difficult to keep up with the items that needed to go out the door and the time we had on hand. In order to keep up with the scale of our marketing presence, we began creating templates and guides for some of our marketing items (eg. pitch decks, booklets, flyers) - which in turn gave other team members the ability to create an asset they needed without having to worry about designing it. 
-      .row
-        .col.col--4
-          img(src="../images/chargebacks911/cb911-tradeshow-1.png" data-action="zoom")
-        .col.col--4
-          img(src="../images/chargebacks911/cb911-flyer-1.png" data-action="zoom")
-        .col.col--4
-          img(src="../images/chargebacks911/cb911-flyer-2.png" data-action="zoom")
-      .row
-        .col.col--4
-          img(src="../images/chargebacks911/cb911-ppt-1.png" data-action="zoom")
-        .col.col--4
-          img(src="../images/chargebacks911/cb911-ppt-2.png" data-action="zoom")
-        .col.col--4
-          a(href="https://www.youtube.com/watch?v=gcCvH2eGDis" target="_blank")
-            img(src="../images/chargebacks911/cb911-video-1.png")
-      .row
-        .col.col--12
-          .spacer.spacer--50
-          h5 Email Signature Generator
-          p In my refactor of the company's email signature, we also needed to have working, custom signatures for the sales team. I quickly realized how timely and repetitive of a process it was to code custom signatures for sales team members manually. In a bit of my free time, I decided to create a small a Vue JS app that would help members of the sales team create their own Hubspot email signature. 
-            a(href="https://chargebacks911.com/hubspot-signature" target="_blank") Check it out!
-      .row
-        .col.col--12
-          .spacer.spacer--25
-          a(href="https://chargebacks911.com/hubspot-signature" target="_blank")
-            img(src="../images/chargebacks911/cb911-hubspot-1.png")
-            figcaption Click to go to the live app!
-    .project__content
-      .row
-        .col.col--12
-          .spacer.spacer--50
-          :markdown-it
             ##### Wizard and Merchant Application
+            **Many retailers simply write-off falsely-protested charges as a cost of doing business.** Even if they do try and show evidence, they may still find themselves asking:
+            - **Why is the chargeback process so complicated?**
+            - **How can I automate these repetitive tasks?**
+            - **How can I manage the disputes my financial team is handling?**
+            
             Creating chargeback cases cost retailers and merchants millions of dollars in time - so we created an application that would give them the ability to make that process easier and reduce their time spent. By using the client's aggregated data, we can build cases using retailer and transaction information. After seeing our support teams' experience in manually inputting complex client information for setup, we realized we can gather more accurate data more easily by letting the client onboard themselves - thus came the onboarding wizard. Using a lightweight, step-by-step application, clients can choose from 1 of 3 service levels, the most in-depth of which would take all of the leg work away for them.
           .spacer.spacer--50
       .row
@@ -104,6 +75,11 @@
       .row
         .col.col--12
           .spacer.spacer--50
+          img(src="../images/chargebacks911/cp-illust-1-8.png" data-action="zoom")
+          figcaption (Above) Illustration for success and prompt states
+      .row
+        .col.col--12
+          .spacer.spacer--50
           :markdown-it
             ###### Gathering important data
             In order to build the most beneficial cases for disputes, we needed to connect to the client's transaction resources (eg. CRM, processor, bank, etc.) as well as intelligently categorize the products they sold.
@@ -115,7 +91,7 @@
         .col.col--12
           :markdown-it
             ###### Efficient sorting and filtering
-            Many clients face a tsunami of transactions - so we began conducting user research and planning what we could deliver in the neccesary timeline. Based on our findings, we architected a rule engine that could filter, sort, and flag through transactions to save time spent on manually searching.
+            Many clients face a tsunami of transactions - so we began conducting user research and planning what we could deliver in the necessary timeline. Based on our findings, we architected a rule engine that could filter, sort, and flag through transactions to save time spent on manually searching.
       .row
         .col.col--12
           img(src="../images/chargebacks911/cb911-wizard-8.png" data-action="zoom")
@@ -127,23 +103,23 @@
           .spacer.spacer--50
       .row
         .col.col--12
-          p(data-height="600" data-theme-id="dark" data-slug-hash="opBBpv" data-default-tab="result" data-user="ryanparag" data-pen-title="opBBpv" class="codepen") See the Pen 
+          p(data-height="800" data-theme-id="dark" data-slug-hash="opBBpv" data-default-tab="result" data-user="ryanparag" data-pen-title="opBBpv" class="codepen") See the Pen 
           script(async src="https://static.codepen.io/assets/embed/ei.js")
           .spacer.spacer--50
       .row
         .col.col--12
           .spacer.spacer--50
-          p(data-height="600" data-theme-id="dark" data-slug-hash="MvMpYv" data-default-tab="result" data-user="ryanparag" data-pen-title="MvMpYv" class="codepen") See the Pen
+          p(data-height="800" data-theme-id="dark" data-slug-hash="MvMpYv" data-default-tab="result" data-user="ryanparag" data-pen-title="MvMpYv" class="codepen") See the Pen
       .row
         .col.col--12
           .spacer.spacer--50
           :markdown-it
             ###### Email Notifications
             We also needed notifications for a plethora of use cases:
-            - Task alerts
-            - Returning users
-            - Password notifications
-            - Upgrade prompts, etc.
+            - **Task alerts**
+            - **Returning users**
+            - **Password notifications**
+            - **Upgrade prompts, etc.**
             
             By using [Ted Goas' Cerberus](https://tedgoas.github.io/Cerberus/), we made sure all of our email notifications would work on every type of email client (Gmail, Outlook, Mail app, etc.).
           .spacer.spacer--50
@@ -159,9 +135,13 @@
             After creating an account through the onboarding wizard, clients can begin managing their chargebacks and uploading their documents through the merchant portal. The merchant portal also gives users the ability to manage mutliple users, case reporting analytics, and fraudulent transaction alerts.
             
             Speaking with the support teams, we identified questions that often came up for new and old users, isolating pain points and assembling a timeline for what users experience as they progress through the app.
-            - Where were users leaving? 
-            - What elements of the interface were confusing or unclear?
-            - Were there any patterns that seemed too complex for the already complex process of payments?
+            - **Where were users leaving?** 
+            - **What elements of the interface were confusing or unclear?**
+            - **Were there any patterns that seemed too complex for the already complex process of payments?**
+          blockquote
+            h5 "We needed an expert who could help stem the tide of chargeback losses while at the same reducing overhead. 
+              span.u-text-green We absolutely love Chargeback911's user-friendly portal and extensive reporting capabilities. 
+              | Plus the amount of data we have access to is phenomenal."
           .spacer.spacer--50
       .row
         .col.col--12
@@ -188,6 +168,11 @@
         .col.col--4
           img(src="../images/chargebacks911/cb911-cp-9.jpg" data-action="zoom")
         figcaption (Above) Early explorations of the merchant portal
+      .row
+        .col.col--12
+          .space.spacer--50
+          p(data-height="600" data-theme-id="dark" data-slug-hash="xYBBbb" data-default-tab="result" data-user="ryanparag" data-pen-title="xYBBbb" class="codepen") See the Pen
+        
     .project__content
       .row
         .col.col--12
@@ -204,12 +189,24 @@
       .row
         .col.col--12
           .spacer.spacer--50
+          h5 Email Signature Generator
+          p In my refactor of the company's email signature, we also needed to have working, custom signatures for the sales team. I quickly realized how timely and repetitive of a process it was to code custom signatures for sales team members manually. In a bit of my free time, I decided to create a small a Vue JS app that would help members of the sales team create their own Hubspot email signature. 
+            a(href="https://chargebacks911.com/hubspot-signature" target="_blank") Check it out!
+      .row
+        .col.col--12
+          .spacer.spacer--25
+          a(href="https://chargebacks911.com/hubspot-signature" target="_blank")
+            img(src="../images/chargebacks911/cb911-hubspot-1.png")
+            figcaption Click to go to the live app!
+      .row
+        .col.col--12
+          .spacer.spacer--50
           :markdown-it
             ##### Internal Management Tool
       .row
         .col.col--2
           .spacer.spacer--25
-          img(src="../images/chargebacks911/cb911-ers-9.png" data-action="zoom")
+          img(src="../images/chargebacks911/cb911-ers-9.png" data-action="zoom") 
       .row
         .col.col--12
           .spacer.spacer--25
@@ -248,11 +245,12 @@
           :markdown-it
             ##### Website Design and Blog
             To help solidify our product offerings and expertise, as well as organize our content through a linear site architecture, we needed to redesign the main website. While undergoing a redesign, we also needed to standardize our website components (buttons, typography, navigation menus, links, etc.). Our goal for a website redesign, similar to many other companies' website redesign goal, is to direct more traffic in hopes to ultimately find readers who would benefit from our platform. After redesigning the website and creating a greater amount of interactive content (blog posts, webinars, ebooks), we gathered higher conversion rates, more traffic, and a greater number of qualified sales leads:
-          blockquote After redesigning the website and updating the content strategy, we saw 
-            strong.u-text-green 200% 
-            | more website traffic and 
-            strong.u-text-green 100% 
-            | qualified leads
+          blockquote After redesigning the website and updating the content strategy, we saw
+            h5 a 
+              strong.u-text-green 250% growth 
+              | in website traffic and 
+              strong.u-text-green 400% growth 
+              | in inbound leads
           .spacer.spacer--50
       .row
         .col.col--4
@@ -280,8 +278,29 @@
         .col.col--12
           .spacer.spacer--50
           :markdown-it
+            ##### Marketing Design Assets
+            Some of my time was spent redesigning all of our marketing assets per our newly-documented visual styles. Those responsibilities consisted of redesigning our tradeshow booths, flyers, banner ads, pitch decks, etc. Due to our increased marketing traction, we began seeing it was getting difficult to keep up with the items that needed to go out the door and the time we had on hand. In order to keep up with the scale of our marketing presence, we began creating templates and guides for some of our marketing items (eg. pitch decks, booklets, flyers) - which in turn gave other team members the ability to create an asset they needed without having to worry about designing it. 
+      .row
+        .col.col--4
+          img(src="../images/chargebacks911/cb911-tradeshow-1.png" data-action="zoom")
+        .col.col--4
+          img(src="../images/chargebacks911/cb911-flyer-1.png" data-action="zoom")
+        .col.col--4
+          img(src="../images/chargebacks911/cb911-flyer-2.png" data-action="zoom")
+      .row
+        .col.col--4
+          img(src="../images/chargebacks911/cb911-ppt-1.png" data-action="zoom")
+        .col.col--4
+          img(src="../images/chargebacks911/cb911-ppt-2.png" data-action="zoom")
+        .col.col--4
+          a(href="https://www.youtube.com/watch?v=gcCvH2eGDis" target="_blank")
+            img(src="../images/chargebacks911/cb911-video-1.png")
+      .row
+        .col.col--12
+          .spacer.spacer--50
+          :markdown-it
             ##### Landing Pages and Emails
-            With the increase in the amount of new content being created from our writing and marketing teams, we saw the need to build landing page/email templates rather than build each page from scratch each time. Using HubSpot's templating language, HUBL, we were able to create a wide array of templates for newsletters, landing pages, and notifications - in turn helping us increase the speed at which we could deliver content to our audiences.
+            With the increase in the amount of new content being created from our writing and marketing teams, we saw the need to build landing page/email templates rather than build each page from scratch each time. Using HubSpot's templating language, HUBL, we were able to create a wide array of templates for newsletters, landing pages, and notifications - in turn **helping us increase the speed at which we could deliver content to our audiences**.
           .spacer.spacer--50
       .row
         .col.col--4
@@ -293,7 +312,15 @@
       .row
         .col.col--12
           img(src="../images/chargebacks911/cb911-lp-4.png" data-action="zoom")
+      .row
+        .col.col--12
+          img(src="../images/chargebacks911/cb911-toro.png" data-action="zoom")
+      .row
+        .col.col--12
+          a(href="http://chargebacks911.com/assets/lp-case-study/" target="_blank")
+            img(src="../images/chargebacks911/cb911-cs-1.png")
+            figcaption Cick the image to view the new case study landing page
 .container
   .row
-    .col.col--12
-      .spacer.spacer--75
+    .col.col--6.col--offset-3
+      include ../_more-work

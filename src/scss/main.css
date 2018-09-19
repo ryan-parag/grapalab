@@ -1803,27 +1803,28 @@ there.
   display: block;
   background-color: #2f353e;
   background-size: cover;
+  background-position: center;
   color: #ffffff;
   margin-bottom: 2rem;
   border-radius: .2em;
   border: 1px solid transparent;
   overflow: hidden;
   box-shadow: 0px 0px 0.1em rgba(25, 30, 39, 0.2); }
-  /* line 12, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 13, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project__body {
     padding: 1rem 2rem;
     top: 2.5rem;
     position: relative;
     text-shadow: 0px 3px 8px rgba(25, 30, 39, 0.2); }
-  /* line 18, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 19, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project p {
     opacity: 0; }
-  /* line 21, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 22, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project__title {
     position: relative;
     color: #ffffff;
     margin: 0; }
-    /* line 25, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+    /* line 26, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
     .sub-project__title:after {
       border-bottom: 2px solid currentColor;
       position: absolute;
@@ -1831,7 +1832,7 @@ there.
       left: 0px;
       width: 0%;
       content: ''; }
-  /* line 34, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 35, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project__label {
     position: relative;
     margin-left: 1rem;
@@ -1840,39 +1841,42 @@ there.
     opacity: .5;
     font-weight: 400;
     left: 0; }
-  /* line 44, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 45, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project:hover .sub-project__body, .sub-project:focus .sub-project__body {
     top: 1rem;
     transition: all 300ms ease; }
-  /* line 49, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 50, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project:hover .sub-project__title:after, .sub-project:focus .sub-project__title:after {
     width: 100%;
     transition: all 300ms ease-out; }
-  /* line 54, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 55, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project:hover p, .sub-project:focus p {
     opacity: 1;
     color: #ffffff;
     transition: all 300ms ease-out; }
-  /* line 59, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 60, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project:hover .sub-project__label, .sub-project:focus .sub-project__label {
     opacity: 0;
     left: 3rem;
     transition: all 300ms ease-out; }
-  /* line 65, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 66, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project.tampa {
-    background-image: url("../images/tampa-preview.jpg"); }
-  /* line 68, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+    background-image: url("../images/tampa-preview.png"); }
+  /* line 69, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project.utility {
     background-image: url("../images/utility-preview.jpg"); }
-  /* line 71, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 72, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project.patellinis {
     background-image: url("../images/patellinis-preview.png"); }
-  /* line 74, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  /* line 75, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project.rugby {
-    background-image: url("../images/womens-rugby-preview.jpg"); }
-  /* line 77, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+    background-image: url("../images/womens-rugby-preview.png"); }
+  /* line 78, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
   .sub-project.linkme {
     background-image: url("../images/linkme-preview.jpg"); }
+  /* line 81, /Users/ryan/grapalab/src/scss/components/_sub-project.scss */
+  .sub-project.illust {
+    background-image: url("../images/illust-preview.png"); }
 
 /* line 2, /Users/ryan/grapalab/src/scss/components/_project.scss */
 .project__border {
@@ -1928,15 +1932,40 @@ there.
   background: #b8e3e5;
   background: linear-gradient(60deg, #b8e3e5, #3bc1cd); }
 
-/* line 13, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+/* line 10, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
 .project__hero--cb911 {
   background: #000;
   background: linear-gradient(60deg, #000, #1f2024); }
 
-/* line 19, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+/* line 13, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
 .project__hero--disputelab {
   background: #274e89;
   background: linear-gradient(60deg, #274e89, #729ad7); }
+
+/* line 16, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--capsule, .project__hero--utility {
+  background: black;
+  background: linear-gradient(60deg, black, #1a1a1a); }
+
+/* line 19, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--world-rugby {
+  background: #49aa00;
+  background: linear-gradient(60deg, #49aa00, #1e009b); }
+
+/* line 22, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--patellinis {
+  background: #8c0014;
+  background: linear-gradient(60deg, #8c0014, #f20022); }
+
+/* line 25, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--linkme {
+  background: #2196f3;
+  background: linear-gradient(60deg, #2196f3, #9c27b0); }
+
+/* line 28, /Users/ryan/grapalab/src/scss/components/_project-hero.scss */
+.project__hero--illustrations {
+  background: #00d1b2;
+  background: linear-gradient(60deg, #00d1b2, #e684ae); }
 
 /* line 1, /Users/ryan/grapalab/src/scss/components/_login.scss */
 .login {
