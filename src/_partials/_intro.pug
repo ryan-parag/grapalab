@@ -1,13 +1,17 @@
 .intro
-	.container
-		.row
-			.intro__body
-				.spacer.spacer--75
-				.col.col--12
-					h1 Hello! I'm Ryan.
-					h4 I'm a Product Designer based in Tampa, Florida. &#9996;&#127996;
-					p I currently work at 
-						a.link(href="https://chargebacks911.com" target="_blank") Chargebacks911 
-						| where I help build digital products and visual assets. I'm passionate about solving problems through design, experimenting with new and effective creative principles, and searching for the elusive Arizona Black and White Iced Tea. 
-						a.link(href="../about") More...
-					include _connect-bar
+  .container
+    .row
+      .intro__body
+        .spacer.spacer--75
+        .col.col--12
+          h1 Hello! I'm Ryan.
+          h4 I'm a Product Designer based in Tampa, Florida. &#9996;&#127996;
+          small.role
+            svg.role__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+              path(d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2")
+              circle(cx="12" cy="7" r="4")
+            span.role__text Currently a UI/UX designer at 
+            a.link(href="https://chargebacks911.com" target="_blank") Chargebacks911
+          p I help build digital products and solve tough problems through purposeful design, clear communication and slick technology. I'm passionate about solving problems with modern methods, experimenting with new and effective creative principles, and searching for the elusive Arizona Black and White Iced Tea. 
+            a.link(href="../about") More...
+          include _connect-bar

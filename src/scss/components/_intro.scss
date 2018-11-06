@@ -14,8 +14,26 @@
 	}
 	&__body {
 		max-width: 875px;
-		.connect, p {
+		.connect {
 			margin-top: 2.5em;
 		}
+    p {
+      margin-top: 1em;
+    }
 	}
+  .role {
+    font-size: 1.6rem;
+    &__icon {
+      margin-right: 1rem;
+      position: relative;
+      top: 4px;
+      color: $color-green;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    &__text {
+      opacity: .6;
+    }
+  }
 }

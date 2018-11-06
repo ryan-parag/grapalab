@@ -21,7 +21,7 @@
 
         I’m driven to learn why people do what they do so I can create experiences that are intuitive and successful. I’ve helped rethink, prototype and design solutions to help bring empathy and simplicty into complex problems - *which is a fancier way of saying I help things make sense*.
         
-        I believe designing good products happens all the way from inception to building - user stories, naming variables, code style, architecture, copywriting, visuals. I believe everything should matter in the product design process.
+        I believe designing good products happens all the way from inception to building - surveys, user stories, defining user goals, user research, card sorting, prototyping, naming variables, code style, architecture, copywriting, visuals, etc.. I believe everything should matter in the product design process.
         
         If you'd like to see more of what I've been working on, take a look at my [CodePen](https://codepen.io/ryanparag), [Dribbble](https://dribbble.com/ryanparag), [Github](https://github.com/ryan-parag), and [Behance](https://behance.net/grapa). For a more in-depth look at my design process, [let's chat](mailto:parag.ryan@gmai.com).
 
@@ -36,6 +36,38 @@
       a.link(href="../resume/") My Résumé
       .spacer.spacer--50
   hr
+  .spacer.spacer--25
+  .row
+    .col.col--6
+      h4
+        include _icon-slack
+        | &nbsp;Slack it up!
+      p I use 
+        a(href="https://slack.com/" target="_blank") Slack
+        | &nbsp;on a daily basis and thought it would be fun to quickly map the theme colors of my portfolio to Slack's predefined utility variables. If you're like me and like switching themes on a weekly basis, try one of these themes made from this portfolio's color theme(s):
+    .col.col--6
+      p Copy and paste these values to your 
+        strong Slack 
+        | settings in the 
+        a.link(href="https://get.slack.help/hc/en-us/articles/205166337-Customizing-your-Slack-theme" target="_blank") Sidebar Theme
+        | &nbsp;section:
+      input.u-full-width#slackThemeInput(type="text" value="Choose one of the themes below...")
+      .demo#demoStuff
+      button.btn.btn--primary(onclick="slackTheme('light')") Light Theme
+      button.btn.btn--secondary(onclick="slackTheme('dark')") Dark Theme
+      #copyValidate.u-text-pink
+  hr
+  .spacer.spacer--25
+  .row
+    .col.col--6
+      h4
+        include _icon-book-open
+        |&nbsp;What I'm reading.
+      p Just a few pieces of writing about design (and some tertiary stuff) that I enjoy, that I hope you might enjoy as well.
+  .spacer.spacer--25
+  include _reading
+  hr
+  .spacer.spacer--25
   .row
     .col.col--6
       include _more-work

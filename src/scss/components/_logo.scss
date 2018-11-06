@@ -28,3 +28,51 @@
 		}
 	}
 }
+
+.demo {
+	margin-bottom: 1rem;
+	&__container {
+		width: auto;
+		display: flex;
+		padding: .5rem;
+		justify-content: space-evenly;
+		max-width: 15rem;
+		border: 1px solid #E7E7E9;
+	}
+	&__item {
+		$size: 1.5rem;
+		width: $size;
+		height: $size;
+		box-shadow: 0px 1px 1px rgba(black, .2);
+		border: 1px solid;
+	}
+}
+
+#textRotate {
+  position: relative;
+  &:after {
+    content: '';
+    top: 0;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    background: transparentize($color-green, .85);
+    border: 1px solid $color-green;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    color: $color-green;
+    width: max-content;
+    transition: all 150ms ease;
+    opacity: 0;
+  }
+  &:hover, &:focus {
+    &:after {
+      content:'Bonus: Refresh the page to find out another fact';
+      top: -30px;
+      opacity: 1;
+    }
+  }
+}

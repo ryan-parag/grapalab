@@ -15,9 +15,16 @@
 		top: 2.5rem;
 		position: relative;
 		text-shadow: 0px 3px 8px rgba($near-black, .2);
+    @media screen and (max-width: 550px) {
+      top: 1rem;
+    }
 	}
 	p {
 		opacity: 0;
+    @media screen and (max-width: 550px) {
+      opacity: .75;
+			color: $white;
+    }
 	}
 	&__title {
 		position: relative;
@@ -30,6 +37,9 @@
 			left: 0px;
 			width: 0%;
 			content: '';
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
 		}
 	}
 	&__label {
@@ -40,6 +50,10 @@
 		opacity: .5;
 		font-weight: 400;
 		left: 0;
+    @media screen and (max-width: 550px) {
+      opacity: 0;
+			left: 3rem;
+    }
 	}
 	&:hover, &:focus {
 		.sub-project__body {

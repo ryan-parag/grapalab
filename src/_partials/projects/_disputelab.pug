@@ -44,13 +44,23 @@
           .spacer.spacer--50
       .row
         .col.col--12
+          img(src="../images/disputelab/dl-map.jpg" data-action="zoom")
+          figcaption High-level journey map
+          .spacer.spacer--50
+      .row
+        .col.col--12
+          img(src="../images/disputelab/dl-map-2.png" data-action="zoom")
+          figcaption User journey for normal and admin users
+          .spacer.spacer--50
+      .row
+        .col.col--12
           :markdown-it
             ##### Design System
-            One of the pain points I came across designing the [applications for merchants](../chargebacks911) was the inconsistency in experience and unorganized styles for components. I thought if the DisputeLab team had access to a source of truth for the design of the UI, we could aim for consistency and can embed UX principles directly in our component design. Finding time to document our UI while still designing features was another story - it was simply going to take a little extra effort. I rolled up my sleeves and began building a unified style guide for our product.
+            One of the pain points I came across designing the [applications for merchants](../chargebacks911) was the inconsistency in experience and unorganized styles for components. We thought if the DisputeLab team had access to a source of truth for the design of the UI, we could aim for consistency and can embed UX principles directly in our component design. Finding time to document our UI while still designing features was another story - it was simply going to take a little extra effort. I rolled up my sleeves and began building a unified style guide for our product.
             
             It was clear that as the devlopment team and volume of work was growing, the inconsistencies across the product were as well. Not only that, but newer parts of the product clashed with the legacy features, making the ecosystem kind of jarring for the end-user. If I could build a style guide and a source of truth with our UI components, we could help stop the use of bespoke code while still increasing the speed at which we can develop.
             
-            **So I created Prelude Design System** as a style guide for DisputeLab's UI.
+            **So we created Prelude Design System** as a style guide for DisputeLab's UI.
         .row
           .col.col--4.col--offset-4
             .spacer.spacer--50
@@ -66,7 +76,7 @@
             :markdown-it
               Inside the documentation, we not only laid out the foundation for how our components should look and operate, but also how our CSS and JS should be written - thereby creating a standardization for a growing team. We decided we would utilize BEM and OOCSS for our stylesheets and abide by AirBnb's rules for writing our JS.
               
-              We also ket a running state of the progress of our components within the documentation (below)
+              We also kept a running state of the progress of our components within the documentation (below)
             blockquote
               h5
                 a.link(href="https://ryan-parag.github.io/drm-docs/index/" target="_blank") Take a look at the design system
@@ -103,19 +113,25 @@
             figcaption Early exploration of working a case
         .spacer.spacer--25
         .row
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-1.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-2.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-3.png" data-action="zoom")
-        .row
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-4.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-5.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-work-6.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-work-8.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-work-9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-work-10.png" data-action="zoom")
         .row
           .col.col--12
             a(target="_blank" href="https://codepen.io/ryanparag/pen/bxjgXo")
@@ -187,16 +203,15 @@
               figcaption View a static prototype of the form
               .spacer.spacer--50
         .row
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-pend-1.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-pend-2.png" data-action="zoom")
-          .col.col--4
+          .col.col--2
             img(src="../images/disputelab/dl-pend-3.png" data-action="zoom")
-        .row
-          .col.col--6
+          .col.col--2
             img(src="../images/disputelab/dl-pend-4.png" data-action="zoom")
-          .col.col--6
+          .col.col--2
             img(src="../images/disputelab/dl-pend-5.png" data-action="zoom")
         .row
           .col.col--12
@@ -205,10 +220,61 @@
           .col.col--12
             .spacer.spacer--50
             :markdown-it
+              ##### Custom Reports
+             Admins users needed a way to view the tracking of teams, dispute resolutions, and periodic metrics. We needed a way for an admin user to:
+             - Build custom queries within an interface
+             - Schedule report generation
+             - Query custom fields across dispute or user data sets
+             - Allow for mulptiple export formats
+             
+             We came up with a simple table view for users to view and toggle all of their currently-scheduled reports, as well as an interface to create custom-queried reports for user or dispute metrics. Users can schedule the generation of reports for custom lengths of time and schedule them to be generated periodically.
+        .row
+          .col.col--12
+            a(href="https://codepen.io/ryanparag/full/OBVBRX/" target="_blank")
+              img(src="../images/disputelab/dl-reports-main.png")
+              figcaption View a static prototype of the report builder layout
+              .spacer.spacer--50
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-1.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-2.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-3.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-4.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-5.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-6.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-7.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-8.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-10.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-11.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-12.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-13.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-14.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-reports-15.png" data-action="zoom")
+        .row
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
               ##### Email Notifications
             p We used 
               a(href="https://mjml.io/" target="_blank") MJML
-              | &nbsp;, a React-based email syntax that build builletproof emails, to build our emil notifications for:
+              | &nbsp;, a React-based email syntax for building bulletproof emails, to put together our email notifications for:
             ul
               li Password changes
               li Account creations
