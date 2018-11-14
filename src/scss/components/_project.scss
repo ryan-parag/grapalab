@@ -32,12 +32,25 @@
     border: 1px solid $gray-lighter;
     border-radius: $global-radius;
     margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      margin-bottom: 0;
+    }
+    @media (#{$bp-larger-than-tablet }) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
   &__icon {
     $size: 30px;
     width: $size;
     height: $size;
     color: $color-primary;
+    margin-bottom: 1.5rem;
+    @media (#{$bp-larger-than-tablet }) {
+      margin-bottom: auto;
+    }
     svg {
       width: $size;
       height: $size;

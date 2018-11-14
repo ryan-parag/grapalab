@@ -1,0 +1,164 @@
+extends _layouts/_base
+
+block variables
+  - var pageID ="";
+
+block content
+  .project
+    .project__hero.project__hero--illustrations
+      img.project__hero-image(src="../images/illustrations/illustration-header.png")
+    .container
+      .row
+        .col.col--12
+          .project__header
+            .spacer.spacer--75
+            :markdown-it
+              ## Design Exercise
+              ##### UX design exercise - Virtusa
+            .project__border
+          .spacer.spacer--25
+      .project__role.flex-grid.u-align-center
+          .project__icon
+            include _partials/_icon-user
+          .flex-grid__col
+            strong.u-display-block Specifications
+            span Redesigning the mobile checkout form for a new user at an ecommerce site
+      .spacer.spacer--50
+      .row
+        .col.col--3
+          img(src="../images/de-1.png" data-action="zoom")
+        .col.col--9
+          :markdown-it
+            #### Scenario
+            Samantha, a 34-year-old mother, is in an airport waiting to board a flight to Colorado for vacation. She has some time to kill before her flight, so she does some impulse shopping online and buys a dress at a leading fashion website. This is her first time purchasing anything on the site. Since she’s going on vacation for a week, she wants the product to be delivered after she arrives back home.
+            
+            Samantha has initiated the checkout process after viewing the dress in her cart. She needs to fill out the checkout form, which contains billing/shipping and payment info. Once she provides that information, the site will enable her to review the information before submitting the transaction.
+      .spacer.spacer--50
+      .row
+        .col.col--12
+          :markdown-it
+            #### Step 1: Providing Context
+            ##### Problem/Goal/Assumptions
+            **Goal:** Redesign the mobile checkout form for a new user at an ecommerce site to make it more usable and enjoyable, and to reduce the likelihood of errors. Bring clarity in the delivery options and fees.
+            
+            **Constraints:** This scenario relies on the fact that Samantha is shopping on a mobile browser and therefore should have the accessibility to complete her transaction and meet her exact needs through her mobile device:
+              - Web-based e-commerce site
+              - Mobile ready checkout form
+              - Shipping options for pinpoint product arrival
+              
+            **Assumptions:** We can make possible assumptions backed by general user patterns and business goals in the ecommerce space:
+              - Since the purchase is optional, dropoff could be more likely
+              - Assume Samantha is a somewhat familiar with online checkout and form patterns
+              - Assume that a fluid checkout experience will increase the likelihood of conversion
+              - Assume the business goal is for users like Samantha to shop again through the ecommerce platform
+            
+            ##### Hallmarks of a good checkout
+            - **Speed:** Slow pages are bad anywhere on a site, but in checkout they can reduce customer confidence in the process.
+            - **Easy form filling:** Forms can be a pain, and the key is to minimise it through good design and smart use of shortcuts.
+            - **Mobile friendly:** More and more people are shopping via mobile but conversion rates are less than half those on desktop. Checkouts are part of the reason.
+            - **Guest checkout:** Forcing registration is a barrier for customers.
+            - **Clear flow:** Users should know what information is needed and why, as well as how many steps in the process.
+            #### Step 2: Brainstorming
+      .spacer.spacer--50
+      .row
+        .col.col--8.col--offset-2
+          img(src="../images/de-2.png" data-action="zoom")
+          figcaption
+            small Priority Matrix
+      .spacer.spacer--50
+      .row
+        .col--12.col
+          :markdown-it
+            ##### Breaking apart the sections
+            By compartmentalizing the checkout sections, we can bring better clarity to the checkout process by way of [Miller's Law](https://lawsofux.com/millers-law.html). If Samantha can group and input her information easier, it's more likely to be valid and prevent any bottlenecks in the checkout process. The sections of the checkout form would therefore be broken into:
+            
+            - Customer information
+            - Shipping information
+            - Credit card information
+            - Billing information
+            - Review
+            
+            ##### Good form UI patterns
+            Pattern testing has shown the some forms of UI perform better for conversions than others. We will try to utilize a few basic rules while building our UI as well:
+            
+            - **Single column layout:** Eye-tracking studies have shown that single-column forms are better than multi-column ones.
+            - **Placing labels above fields:** Better for context and adapts better to smartphone sizes, which is works well for **Samantha**.
+            - **Auto-focus the first input field of each section:** Reducing steps can help lessen cognitive load.
+            - **Don't use caps:** Text in all uppercase is difficult to read.
+            - **Non-generic button labels:** Changing a simple verb to a call-to-action phrase converts over 34% more.
+            - **Large text inputs:** Large inputs are easier to read and touch on mobile devices.
+            
+            #### Step 3: Visual Iteration
+      .row
+        .col.col--6
+          img(src="../images/de-4.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            Not only can we show Samantha her progress throughout the checkout process (nudging her to complete more of the process), but also gives us the ability to validate each section rather than the entire form at once.
+            ##### Customer information
+            Below we have a mocked out version of the customer information section. We've also added an email address input for a method of contact for customer service needs. To bring up the appropriate mobile keyboards for the text inputs we should make sure to differentiate them in the HTML markup by use of the type attributes(eg. `type="email"` or `type="text"`). We've also added the option to checkout as a guest or register an account &mdash; while adding value propositions to increase the likelihood of future transactions.
+      .row
+        .col.col--4.col--offset-2
+          img(src="../images/de-3.png" data-action="zoom")
+        .col.col--4
+          img(src="../images/de-6.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Shipping information
+            Shipping information should be fairly straightforward. By utilizing the same large, clear text inputs we can ensure consistency and increase accessibility. After inputting the shipping address, Samantha may choose one of several delivery options to suit her needs. We provide the delivery option in this section to group similar items in context and hopefully prevent the back and forth between sections.
+      .row
+        .col.col--4.col--offset-4
+          img(src="../images/de-5.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Credit card information
+            Instead of forcing a user like Samantha to **only** use a credit card, we also give the option to checkout with PayPal. Consistent text inputs with placeholder information will help biuld a more cohesive experience as well. Sections that are completed will be validated and be given a completed state in the bottom progress navigation.
+      .row
+        .col.col--4.col--offset-4
+          img(src="../images/de-7.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Billing information
+            To hasten the checkout process, users are given the option to auto-fill their billing address using their shipping address. To provide more context, the user is shown their current shipping address &mdash; if they choose to use a different billing address, they may select `No`.
+      .row
+        .col.col--4.col--offset-4
+          img(src="../images/de-8.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Finalize the order
+            The last section provides users like Samantha to review their order as well as their payment information. If a piece of the checkout information is incorrect, the user can click the edit link in the respective section to jump back for editing. The bottom, primary button will submit and finalize the order &mdash; and follows the z-based reading pattern accustomed to longer forms.
+      .row
+        .col.col--4.col--offset-2
+          img(src="../images/de-9.png" data-action="zoom")
+        .col.col--4
+          img(src="../images/de-10.png" data-action="zoom")
+      .row
+        .col.col--12
+          :markdown-it
+            #### Step 4: Next steps
+            ##### Test goals
+            We outlined a few goals for success when converting orders from Samantha and similar users:
+            - **Speed:** Consisten UI patterns and less items to load speed up the page
+            - **Easy form filling:** Use of shortcuts, large inputs, and vertical layout
+            - **Mobile friendly:** Vertical layout designed for mobile
+            - **Guest checkout:** Optional guest checkout, but value propositions for members described
+            - **Clear flow:** Separated sections bring greater clarity to context
+            
+            Using consistent UI components, F-based & Z-based reading patterns, progressive checkout flows, and a responsive design, we were able to accomplish these goals to a degree. In order to validate and progress the design of the checkout, we should outline testing methods to see if any pain points still exist or are newly formed due to the redesign. Methods such as volumetric or A/B testing may show these pain points more clearly.
+            
+            If successful, we may use the redesign as a platform to push further revenue inducing goals:
+            - Recommending similar or additional products during checkout
+            - Offering more payment types (Stripe, Crypto?, etc.)
+            - Integrating with shipping and voucher partners (eg. Shyp, Ebates, etc.)
+      .spacer.spacer--100
+      .row
+        .col.col--12
+          :markdown-it
+            ## Thanks for reading
+            #### Let me know if you had any thoughts at [parag.ryan@gmail.com](mailto:parag.ryan@gmail.com)
+      .spacer.spacer--100

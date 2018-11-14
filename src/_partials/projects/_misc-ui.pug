@@ -1,0 +1,75 @@
+mixin snippet(link,img,title,content)
+  .col.col--3
+    a(target="_blank" href= link data-type="page-transition").main-project
+      .main-project__hero
+        img(src= img)
+      .main-project__content
+        h6.main-project__title= title
+        
+.project
+  .project__hero.project__hero--illustrations
+    img.project__hero-image(src="../images/misc-ui/ui-header.png")
+  .container
+    .row
+      .col.col--12
+        .project__header
+          .spacer.spacer--75
+          :markdown-it
+            ## UI Sketchbook
+            ##### A collection of User Interface snippets
+          .project__border
+        .spacer.spacer--25
+    .row
+      .col.col--12
+        :markdown-it
+          #### What's my design process?
+          I believe talking to users and truly understanding their problems trumps any visual flare I can possibly create.
+          
+          I think designing products really tests one's context switching ability: Jumping from writing the problem down to a core set of needs, to iterating layouts in Sketch, to illustrating icons for the UI, to throwing together a front-end prototype - **it can get exhausting fairly quickly**.
+          
+          Sometimes I find that using design tools (Sketch, XD, Figma, Photoshop, etc.) for UI tends to be more work than I’d like, especially when working through preliminary ideas solo. When I feel like I have a really clear set of expectations, I'll jump into a simple sketckbook-like code editor, such as [CodePen](https://codepen.io/ryanparag) and start working through ideas for layouts, components, UI workflows, etc. **In my experience, having front-end code to handoff to developers also helps reduce friction between the approved design and the shipped product.**
+          
+          Here are some ideas I've been working on:
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/oWrLPr", "../images/misc-ui/movie-cards.png", "Responsive movie cards")
+      +snippet("https://codepen.io/ryanparag/pen/LLrVbo", "../images/misc-ui/movie-cards2.png", "Movie ticket cards")
+      +snippet("https://codepen.io/ryanparag/pen/dVpGXw", "../images/misc-ui/feedback.png", "Feedback form")
+      +snippet("https://codepen.io/ryanparag/pen/YRyzPL", "../images/misc-ui/destination-cards.png", "Destination cards")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/NExrXQ", "../images/misc-ui/reminder.png", "Create a reminder")
+      +snippet("https://codepen.io/ryanparag/pen/ePbBRZ", "../images/misc-ui/style-guide.png", "UI Style Guide")
+      +snippet("https://codepen.io/ryanparag/pen/opBBpv", "../images/misc-ui/wizard-icons.png", "Themed SVG icons")
+      +snippet("https://codepen.io/ryanparag/pen/rQLqeJ", "../images/misc-ui/dropbox.png", "Dropbox colors")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/wYppgq", "../images/misc-ui/themed-components.png", "Themed components")
+      +snippet("https://codepen.io/ryanparag/pen/rZomjo", "../images/misc-ui/tree-filter.png", "Tree filter")
+      +snippet("https://codepen.io/ryanparag/pen/PJqryW", "../images/misc-ui/character-select.png", "Character select")
+      +snippet("https://codepen.io/ryanparag/pen/aWxGwN", "../images/misc-ui/indy-500.png", "Indy 500")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/rZVexj", "../images/misc-ui/color-picker.png", "Logo color picker")
+      +snippet("https://codepen.io/ryanparag/pen/JeROmG", "../images/misc-ui/avatars.png", "Overlapping avatars")
+      +snippet("https://codepen.io/ryanparag/pen/EpWzax", "../images/misc-ui/blog.png", "Blog post")
+      +snippet("https://codepen.io/ryanparag/pen/VVLvmV", "../images/misc-ui/empty-state.png", "Empty states")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/bjxwvp", "../images/misc-ui/toolbar.png", "Accessibility toolbar")
+      +snippet("https://codepen.io/ryanparag/pen/WgQQRR", "../images/misc-ui/svg-theme.png", "SVG illustration theme")
+      +snippet("https://codepen.io/ryanparag/pen/dKLNQJ", "../images/misc-ui/user-search.png", "User list search")
+      +snippet("https://codepen.io/ryanparag/pen/OoEwVM", "../images/misc-ui/sessionstorage.png", "SessionStorage themes")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/gdwypq", "../images/misc-ui/coffee.png", "Who buys coffee?")
+      +snippet("https://codepen.io/ryanparag/pen/jpKpYb", "../images/misc-ui/calculator.png", "Tip calculator")
+      +snippet("https://codepen.io/ryanparag/pen/mjZLWN", "../images/misc-ui/rainbow.png", "Rainbow loader")
+      +snippet("https://codepen.io/ryanparag/pen/oPjrdV", "../images/misc-ui/column-toggle.png", "Column toggle")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/PaqNrm", "../images/misc-ui/night-mode.png", "Night mode toggle")
+      +snippet("https://codepen.io/ryanparag/pen/xJydGy", "../images/misc-ui/neon-svg.png", "Neon SVG")
+      +snippet("https://codepen.io/ryanparag/pen/NMJGRw", "../images/misc-ui/bem-loader.png", "BEM Loader")
+      +snippet("https://codepen.io/ryanparag/pen/YaJPqe", "../images/misc-ui/radio-icons.png", "Radio button icons")
+    .row
+      +snippet("https://codepen.io/ryanparag/pen/QmPWVK", "../images/misc-ui/car-and-driver.png", "Subscription with Vue.js")
+      +snippet("https://codepen.io/ryanparag/pen/jzvmNB", "../images/misc-ui/news-article.png", "News card")
+      +snippet("https://codepen.io/ryanparag/pen/xWWjJK", "../images/misc-ui/planets.png", "Our solar system")
+.container
+  .row
+    .col.col--6.col--offset-3
+      include ../_more-work

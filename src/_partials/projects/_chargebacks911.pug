@@ -11,12 +11,21 @@
             ##### Helping online merchants optimize profitability
           .project__border
         .spacer.spacer--25
-    .project__role.flex-grid.u-align-center
-        .project__icon
-          include ../_icon-user
-        .flex-grid__col
-          strong.u-display-block My Role
-          span Lead designer responsible for UI/UX of products, website design, marketing page/email templates, printed assets, etc.
+    .row
+      .col.col--6
+        .project__role.flex-grid
+          .project__icon
+            include ../_icon-user
+          .flex-grid__col
+            strong.u-display-block My Role
+            span Lead designer responsible for UI/UX of products, website design, marketing page/email templates, printed assets, etc.
+      .col.col--6
+        .project__role.flex-grid
+          .project__icon
+            include ../_icon-flag
+          .flex-grid__col
+            strong.u-display-block The Challenge
+            span Help create consistent design standards across all of Chargebacks911's products and web/print marketing assets.
     .row
       .spacer.spacer--50
       .col.col--12
@@ -40,8 +49,21 @@
       .col.col--12
         :markdown-it
           ##### Overview
+    .row
+      .col.col--12
+        :markdown-it
           Chargebacks911® provides cutting-edge, highly-scalable enterprise solutions and specialized consulting for chargeback compliance, risk mitigation, and dispute management - **which simply means providing solutions for businesses dealing with falsely protested credit card charges**. The company’s dynamic technologies and tactical data analysis help decrease the negative impacts of chargebacks and disputes, thereby increasing customer retention and revenues. Chargebacks911 is recognized as the world’s leading service provider for comprehensive dispute mitigation and remediation technology.
           
+    .row
+      .col.col--12
+        blockquote
+          p
+            strong.u-text-green What is a chargeback? 
+            | It's difficult to explain how the entire process works, and if I tried to explain the entire thing on here, it would probably bore you to death - but when customers file a chargeback with their card issuer, this means that they are disputing a charge and request the card issuer for a refund. A chargeback is a transaction that a card issuer returns to an acquirer as a financial liability and which, in turn, an acquirer may return to the merchant. There are three common reasons for chargeback including fraud, processing errors, other disputes (e.g. customer disputes). The card schemes define the chargeback process, rules and regulations.
+
+    .row
+      .col.col--12
+        :markdown-it
           Although I juggled between a role as the designer on the marketing team and the sole designer on our application development team (30+ team members), it came as a blessing in disguise - it allowed me to see exacly how we could reach companies who needed a profit-optimizing solution, and how we could develop a solution to do just that. While at Chargebacks911, [**I was also chosen to join a small team to develop a dispute management application for enterprise banks. Check it out!**](../disputelab)
           
         .spacer.spacer--50
@@ -50,7 +72,7 @@
         .col.col--12
           :markdown-it
             ##### Research
-            When I joined Chargebacks911, it seemed as if design and product requirements were driven only by the business and client needs. Years of this process resulted in a broken user experience.After jumping into this process head first, I realized we needed to build a UX foundation that was rooted in user research, collaboration, and iterative prototyping.
+            When I joined Chargebacks911, it seemed as if design and product requirements were driven only by the business and client needs. Years of this process resulted in a broken user experience. After jumping into this process head first, I realized we needed to build a UX foundation that was rooted in user research, collaboration, and iterative prototyping.
             
             In order to understand the purpose of each of our solutions, I had to understand our internal methods, as well as the overall payments process - specifically credit card disputes. I jumped into a world rife with corporate acronyms, business rules, and convoluted logic.
 
@@ -82,7 +104,7 @@
         .col.col--4
           img(src="../images/chargebacks911/cb911-wizard-6.png" data-action="zoom")
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           .spacer.spacer--50
           img(src="../images/chargebacks911/cp-illust-1-8.png" data-action="zoom")
           figcaption (Above) Illustration for success and prompt states
@@ -93,7 +115,7 @@
             ###### Gathering important data
             In order to build the most beneficial cases for disputes, we needed to connect to the client's transaction resources (eg. CRM, processor, bank, etc.) as well as intelligently categorize the products they sold.
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-wizard-7.png" data-action="zoom")
           .spacer.spacer--50
       .row
@@ -102,7 +124,7 @@
             ###### Efficient sorting and filtering
             Many clients face a tsunami of transactions - so we began conducting user research and planning what we could deliver in the necessary timeline. Based on our findings, we architected a rule engine that could filter, sort, and flag through transactions to save time spent on manually searching.
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-wizard-8.png" data-action="zoom")
           .spacer.spacer--50
       .row
@@ -111,12 +133,12 @@
             As part of the onboarding wizard, I created visual assets and a lightweight icon set to help illustrate selections and actions. I also included assets to help convey empty states, success states, product tiers, etc. Since we built the onboarding wizard to be white-labeled and themed for third-party partners, we made sure the visuals could be themed by utilizing the partner's brand palette.
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           p(data-height="800" data-theme-id="dark" data-slug-hash="opBBpv" data-default-tab="result" data-user="ryanparag" data-pen-title="opBBpv" class="codepen") See the Pen 
           script(async src="https://static.codepen.io/assets/embed/ei.js")
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           .spacer.spacer--50
           p(data-height="800" data-theme-id="dark" data-slug-hash="MvMpYv" data-default-tab="result" data-user="ryanparag" data-pen-title="MvMpYv" class="codepen") See the Pen
       .row
@@ -133,7 +155,7 @@
             By using [Ted Goas' Cerberus](https://tedgoas.github.io/Cerberus/), we made sure all of our email notifications would work on every type of email client (Gmail, Outlook, Mail app, etc.).
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           a(href="https://chargebacks911.com/emails/portal-template_upgrade.html" target="_blank")
             img(src="../images/chargebacks911/cb911-cp-1.png")
             figcaption Click to view one of the live email templates!
@@ -153,7 +175,7 @@
               | Plus the amount of data we have access to is phenomenal."
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-cp-10.png" data-action="zoom")
       .row
         .col.col--4
@@ -186,7 +208,7 @@
         figcaption Snippets of user journeys and workflow maps
       .spacer--25
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           .space.spacer--50
           p(data-height="600" data-theme-id="dark" data-slug-hash="xYBBbb" data-default-tab="result" data-user="ryanparag" data-pen-title="xYBBbb" class="codepen") See the Pen
         
@@ -199,7 +221,7 @@
             After joining Chargebacks911, I saw there wasn't a source of truth nor standardization for the brand's design language. To help instill the brand's mission, vision, and values through a codified form, we created a style guide using our newly created styles. With an organized reference guide, we could onboard other teams, partners, vendors, and third parties to our brand design language quickly and more thoroughly. **I also happen to be a huge nerd for design documentation**.
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-styles-1.png" data-action="zoom")
           .spacer.spacer--50
     .project__content
@@ -210,7 +232,7 @@
           p In my refactor of the company's email signature, we also needed to have working, custom signatures for the sales team. I quickly realized how timely and repetitive of a process it was to code custom signatures for sales team members manually. In a bit of my free time, I decided to create a small a Vue JS app that would help members of the sales team create their own Hubspot email signature. 
             a(href="https://chargebacks911.com/hubspot-signature" target="_blank") Check it out!
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           .spacer.spacer--25
           a(href="https://chargebacks911.com/hubspot-signature" target="_blank")
             img(src="../images/chargebacks911/cb911-hubspot-1.png")
@@ -235,7 +257,7 @@
             4. Cleaning up and organizing the CSS, establishing and enforcing naming rules in order to help maintain consistency, reduce technical debt, and simplify future changes
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-ers-1.png" data-action="zoom")
           .spacer.spacer--50
       .row
@@ -253,7 +275,7 @@
           .spacer.spacer--50
           img(src="../images/chargebacks911/cb911-ers-8.png" data-action="zoom")
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-ers-7.png" data-action="zoom")
     .project__content
       .row
@@ -270,7 +292,7 @@
               | in inbound leads
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-new-1.png" data-action="zoom")
       .row
         .col.col--4
@@ -330,13 +352,13 @@
         .col.col--4
           img(src="../images/chargebacks911/cb911-lp-3.png" data-action="zoom")
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-lp-4.png" data-action="zoom")
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-toro.png" data-action="zoom")
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           a(href="http://chargebacks911.com/assets/lp-case-study/" target="_blank")
             img(src="../images/chargebacks911/cb911-cs-1.png")
             figcaption Cick the image to view the new case study landing page

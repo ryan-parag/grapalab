@@ -11,17 +11,39 @@
             ##### Payments and Large Data Management for Banks
           .project__border
         .spacer.spacer--25
-    .project__role.flex-grid.u-align-center
-        .project__icon
-          include ../_icon-user
-        .flex-grid__col
-          strong.u-display-block My Role
-          span Conduct user research, sketch, mockup static interfaces, illustrate icons, outline usability testing, and code the real thing.
+    .row
+      .col.col--6
+        .project__role.flex-grid
+          .project__icon
+            include ../_icon-user
+          .flex-grid__col
+            strong.u-display-block My Role
+            span Conduct user research, sketch, mockup static interfaces, front-end development, illustrate icons, outline usability testing, and design feature workflows.
+      .col.col--6
+        .project__role.flex-grid
+          .project__icon
+            include ../_icon-flag
+          .flex-grid__col
+            strong.u-display-block The Challenge
+            span Optimizing the transaction dispute process through intelligent case building/sorting and bridging the inefficiencies between banks and credit card companies.
     .spacer.spacer--50
     .row
       .col.col--12
         :markdown-it
           ##### Overview
+          In a world where credit card transactions are increasing exponentially, we saw that banks (credit card acquirers), handling the disputes sent from retailers could use a more efficient platform to help them process more disputes.
+    .row
+      .col.col--12
+        blockquote
+          :markdown-it
+            **What is a dispute?**
+            
+            A dispute is just another term for a chargeback. A merchant or retailer may use the term *chargeback* while a bank or card scheme might use *dispute*.
+            
+            When customers file a chargeback with their card issuer, this means that they are disputing a charge and request the card issuer for a refund. A chargeback is a transaction that a card issuer returns to an acquirer as a financial liability and which, in turn, an acquirer may return to the merchant. There are three common reasons for chargeback including fraud, processing errors, other disputes (e.g. customer disputes). The card schemes define the chargeback process, rules and regulations.
+    .row
+      .col.col--12
+        :markdown-it
           One of my major responsibilities whilst at Chargebacks911 was the designing the UI system and features for DisputeLab — a new dispute optimization and productivity tool aimed at large banks. DisputeLab's readily-integrated platform allows for the sorting, filtering, and optimizing of millions of transactions and disputes. By integrating directly to credit card schemes, users can eliminate the need for jumping to each credit card's proprietary applications to add dispute information.
           
           DisputeLab also gives users the power to:
@@ -29,26 +51,26 @@
           - **Filter cases using rules**
           - **Custom-tailor the antiquated process of handling the disputed transactions their clients receive**
           
-          Over several months, I, along with a small team of 5, worked to produce a fresh new take on enterprise banking software for disputes.
+          As the only designer, and with a blank slate, it was great being able to help create what the workflow for a bank working between it's clients (retailers) and credit card companies could look like in DisputeLab. Over several months, I, along with a small team of 5, worked to produce a fresh new take on enterprise banking software for disputes.
         .spacer.spacer--50
     .project__content
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/disputelab/dl-dashboard.png" data-action="zoom")
           figcaption (Above) Dashboard
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/disputelab/dl-process.png" data-action="zoom")
           figcaption (Above) Early exploration of process architecture
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/disputelab/dl-map.jpg" data-action="zoom")
           figcaption High-level journey map
           .spacer.spacer--50
       .row
-        .col.col--12
+        .col.col--8.col--offset-2
           img(src="../images/disputelab/dl-map-2.png" data-action="zoom")
           figcaption User journey for normal and admin users
           .spacer.spacer--50
@@ -68,7 +90,7 @@
             figcaption (Above) logo for the design system
             .spacer.spacer--100
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-prelude-1.png" data-action="zoom")
             .spacer.spacer--50
         .row
@@ -81,7 +103,7 @@
               h5
                 a.link(href="https://ryan-parag.github.io/drm-docs/index/" target="_blank") Take a look at the design system
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-prelude-2.png" data-action="zoom")
             .spacer.spacer--50
         .row
@@ -97,6 +119,8 @@
             :markdown-it
               ##### Build case documents
               Users can utilize the template editor to create rich text documents to supplement their clients' dispute cases. Users have the ability to type rich text, insert images, drag merchant and case tokens (placeholder data pull from the clients' data).
+        .row
+          .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-template.png" data-action="zoom")
         .row
           .col.col--12
@@ -133,7 +157,7 @@
           .col.col--2
             img(src="../images/disputelab/dl-work-10.png" data-action="zoom")
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             a(target="_blank" href="https://codepen.io/ryanparag/pen/bxjgXo")
               img(src="../images/disputelab/dl-work-7.png")
               figcaption Click to view layout markup
@@ -144,7 +168,7 @@
               ##### Reconfiguring the navigation
               As more and more features are added by stakeholders, we needed a way to organize the navigation items in the sidebar navigation. We didn't want to hide prominent items offscreen, so we came up with a solution to have drawers for our navigation items in the sidebar.
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-sidebar.png" data-action="zoom")
         .row
           .col.col--12
@@ -197,7 +221,7 @@
               ##### Pend Cases
               Since credit card companies have deadlines on dispute cases, banks felt the need to prioritize the workload of dispute cases efficiently. We created the Pend feature to allow users to pause cases and remove it from their personal bucket of working cases. When pausing a case, they can choose when it would pop back into their bucket of working cases, and even add it back into the bucket of working cases for a team or group.
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             a(href="https://codepen.io/ryanparag/pen/bxgzGN" target="_blank")
               img(src="../images/disputelab/dl-pend-main.png")
               figcaption View a static prototype of the form
@@ -229,7 +253,7 @@
              
              We came up with a simple table view for users to view and toggle all of their currently-scheduled reports, as well as an interface to create custom-queried reports for user or dispute metrics. Users can schedule the generation of reports for custom lengths of time and schedule them to be generated periodically.
         .row
-          .col.col--12
+          .col.col--8.col--offset-2
             a(href="https://codepen.io/ryanparag/full/OBVBRX/" target="_blank")
               img(src="../images/disputelab/dl-reports-main.png")
               figcaption View a static prototype of the report builder layout
@@ -290,7 +314,23 @@
             :markdown-it
               ##### Errors
               In case a user encountered a missing link, they would be forwarded to an error page, while also pinging our support teams of an error
+        .row
+          .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-prelude-6.png" data-action="zoom")
+        .row
+          .col.col--12
+            :markdown-it
+              ##### Landing Pages
+              Although **DisputeLab** isn't public yet, we played around with a few introductory ideas when we would subsequently look for our first enterprise clients after beta testing with some of our existing clients. If conversion testing proved well, we would hopefully add testimonials from our beta clients to validate the product in the eyes of prospective clients.
+              
+              I put together some of our strongest value prpositions of our application and tailored it to sectionable content. To work quickly, I utilized Pug (HTML), SCSS, and vanilla JS to create a super lightweight landing page without any external dependencies.
+        .row
+          .col.col--6.col--offset-3
+            a(href="../test/dl" target="_blank")
+              img(src="../images/disputelab/dl.gif")
+              figcaption
+                small Landing page idea
+            
 .container
   .row
     .col.col--6.col--offset-3
