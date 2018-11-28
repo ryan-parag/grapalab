@@ -1,0 +1,533 @@
+extends _layouts/_base
+
+block variables
+  - var pageID ="Style Guide";
+
+block content
+  .project
+    .project__hero.project__hero--illustrations
+      img.project__hero-image(src="../images/illustrations/illustration-header.png")
+    .container
+      .row
+        .col.col--12
+          .project__header
+            .spacer.spacer--75
+            :markdown-it
+              ## Style Guide
+              ###### Just some design documentation on the design tokens, components, utilities, and layouts that are used on my portfolio
+            .project__border
+      .row
+        .col.col--12
+          ul.nav
+            li.nav__item
+              a.nav__link.active(href="#designOverview" data-section="designOverview") Overview
+            li.nav__item
+              a.nav__link(href="#designColors" data-section="designColors") Color
+            li.nav__item
+              a.nav__link(href="#designTypography" data-section="designTypography") Typography
+            li.nav__item
+              a.nav__link(href="#designIcons" data-section="designIcons") Icons
+            li.nav__item
+              a.nav__link(href="#designLayout" data-section="designLayout") Layout
+            li.nav__item
+              a.nav__link(href="#designComponents" data-section="designComponents") Components
+      #designSections
+        .spacer.spacer--100
+        section.design-section.active#designOverview
+          .row
+            .col.col--12
+              h2 Overview
+              p As a documentation nerd, I thought it would not only be fun to showcase the assets that help make this portfolio possible, but also be helpful to do a design inventory and build more efficient design patterns.
+              p Check out one of the sections:
+              .swatch__grid
+                a.swatch(href="#designColors" data-section="designColors")
+                  img.swatch__img(src="../images/guide/icon--colors.svg")
+                  span Colors
+                a.swatch(href="#designTypography" data-section="designTypography")
+                  img.swatch__img(src="../images/guide/icons--typography.svg")
+                  span Typography
+                a.swatch(href="#designIcons" data-section="designIcons")
+                  img.swatch__img(src="../images/guide/icons--icons.svg")
+                  span Icons
+                a.swatch(href="#designLayout" data-section="designLayout")
+                  img.swatch__img(src="../images/guide/icons--layout.svg")
+                  span Layout
+                a.swatch(href="#designComponents" data-section="designComponents")
+                  img.swatch__img(src="../images/guide/icons--components.svg")
+                  span Components
+        
+        section.design-section#designColors
+          .row
+            .col.col--12
+              h2 Swatches
+              p Color brings a design to life. Color is versatile; it's used to express emotion and tone, as well as place emphasis and create associations. Color should always be used in meaningful and intentional ways in order to create patterns and visual cues.
+              h4 Primary/State Colors
+              p We can use these colors to express state, accent, or emphasis
+              .swatch__grid
+                .swatch
+                  .spacer.spacer--75.u-bg-green
+                  span Grapa Green
+                .swatch
+                  .spacer.spacer--75.u-bg-pink
+                  span Grapa Pink
+                .swatch
+                  .spacer.spacer--75.u-bg-blue
+                  span Grapa Blue
+              .spacer.spacer--50
+              h4 Neutral UI Colors
+              p We can use these colors to shade the neutral parts of our UI (eg. text, backgrounds, panels, form controls)
+              .swatch__grid
+                .swatch
+                  .spacer.spacer--75.u-bg-white
+                  span White
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-lightest
+                  span Gray Lightest
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-lighter
+                  span Gray Lighter
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-light
+                  span Gray Light
+                .swatch
+                  .spacer.spacer--75.u-bg-gray
+                  span Gray
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-dark
+                  span Gray Dark
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-darker
+                  span Gray Darker
+                .swatch
+                  .spacer.spacer--75.u-bg-gray-darkest
+                  span Gray Darkest
+                .swatch
+                  .spacer.spacer--75.u-bg-near-black
+                  span Near Black
+        section.design-section#designTypography
+          .row
+            .col.col--12
+              h2 Typography
+              h5 Font
+              p
+                strong IBM Plex Sans 
+                | is an open source typeface family designed by IBM. The fonts have been designed to work well in user interface (UI) environments as well as other mediums. This project provides all source files and file formats to support most typographical situations.
+              .swatch__grid
+                .swatch
+                  .h1.big-title Aa
+                  span IBM Plex Sans
+              .swatch__grid
+                .swatch
+                  .h1.u-text-green.big-title Aa
+                  span Bold (700)
+                .swatch
+                  .h1.u-text-blue.title Aa
+                  span Semibold (600)
+                .swatch
+                  .h1.u-text-pink Aa
+                  span Regular (400)
+              .spacer.spacer--50
+              h5 Elements
+              table.table
+                thead
+                  tr
+                    th Heading
+                    th Weight
+                    th Size
+                    th Line-height
+                tbody
+                  tr
+                    td
+                      span.h1.big-title Heading 1
+                    td 700
+                    td 4rem
+                    td 1.2
+                  tr
+                    td
+                      span.h2.big-title Heading 2
+                    td 700
+                    td 3.6rem
+                    td 1.25
+                  tr
+                    td
+                      span.h3.big-title Heading 3
+                    td 700
+                    td 3rem
+                    td 1.3
+                  tr
+                    td
+                      span.h4.title Heading 4
+                    td 500
+                    td 2.4rem
+                    td 1.35
+                  tr
+                    td
+                      span.h5.title Heading 5
+                    td 600
+                    td 1.8rem
+                    td 1.5
+                  tr
+                    td
+                      span.h6.title Heading 6
+                    td 600
+                    td 1.5rem
+                    td 1.6
+                  tr
+                    td
+                      span Paragraph
+                    td 400
+                    td 1.6rem
+                    td 1.8
+                    
+        section.design-section#designIcons
+          .row
+            .col.col--12
+              h2 Icons
+              p Iconography uses images and symbols to represent an object visually. They communicate a message and should be distinct and informative. Icons should be used sparingly throughout the product to provide clarity and reduce cognitive load on users.
+              p Instead of using an icon font and utilizing an icon through a unique glyph, the icons below are optimized SVG being included through a PUG include
+              .swatch__grid
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-behance
+                  span behance
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-book
+                  span book
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-code
+                  span code
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-codepen
+                  span codepen
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-dribbble
+                  span dribbble
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-eye
+                  span eye
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-file
+                  span file
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-flag
+                  span flag
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-github
+                  span github
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-mail
+                  span mail
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-moon
+                  span moon
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-slack
+                  span slack
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-sun
+                  span sun
+                .swatch
+                  .swatch__img.u-text-green
+                    include _partials/_icon-user
+                  span user
+        section.design-section#designLayout
+          .row
+            .col.col--12
+              h2 Layout
+              p Grid systems are used for creating page layouts through a series of rows and columns that house your content. This portfolio uses BEMSkel's grid component 
+                a(href="http://bemskel.com/" target="_blank") http://bemskel.com/
+                | &nbsp;a responsive, mobile first, fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases.
+              h5 Grid
+          .spacer.spacer--25
+          .row.guide__item.u-bg-gray-lighter .row
+          .spacer.spacer--25
+          .row
+            .col.col--12.guide__item.u-bg-gray-lighter 12
+          .spacer.spacer--25
+          .row
+            .col.col--6.guide__item.u-bg-gray-lighter 6
+            .col.col--6.guide__item.u-bg-gray-lighter 6
+          .spacer.spacer--25
+          .row
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+            .col.col--1.guide__item.u-bg-gray-lighter 1
+          .spacer.spacer--50
+          .row
+            .col.col--12
+              h5 Header
+              .demo.u-bg-gray-lighter
+                .header(style="position: relative;")
+                  .header__stripe
+                  .header__body.u-ta-center Header
+          .spacer.spacer--50
+          .row
+            .col.col--12
+              h5 Footer
+              .demo.u-bg-gray-lighter
+                .footer(style="position: relative;")
+                  .footer__body.u-ta-center Footer
+        section.design-section#designComponents
+          .row
+            .col.col--12
+              h2 Components
+              p These are the building blocks used in my portfolio. We use these components to display the plethora of content in different hierarchies, forms, and mediums.
+              .spacer.spacer--50
+              h5 Buttons
+              h6 Solid buttons
+              .demo
+                button.btn.btn--primary Primary
+                button.btn.btn--secondary Secondary
+                button.btn.btn--info Info
+                button.btn.btn--warning Warning
+                button.btn.btn--danger Danger
+              h6 Solid buttons
+              .demo
+                button.btn.btn-outline--primary Primary
+                button.btn.btn-outline--secondary Secondary
+                button.btn.btn-outline--info Info
+                button.btn.btn-outline--warning Warning
+                button.btn.btn-outline--danger Danger
+              .spacer.spacer--50
+              h5 Connect
+              .demo
+                .connect
+                  a.connect__icon.connect__icon--mail(href="mailto:parag.ryan@gmail.com?Subject=Hey Ryan")
+                    include _partials/_icon-mail
+                  a.connect__icon.connect__icon--dribbble(href="https://dribbble.com/ryanparag" target="_blank")
+                    include _partials/_icon-dribbble
+                  a.connect__icon.connect__icon--codepen(href="https://codepen.io/ryanparag" target="_blank")
+                    include _partials/_icon-codepen
+                  a.connect__icon.connect__icon--github(href="https://github.com/ryan-parag" target="_blank")
+                    include _partials/_icon-github
+                  a.connect__icon.connect__icon--behance(href="https://behance.net/grapa" target="_blank")
+                    include _partials/_icon-behance
+                  a.connect__icon.connect__icon--resume(href="../resume")
+                    include _partials/_icon-file
+              .spacer.spacer--50
+              h5 Forms
+              .demo
+                .row
+                  .col.col--6
+                    label This is a label
+                    input.u-full-width(type="text" placeholder="Placeholder text")
+                  .col.col--6
+                    label This is a label
+                    select.u-full-width(type="text")
+                      option(disabled selected) Placeholder Option
+                      option Option 1
+                      option Option 2
+                .row
+                  .col.col--12
+                    label.radio
+                      input(type="radio" name="example")
+                      span.radio__label.label-body Option 1
+                      br
+                      input(type="radio" name="example")
+                      span.radio__label.label-body Option 2
+                .row
+                  .col.col--12
+                    textarea.u-full-width(placeholder="This is a textarea")
+              .spacer.spacer--50
+              h5 Lists
+              .demo
+                .row
+                  .col.col--6
+                    ul
+                      li Unordered lists have basic styles
+                      li They use the circle list style
+                      ul
+                        li Nested lists styled to feel right
+                        li Can nest either type of list into the other
+                      li Just more list items
+                  .col.col--6
+                    ol
+                      li Ordered lists also have basic styles
+                      li They use the decimal list style
+                      ul
+                        li Ordered and unordered can be nested
+                        li Can nest either type of list into the other
+                      li Last list item just for the fun
+              .spacer.spacer--50
+              h5 Tables
+              .demo
+                .row
+                  .col.col--6
+                    strong Default
+                    table.table
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+                  .col.col--6
+                    strong Bordered
+                    table.table.table--bordered
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+                .row
+                  .col.col--6
+                    strong Striped
+                    table.table.table--striped
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+                  .col.col--6
+                    strong Hover
+                    table.table.table--hover
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+                .row
+                  .col.col--6
+                    strong Compact
+                    table.table.table--compact
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+                  .col.col--6
+                    strong Responsive
+                    table.table.table--responsive
+                      thead
+                        tr
+                          th First Name
+                          th Last Name
+                          th Team
+                      tbody
+                        tr
+                          td Lewis
+                          td Hamilton
+                          td Mercedes
+                        tr
+                          td Kimi
+                          td Raikkonen
+                          td Ferrari
+                        tr
+                          td Fernando
+                          td Alonso
+                          td McLaren
+              .spacer.spacer--50
+              h5 Main Project
+              .demo
+                a(href="#" data-type="page-transition").main-project.container
+                  .row
+                    .col.col--6
+                      .main-project__hero
+                        img(src="../images/chargebacks911-preview.png")
+                    .col.col--6
+                      .main-project__content
+                        h4.main-project__title Main Project
+                        p This is the description
+              .spacer.spacer--50
+              h5 Media Object
+              .demo
+                .project__role.flex-grid.u-align-center
+                  .project__icon
+                    include _partials/_icon-user
+                  .flex-grid__col
+                    strong.u-display-block This is a title
+                    span This is the description area of the media object. Larger amounts of text can also be inserted into the media object.
+              .spacer.spacer--50
+              h5 Toggle
+              .demo
+                .toggle
+                  include _partials/_icon-sun
+                  .toggle__input
+                    span.toggle__handle
+                  include _partials/_icon-moon
+        .spacer.spacer--100

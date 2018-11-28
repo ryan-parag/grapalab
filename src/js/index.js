@@ -43,3 +43,44 @@ window.addEventListener('load', function(){
 }, false)
 
 console.log('%c It seems like Ryan\'s code is working. If you\'d like to learn more about my experience, get in touch at parag.ryan@gmail.com ', 'background: #05ffda; color: #191e27; font-size: 18px;');
+
+$('.nav [data-section]').click(function() {
+  $('.nav [data-section]').removeClass('active');
+  $(this).addClass('active');
+  const target = $(this).data('section');
+  $('.design-section').removeClass('active');
+  if(target == 'designOverview') {
+    $('#designOverview').addClass('active');
+  } else if(target == 'designColors') {
+    $('#designColors').addClass('active');
+  } else if(target == 'designTypography') {
+    $('#designTypography').addClass('active');
+  } else if(target == 'designIcons') {
+    $('#designIcons').addClass('active');
+  } else if(target == 'designLayout') {
+    $('#designLayout').addClass('active');
+  } else if(target == 'designComponents') {
+    $('#designComponents').addClass('active');
+  }
+});
+
+$('.swatch__grid [data-section]').click(function() {
+  $('.nav  [data-section]').removeClass('active');
+  $(this).addClass('active');
+  const target = $(this).data('section');
+  $('[data-section="' + target + '"]').addClass('active');
+  $('.design-section').removeClass('active');
+  if(target == 'designOverview') {
+    $('#designOverview').addClass('active');
+  } else if(target == 'designColors') {
+    $('#designColors').addClass('active');
+  } else if(target == 'designTypography') {
+    $('#designTypography').addClass('active');
+  } else if(target == 'designIcons') {
+    $('#designIcons').addClass('active');
+  } else if(target == 'designLayout') {
+    $('#designLayout').addClass('active');
+  } else if(target == 'designComponents') {
+    $('#designComponents').addClass('active');
+  }
+});

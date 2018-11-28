@@ -1,0 +1,17 @@
+.design-section {
+  display: none;
+  &.active {
+    display: block;
+    @include slideTransition(200ms, 0px, 200px);
+  }
+}
+
+.demo {
+  padding: 1rem;
+}
+
+.guide__item {
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

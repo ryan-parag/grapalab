@@ -107,17 +107,31 @@
 
 // Color
 
-.u-text-green {
-  color: $color-green !important;
-}
+.u-text-green { color: $color-green !important; }
+.u-text-blue { color: $color-blue !important; }
+.u-text-pink { color: $color-pink !important; }
+.u-text-gray-lightest { color: $gray-lightest !important; }
+.u-text-gray-lighter { color: $gray-lighter !important; }
+.u-text-gray-light { color: $gray-light !important; }
+.u-text-gray { color: $gray !important; }
+.u-text-gray-dark { color: $gray-dark !important; }
+.u-text-gray-darker { color: $gray-darker !important; }
+.u-text-gray-darkest { color: $gray-darkest !important; }
+.u-text-near-black { color: $near-black !important; }
+.u-text-white { color: $white !important; }
 
-.u-text-blue {
-  color: $color-blue !important;
-}
-
-.u-text-pink {
-  color: $color-pink !important;
-}
+.u-bg-green { background: $color-green !important; }
+.u-bg-blue { background: $color-blue !important; }
+.u-bg-pink { background: $color-pink !important; }
+.u-bg-gray-lightest { background: $gray-lightest !important; }
+.u-bg-gray-lighter { background: $gray-lighter !important; }
+.u-bg-gray-light { background: $gray-light !important; }
+.u-bg-gray { background: $gray !important; }
+.u-bg-gray-dark { background: $gray-dark !important; }
+.u-bg-gray-darker { background: $gray-darker !important; }
+.u-bg-gray-darkest { background: $gray-darkest !important; }
+.u-bg-near-black { background: $near-black !important; }
+.u-bg-white { background: $white !important; }
 
 // Project Links
 
