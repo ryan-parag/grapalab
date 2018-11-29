@@ -236,6 +236,10 @@ block content
                   span slack
                 .swatch
                   .swatch__img.u-text-green
+                    include _partials/_icon-slider
+                  span slider
+                .swatch
+                  .swatch__img.u-text-green
                     include _partials/_icon-sun
                   span sun
                 .swatch
@@ -504,21 +508,34 @@ block content
               .spacer.spacer--50
               h5 Main Project
               .demo
-                a(href="#" data-type="page-transition").main-project.container
-                  .row
-                    .col.col--6
+                .row
+                  .col.col--4
+                    a(target="_blank" href= link data-type="page-transition").main-project
                       .main-project__hero
                         img(src="../images/chargebacks911-preview.png")
-                    .col.col--6
                       .main-project__content
-                        h4.main-project__title Main Project
+                        h5.main-project__title Main Project
+                        p This is the description
+                  .col.col--4
+                    a(target="_blank" href= link data-type="page-transition").main-project
+                      .main-project__hero
+                        img(src="../images/chargebacks911-preview.png")
+                      .main-project__content
+                        h5.main-project__title Main Project
+                        p This is the description
+                  .col.col--4
+                    a(target="_blank" href= link data-type="page-transition").main-project
+                      .main-project__hero
+                        img(src="../images/chargebacks911-preview.png")
+                      .main-project__content
+                        h5.main-project__title Main Project
                         p This is the description
               .spacer.spacer--50
               h5 Media Object
               .demo
                 .project__role.flex-grid.u-align-center
                   .project__icon
-                    include _partials/_icon-user
+                    include _partials/_icon-flag
                   .flex-grid__col
                     strong.u-display-block This is a title
                     span This is the description area of the media object. Larger amounts of text can also be inserted into the media object.
@@ -530,4 +547,12 @@ block content
                   .toggle__input
                     span.toggle__handle
                   include _partials/_icon-moon
+              .spacer.spacer--50
+              h5 Images
+              :markdown-it
+                We can add zoom functionality to images through the use of Zoom.js and the adding of a data attribute `data-action="zoom"`
+              .demo
+                .row
+                  .col.col--6
+                    img(src="../images/chargebacks911-preview.png" data-action="zoom")
         .spacer.spacer--100
