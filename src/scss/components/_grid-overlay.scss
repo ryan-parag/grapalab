@@ -1,0 +1,26 @@
+.o-grid {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 100;
+  display: none;
+  &.show-grid {
+  	display: block;
+    @include fadeIn(150ms, 0ms)
+  }
+  &__row {
+    height: 100%;
+  }
+  &__column {
+    background: rgba($color-primary, .15);
+  	border-left: 1px dashed rgba($color-primary, .4);
+  	border-right: 1px dashed rgba($color-primary, .4);
+  	padding-top: 1rem;
+  	padding-bottom: 1rem;
+  	height: 100%;
+  }
+}

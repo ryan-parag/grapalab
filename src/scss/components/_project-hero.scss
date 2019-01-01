@@ -28,4 +28,10 @@
    &--illustrations {
 		@include gradient($color-green, $color-pink);
 	}
+  &--ux-drops {
+    @include gradient(darken(#666fde, 10%), lighten(#666fde, 10%));
+  }
+  &--audiorah {
+    @include gradient(darken(#344bf0, 10%), lighten(#344bf0, 10%));
+  }
 }

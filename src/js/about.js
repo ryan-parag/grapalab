@@ -33,7 +33,7 @@
     {
       text: "likes to draw letters"
     },
-    { 
+    {
       text: "a Floridian with too many denim shirts"
     }
     ];
@@ -47,16 +47,7 @@ var darkTheme = ['#191E27','#2C3849','#444951','#FFFFFF','#2F353E','#E7E7E9','#0
 function themeable(theme) {
 	var demoStuff = document.querySelector('#demoStuff');
 	var themeBorder = theme[4];
-	demoStuff.innerHTML = 
-		`<div style="background: ${theme[0]}; border-color: ${themeBorder};" class="demo__container">
-				<div style="background: ${theme[1]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[2]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[3]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[4]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[5]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[6]}; border-color: ${themeBorder};" class="demo__item"></div>
-				<div style="background: ${theme[7]}; border-color: ${themeBorder};" class="demo__item"></div>
-			</div>`;
+	demoStuff.innerHTML = '<div style="background: ' + theme[0] + '; border-color: ' + themeBorder + ';" class="demo__container"><div style="background: ' + theme[1] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[2] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[3] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[4] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[5] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[6] + '; border-color: ' + themeBorder + ';" class="demo__item"></div><div style="background: ' + theme[7] + '; border-color: ' + themeBorder + ';" class="demo__item"></div></div>';
 }
 
 function slackTheme(x) {

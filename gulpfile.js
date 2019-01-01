@@ -17,7 +17,8 @@ var gulp = require('gulp'),
 	path = require('path'),
 	rename = require('gulp-rename'),
   imagemin = require('gulp-imagemin'),
-  minify = require('gulp-minify');
+  minify = require('gulp-minify'),
+	gutil = require('gulp-util');;
 
 var paths = {
   public: './dist/',
@@ -144,7 +145,8 @@ gulp.task('lint:template', function () {
 ---------------------------------------------*/
 gulp.task('scripts', function (){
 	return gulp.src(paths.js)
-		.pipe(minify())
+		.pipe(uglify())
+		.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
 		.pipe(gulp.dest(paths.public + 'js'))
 });
 

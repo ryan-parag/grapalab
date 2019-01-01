@@ -3,10 +3,11 @@
 var toggle = document.querySelector('.toggle');
 var body = document.querySelector('body');
 body.classList = sessionStorage.getItem('bg');
-toggle.addEventListener('click', () => {
+
+toggle.addEventListener('click', function() {
   toggle.classList.toggle('active');
   body.classList.toggle('dark');
-  
+
   if (sessionStorage.getItem('bg') === 'dark') {
     sessionStorage.setItem('bg', '');
   } else {
@@ -27,7 +28,7 @@ $(function () {
   $(window).focus(function () {
     $("title").text(pageTitle);
   });
-  
+
   if($(body).hasClass('dark')) {
     $(toggle).addClass('active');
   }
@@ -42,12 +43,33 @@ window.addEventListener('load', function(){
     }
 }, false)
 
+// keyboard shortcuts
+document.addEventListener("keydown", keyDownTextField, false);
+
+function keyDownTextField(e) {
+var keyCode = e.keyCode;
+  if(keyCode==71) {
+  document.querySelector('.o-grid').classList.toggle('show-grid');
+  } else if(keyCode==68) {
+    toggle.classList.toggle('active');
+    body.classList.toggle('dark');
+
+    if (sessionStorage.getItem('bg') === 'dark') {
+      sessionStorage.setItem('bg', '');
+    } else {
+      sessionStorage.setItem('bg', 'dark');
+    }
+    body.classList = sessionStorage.getItem('bg');
+		}
+}
+
+
 console.log('%c It seems like Ryan\'s code is working. If you\'d like to learn more about my experience, get in touch at parag.ryan@gmail.com ', 'background: #05ffda; color: #191e27; font-size: 18px;');
 
 $('.nav [data-section]').click(function() {
   $('.nav [data-section]').removeClass('active');
   $(this).addClass('active');
-  const target = $(this).data('section');
+  var target = $(this).data('section');
   $('.design-section').removeClass('active');
   if(target == 'designOverview') {
     $('#designOverview').addClass('active');
@@ -67,7 +89,7 @@ $('.nav [data-section]').click(function() {
 $('.swatch__grid [data-section]').click(function() {
   $('.nav  [data-section]').removeClass('active');
   $(this).addClass('active');
-  const target = $(this).data('section');
+  var target = $(this).data('section');
   $('[data-section="' + target + '"]').addClass('active');
   $('.design-section').removeClass('active');
   if(target == 'designOverview') {
