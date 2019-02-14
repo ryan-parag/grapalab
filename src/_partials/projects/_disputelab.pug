@@ -30,6 +30,51 @@
     .row
       .col.col--12
         :markdown-it
+          ##### Sections
+          Navigate to one of the sections:
+    .row
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#overview")
+          strong Overview
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#designSystem")
+          strong  Design System
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#buildCases")
+          strong  Building New Documents
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#workCases")
+          strong  Working Dispute Cases
+    .row
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#reconfigNav")
+          strong Reconfiguring the Navigation
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#rules")
+          strong  Prioritizing Disputes with Rules
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#merchantAdmin")
+          strong  Managing Disputes with Rules
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#pend")
+          strong  Pausing the Workflow
+    .row
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#reports")
+          strong Creating Custom Reports
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#permissions")
+          strong  Toggling User Permissions
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#emails")
+          strong  Email Notifications
+      .col.col--3
+        a.project__role.u-display-block(data-type="page-transition" href="#marketing")
+          strong  Marketing
+    .spacer.spacer--50
+    .row#overview
+      .col.col--12
+        :markdown-it
           ##### Overview
           In a world where credit card transactions are increasing exponentially, we saw that banks (credit card acquirers), handling the disputes sent from retailers could use a more efficient platform to help them process more disputes.
     .row
@@ -73,8 +118,22 @@
         .col.col--8.col--offset-2
           img(src="../images/disputelab/dl-map-2.png" data-action="zoom")
           figcaption User journey for normal and admin users
-          .spacer.spacer--50
+      .spacer.spacer--50
       .row
+        .col.col--12
+          :markdown-it
+            As the sole designer on the team, I thought it would be easy to not only keep track of **in progress** designs through a simple list in which developers, PM's, and support teams could easily sift through, but also be a way great way to test a few expiremental UI components.
+            
+            While we've used tools such as InVision, Axure, and simple PDF's before for step-by-step UI walkthroughs, it seemed as though I receieved *feedback quicker and more efficiently by using Google Slides* - so I made sure each list item linked to the respective feature document.
+            
+            The simple list was built using simple BEM-flavored HTML, SCSS, modern JS, and the design tokens we've used across DisputeLab - along with a few experimental features (CSS Variables, dark mode toggles, etc.).
+      .spacer.spacer--50
+      .row
+        .col.col--8.col--offset-2
+          img(src="../images/disputelab/ui-list.png" data-action="zoom")
+          figcaption Simple List documenting the respective feature design documentation
+      .spacer.spacer--50
+      .row#designSystem
         .col.col--12
           :markdown-it
             ##### Design System
@@ -113,7 +172,7 @@
             img(src="../images/disputelab/dl-prelude-4.png" data-action="zoom")
           .col.col--4
             img(src="../images/disputelab/dl-prelude-5.png" data-action="zoom")
-        .row
+        .row#buildCases
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -122,7 +181,7 @@
         .row
           .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-template.png" data-action="zoom")
-        .row
+        .row#workCases
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -136,6 +195,9 @@
             img(src="../images/disputelab/dl-work.png" data-action="zoom")
             figcaption Early exploration of working a case
         .spacer.spacer--25
+        .row
+          .col.col-12
+            h5 Version 1
         .row
           .col.col--2
             img(src="../images/disputelab/dl-work-1.png" data-action="zoom")
@@ -157,11 +219,41 @@
           .col.col--2
             img(src="../images/disputelab/dl-work-10.png" data-action="zoom")
         .row
+          .col.col-12
+            h5 Version 2
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc1.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc2.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc3.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc4.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc5.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc6.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc7.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc8.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc10.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc11.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-nwc12.png" data-action="zoom")
+        .row
           .col.col--8.col--offset-2
+            .spacer.spacer--50
             a(target="_blank" href="https://codepen.io/ryanparag/full/rQZLQm/")
               img(src="../images/disputelab/dl-work-7.png")
               figcaption Click to view layout markup
-        .row
+        .row#reconfigNav
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -170,7 +262,77 @@
         .row
           .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-sidebar.png" data-action="zoom")
+        .row#rules
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Building Rules for easier workflows
+              One of the main pain points our clients were having with their legacy processes was the tedious workflow caused by non-automated workflows. With a numerous amount of credit card disputes coming from the exponential growth in credit casrd transactions, dispute teams at banks needed a way to route, filter, and take action on large batches of cases coming through their system.
+              
+              Using DisputeLab's rule engine, users are able to create modular rules targeting specific criteria, and subsequently take various types of actions (eg. assigning, declining, routing, pausing) on these disputes.
+              
+              We also separated the rule engine into two parts:
+              - Single, interval rules
+              - Sequential rule groups
+              
+              Rule groups allowed users to build rules in grouped sequences; part of an encapsulated `if/else` scenario.
         .row
+          .col.col--12
+            h5.u-text-green Single, interval rules
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-rules1.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules2.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules3.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules4.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules5.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules6.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-rules7.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules8.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules10.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rules11.png" data-action="zoom")
+        .row
+          .col.col--12
+            h5.u-text-green Sequential rule groups
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-rg3.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg4.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg5.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg6.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg7.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg8.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-rg9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg10.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg11.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg12.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg13.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-rg14.png" data-action="zoom")
+        .row#merchantAdmin
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -214,7 +376,7 @@
             img(src="../images/disputelab/dl-merchant-11.png" data-action="zoom")
           .col.col--4
             img(src="../images/disputelab/dl-merchant-12.png" data-action="zoom")
-        .row
+        .row#pend
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -240,7 +402,7 @@
         .row
           .col.col--12
             img(src="../images/disputelab/dl-pend-grid.png" data-action="zoom")
-        .row
+        .row#reports
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -291,7 +453,54 @@
             img(src="../images/disputelab/dl-reports-14.png" data-action="zoom")
           .col.col--2
             img(src="../images/disputelab/dl-reports-15.png" data-action="zoom")
+        .row#permissions
+          .col.col--12
+            .spacer.spacer--50
+            :markdown-it
+              ##### Permissions
+             We needed a way for admin users to toggle features on system and custom roles through an easy-to-use interface. One of the complex elements about permissions is the fact that permissions work in hierarchy:
+             - Page permissions
+             - Feature permissions
+             
+             We built simple toggles for each page, alongside micro feature toggles respective to each page.
         .row
+          .col.col--2
+            img(src="../images/disputelab/dl-permission1.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission2.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission3.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission4.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission5.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission6.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-permission7.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission8.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission9.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission10.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission11.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission12.png" data-action="zoom")
+        .row
+          .col.col--2
+            img(src="../images/disputelab/dl-permission13.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission14.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission15.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission16.png" data-action="zoom")
+          .col.col--2
+            img(src="../images/disputelab/dl-permission18.png" data-action="zoom")
+        .row#emails
           .col.col--12
             .spacer.spacer--50
             :markdown-it
@@ -317,7 +526,7 @@
         .row
           .col.col--8.col--offset-2
             img(src="../images/disputelab/dl-prelude-6.png" data-action="zoom")
-        .row
+        .row#marketing
           .col.col--12
             :markdown-it
               ##### Landing Pages
@@ -330,6 +539,33 @@
               img(src="../images/disputelab/dl.gif")
               figcaption
                 small Landing page idea
+        .row
+          .col.col--12
+            :markdown-it
+              ##### User Training & Documentation
+              To help users understand how to use the basic and complex features of DisputeLab, we needed to build out a documentation site. We also needed a way for non-dev members to add/edit content on each documentation site.
+              
+              Along with the tutorial documentation, enterprise clients would probably need to utilize a status page to keep track of the handful of testing versions of the application and API. Rather than use the full weight of DisputeLab's UI, I thought to create a **lightweight version** of the UI using the design tokens we use within the application.
+              
+              Also, since we were moving the front-end portions of DisputeLab towards a React build, we thought Gatsby.js might be a nice way to migrate and test how a few of the basic components might function within a modern JS framework. Gatsby also had the ability to utilize Netlify, an open-source CMS, so team members could add/edit new content without having to dive into the code.
+        .spacer.spacer--50      
+        .row
+          .col.col--8.col--offset-2
+            img(src="../images/disputelab/drm-docs.png" data-action="zoom")
+            figcaption
+              small Documentation Site
+            .spacer.spacer--50
+        .row
+          .col.col--8.col--offset-2
+            img(src="../images/disputelab/drm-status.png" data-action="zoom")
+            figcaption
+              small Application and API Status Page
+            .spacer.spacer--50
+        .row
+          .col.col--12
+            p.codepen(data-height='600', data-theme-id='0', data-default-tab='result', data-user='ryanparag', data-slug-hash='c12cfd3ea2695c68b7d23a6798783f58', style='height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;', data-pen-title='Status Page docs')
+            script(async='', src='https://static.codepen.io/assets/embed/ei.js')
+
             
 .container
   .row
