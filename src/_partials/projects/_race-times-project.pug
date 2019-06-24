@@ -1,0 +1,168 @@
+.project
+  .project__hero.project__hero--cb911
+    img.project__hero-image(src="../images/race-times/race-times-header.png")
+  .container
+    .row
+      .col.col--12
+        .project__header
+          .spacer.spacer--75
+          :markdown-it
+            ## Race Times
+            ##### Tracking the local race times of the race calendar
+          .project__border
+        .spacer.spacer--25
+    .row 
+      .col.col--6
+        .project__role.flex-grid.u-align-center
+            .project__icon
+              include ../_icon-user
+            .flex-grid__col
+              strong.u-display-block Specifications
+              span A small, personal side project to try and create the easiest way to track Formula 1 races per my local time zone.
+      .col.col--6
+        .project__role.flex-grid.u-align-center
+            .project__icon
+              include ../_icon-slider
+            .flex-grid__col
+              strong.u-display-block Tools
+              span Figma, CodePen, Atom, GitHub, HTML, SCSS, Javascript, Bear Notes, Google Forms, Ergast Formula 1 API
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        :markdown-it
+          ##### Overview
+          Millions of people, from a variety of time zones, tune in to watch the next Grand Prix every other Sunday (or Saturday night, depending on the time zone). But scheduling a fixed time to watch on race day is difficult due to:
+          - Different race locations for each Grand Prix
+          - Worldwide viewership
+          - Varied race time in the race location
+          - Difficulty in finding the race time translated per the user's time zone
+
+          Unlike a national sport, such as basketball or American football, set times are a bit more difficult to schedule for Formula 1. In order for a viewer to gauge when the next race will be, they either have to dig past multiple clicks on the official Formula 1 website/app, or utilize Google Search for realtime updates on the searched race.
+    .row
+      .col.col--6.col--offset-3
+        .spacer.spacer--25
+        img(data-action="zoom" src="../images/race-times/race-times-1.png")
+        .spacer.spacer--25
+        .u-ta-center
+          a.btn.btn--primary(href="/f1-race-times/" target="_blank") View the Live Tool
+        .spacer.spacer--50
+    .row
+      .col.col--12
+        :markdown-it
+          ##### Scenario Goals
+
+          Now that I had nailed down some of the MVP features of this tool, I needed to start putting pen to paper and ideating upon the scenario goals. While there is no real business need currently, I could still utilize the Lean UX method to wireframe, test, critique, and prototype this idea.
+    .row
+      .col.col--4
+        .project__role
+          strong.u-text-green Goal #1
+          br
+          span I want to quickly see what time the next Formula 1 race starts per my time zone.
+      .col.col--4
+        .project__role
+          strong.u-text-green Goal #2
+          br
+          span I want to see which Formula 1 races are left in the current season, as well as which have ended.
+      .col.col--4
+        .project__role
+          strong.u-text-green Goal #3
+          br
+          span I want to see simple historical data (circuits, race locations, etc) on past Formula 1 races.
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        :markdown-it
+
+          ##### Initial Wireframes
+          To not waste too much time, I crafted a few simple wireframe layouts that would show the race calendar inside of a list view. A simple tab component was included to help filter the selected season's races and generate the update within the list.
+    .row
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-2.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-3.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-4.png")
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        :markdown-it
+          ##### Design System
+
+          After looking through a few wireframe ideas, Itook inventory of what components and foundational UI I would need in order to begin a build out. Using Figma, I began documenting the design tokens and used them to start building the components within the design tool.
+    .row
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-5.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-6.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-7.png")
+    .row
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-8.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-9.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-10.png")
+    .row
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-11.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-12.png")
+      .col.col--4
+        img(data-action="zoom" src="../images/race-times/race-times-13.png")
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        :markdown-it
+          ##### Design & Build
+
+          Using the wireframes, high-fidelity mockups, and design notes, I set out to create a simple tool using HTML (PUG), SCSS, and Javascript. By connecting to the Ergast Formula 1 API, I could gather realtime data of races and seasons.
+    .row
+      .col.col--8.col--offset-2
+        img(data-action="zoom" src="../images/race-times/race-times-14.png")
+    .spacer.spacer--50
+    .row
+      .col.col--6
+        :markdown-it
+          ##### Selecting Seasons
+
+          Users are able to select a season from the dropdown - thereby re-generating the list of races.
+      .col.col--6
+        img(data-action="zoom" src="../images/race-times/race-times-15.png")
+    .spacer.spacer--50
+    .row
+      .col.col--6
+        img(data-action="zoom" src="../images/race-times/race-times-16.png")
+      .col.col--6
+        :markdown-it
+          ##### Dark Mode
+
+          By using mapped design tokens, in the form of CSS variables, users may be able to toggle between light and dark modes.
+    .spacer.spacer--50
+    .row
+      .col.col--6
+        :markdown-it
+          ##### Filtering Races
+
+          Users may use the tab bar to quickly filter between upcoming and past races in the currently selected season. If they wish to view the full season calendar, past races will be visibly faded in order to differentiate between past and upcoming races.
+      .col.col--6
+        img(data-action="zoom" src="../images/race-times/race-times-17.png")
+    .spacer.spacer--50
+    .row
+      .col.col--6
+        img(data-action="zoom" src="../images/race-times/race-times-18.png")
+      .col.col--6
+        :markdown-it
+          ##### Empty States
+
+          If there are no past or upcoming races when a user selects the respective tab filter, an empty state eill be generated - prompting the user to change their selection to an option that may contain filled data.
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        .u-ta-center
+          a.btn.btn--primary(href="/f1-race-times/" target="_blank") View the Live Tool
+    .spacer.spacer--100
+.container
+  .row
+    .col.col--6.col--offset-3
+      include ../_more-work

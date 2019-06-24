@@ -1,3 +1,11 @@
+mixin snippet(link,img,title,content)
+  .col.col--3
+    a(target="_blank" href= link data-type="page-transition").main-project
+      .main-project__hero
+        img(src= img)
+      .main-project__content
+        h6.main-project__title= title
+
 .project
   .project__hero.project__hero--cb911
     img.project__hero-image(src="../images/chargebacks911/cb911-header.png")
@@ -77,6 +85,16 @@
             In order to understand the purpose of each of our solutions, I had to understand our internal methods, as well as the overall payments process - specifically credit card disputes. I jumped into a world rife with corporate acronyms, business rules, and convoluted logic.
 
             One of the largest areas creating bottlenecks in our internal process was the gathering of client data and creating an account on behalf of the client. Our teams would go through rounds of back and forth with clients asking for third-party login credentials, retailer information, types of products sold, etc. **We simply needed to rethink this entire process**.
+      .row
+        .col.col--12
+          :markdown-it
+            ##### Projects
+            Use one of the sections below to dive deeper into a few of teh projects I helped design at Chargebacks911:
+      .row
+        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-wizard.png", "Wizard & Merchant App")
+        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-email.png", "Email Signature Generator")
+        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-ers.png", "Internal Management Tool")
+        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-web.png", "Marketing Design & Blog")
       .row
         .col.col--12
           .spacer.spacer--50
