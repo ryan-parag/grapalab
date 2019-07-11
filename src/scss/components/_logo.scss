@@ -6,10 +6,10 @@
 	a {
 		display: block;
 		color: inherit;
+		transition: all 150ms ease-in-out;
 	}
 	a:hover {
 		transform: scale(1.02);
-		transition: all 150ms ease-in-out;
 		.logo__icon {
 			color: $color-green;
 			transition: all 150ms ease-in-out;

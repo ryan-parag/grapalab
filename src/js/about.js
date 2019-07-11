@@ -35,6 +35,9 @@
     },
     {
       text: "a Floridian with too many denim shirts"
+    },
+    {
+      text: "fumbling through learning new things"
     }
     ];
   var roleRandom = roles[Math.floor(Math.random() * roles.length)];
