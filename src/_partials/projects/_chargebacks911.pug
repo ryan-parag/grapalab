@@ -1,10 +1,10 @@
 mixin snippet(link,img,title,content)
-  .col.col--3
-    a(target="_blank" href= link data-type="page-transition").main-project
+  .col.col--6
+    a(href= link data-type="page-transition").main-project
       .main-project__hero
         img(src= img)
       .main-project__content
-        h6.main-project__title= title
+        h5.main-project__title= title
 
 .project
   .project__hero.project__hero--cb911
@@ -58,44 +58,48 @@ mixin snippet(link,img,title,content)
         :markdown-it
           ##### Overview
     .row
-      .col.col--12
+      .col.col--6
         :markdown-it
           Chargebacks911® provides cutting-edge, highly-scalable enterprise solutions and specialized consulting for chargeback compliance, risk mitigation, and dispute management - **which simply means providing solutions for businesses dealing with falsely protested credit card charges**. The company’s dynamic technologies and tactical data analysis help decrease the negative impacts of chargebacks and disputes, thereby increasing customer retention and revenues. Chargebacks911 is recognized as the world’s leading service provider for comprehensive dispute mitigation and remediation technology.
-          
+
+          Although I juggled between a role as the designer on the marketing team and the sole designer on our application development team (30+ team members), it came as a blessing in disguise - it allowed me to see exacly how we could reach companies who needed a profit-optimizing solution, and how we could develop a solution to do just that. While at Chargebacks911, [**I was also chosen to join a small team to develop a dispute management application for enterprise banks. Check it out!**](../disputelab)
+      .col.col--6
+        img(src="../images/chargebacks911/cb911-service.png" data-action="zoom")
+    .spacer.spacer--75      
     .row
       .col.col--12
         blockquote
-          p
-            strong.u-text-green What is a chargeback? 
-            | It's difficult to explain how the entire process works, and if I tried to explain the entire thing on here, it would probably bore you to death - but when customers file a chargeback with their card issuer, this means that they are disputing a charge and request the card issuer for a refund. A chargeback is a transaction that a card issuer returns to an acquirer as a financial liability and which, in turn, an acquirer may return to the merchant. There are three common reasons for chargeback including fraud, processing errors, other disputes (e.g. customer disputes). The card schemes define the chargeback process, rules and regulations.
-
-    .row
-      .col.col--12
-        :markdown-it
-          Although I juggled between a role as the designer on the marketing team and the sole designer on our application development team (30+ team members), it came as a blessing in disguise - it allowed me to see exacly how we could reach companies who needed a profit-optimizing solution, and how we could develop a solution to do just that. While at Chargebacks911, [**I was also chosen to join a small team to develop a dispute management application for enterprise banks. Check it out!**](../disputelab)
+          h5.u-text-green What is a chargeback? 
+          p It's difficult to explain how the entire process works, and if I tried to explain the entire thing on here, it would probably bore you to death - but when customers file a chargeback with their card issuer, this means that they are disputing a charge and request the card issuer for a refund.
+          p 
+            strong A chargeback is a transaction that a card issuer returns to an acquirer as a financial liability and which, in turn, an acquirer may return to the merchant. 
+            | There are three common reasons for chargeback including fraud, processing errors, other disputes (e.g. customer disputes). The card schemes define the chargeback process, rules and regulations.
           
         .spacer.spacer--50
     .project__content
+      .spacer.spacer--50
       .row
         .col.col--12
           :markdown-it
             ##### Research
-            When I joined Chargebacks911, it seemed as if design and product requirements were driven only by the business and client needs. Years of this process resulted in a broken user experience. After jumping into this process head first, I realized we needed to build a UX foundation that was rooted in user research, collaboration, and iterative prototyping.
+            I was Designer #1 when I joined Chargebacks911 and it seemed as if design and product requirements were driven only by the business and client needs. Years of this process resulted in a broken user experience. After jumping into this process head first, I realized we needed to build a UX foundation that was rooted in user research, collaboration, and iterative prototyping.
             
             In order to understand the purpose of each of our solutions, I had to understand our internal methods, as well as the overall payments process - specifically credit card disputes. I jumped into a world rife with corporate acronyms, business rules, and convoluted logic.
 
             One of the largest areas creating bottlenecks in our internal process was the gathering of client data and creating an account on behalf of the client. Our teams would go through rounds of back and forth with clients asking for third-party login credentials, retailer information, types of products sold, etc. **We simply needed to rethink this entire process**.
+      .spacer.spacer--75
       .row
         .col.col--12
           :markdown-it
             ##### Projects
-            Use one of the sections below to dive deeper into a few of teh projects I helped design at Chargebacks911:
+            Use one of the sections below to dive deeper into a few of the projects I helped design at Chargebacks911:
       .row
-        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-wizard.png", "Wizard & Merchant App")
-        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-email.png", "Email Signature Generator")
-        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-ers.png", "Internal Management Tool")
-        +snippet("https://codepen.io/ryanparag/pen/YdeOxB", "../images/chargebacks911/cb911-sec-web.png", "Marketing Design & Blog")
+        +snippet("#wizard", "../images/chargebacks911/cb911-sec-wizard.png", "Wizard & Merchant App")
+        +snippet("#email", "../images/chargebacks911/cb911-sec-email.png", "Email Signature Generator")
       .row
+        +snippet("#internal", "../images/chargebacks911/cb911-sec-ers.png", "Internal Management Tool")
+        +snippet("#marketing", "../images/chargebacks911/cb911-sec-web.png", "Marketing Design & Blog")
+      .row#wizard
         .col.col--12
           .spacer.spacer--50
           :markdown-it
@@ -242,7 +246,7 @@ mixin snippet(link,img,title,content)
         .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-styles-1.png" data-action="zoom")
           .spacer.spacer--50
-    .project__content
+    .project__content#email
       .row
         .col.col--12
           .spacer.spacer--50
@@ -272,7 +276,7 @@ mixin snippet(link,img,title,content)
           a(href="https://codepen.io/ryanparag/full/1c77a9a0faa08ee19fc6d3741eadda14" target="_blank")
             img(src="../images/chargebacks911/signature-v2.png")
             figcaption Click to see Version 2 on CodePen!
-      .row
+      .row#internal
         .col.col--12
           .spacer.spacer--50
           :markdown-it
@@ -312,7 +316,7 @@ mixin snippet(link,img,title,content)
       .row
         .col.col--8.col--offset-2
           img(src="../images/chargebacks911/cb911-ers-7.png" data-action="zoom")
-    .project__content
+    .project__content#marketing
       .row
         .col.col--12
           .spacer.spacer--50

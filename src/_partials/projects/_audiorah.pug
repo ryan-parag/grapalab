@@ -24,23 +24,24 @@
           ##### Overview
           AudioRah is musical artist and DJ who focuses his music around blending genres and closing the gap between oldern and modern areas of music. He wanted a simple website where prospective clients and new listeners could find him as well as listen to his newest mixes and sets.
           
-          On top of a new website, ge also wanted to brand his artist moniker to something unique and bold.
+          On top of a new website, we also wanted to brand his artist moniker to something unique and bold.
     .spacer.spacer--50
     .row
-      .col.col--12
+      .col.col--6
+        img(data-action="zoom" src="../images/audiorah/interface.png")
+      .col.col--6
+        .spacer.spacer--75
         :markdown-it
           ##### The Branding and Design Tokens
           We used bold colors and strong typography to add some modern, brutalist elements to both the branding and the interface components. Doing so helps the branding remain unique amongst a sea of minimally-branded musical artists.
+        .u-ta-left
+          .spacer.spacer--25
+          a.btn.btn--primary(href="http://audiorah.com" target="_blank") Visit the website
     .row
-      .col.col--6.col--offset-3.u-ta-center
-        .spacer.spacer--25
-        a.btn.btn--primary(href="http://audiorah.com" target="_blank") Visit the website
-    .row
-      .col.col--6.col--offset-3
+      .col.col--6
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/cover.png")
-    .row
-      .col.col--6.col--offset-3
+      .col.col--6
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/breakdown.png")
     .row
@@ -58,34 +59,37 @@
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/type.png")
     .row
-      .col.col--12
+      .col.col--6
         :markdown-it
           ##### Website Design
           Using teh SoundCloud SDK and API, I was able to gather his latest mixes and populate a list dynamically on the front-end. Users are now able to play/pause any of his latest sets directly from his website within a responsive audio player. 
           
           Rather than use a static-site builder, WordPress, or and design tool options (eg. WebFlow, Squarespace, Wix, etc.), I decided I could work fastest and build for scalability by using simple  HTML (PUG), CSS (SCSS), and JS. While also being the fastest for my workflow on this project, I thought it would also help make the most out of the design tokens we chose without interference from any third-party, opionated libraries.
-    .row
-      .col.col--6.col--offset-3
+        .u-ta-left
+          .spacer.spacer--25
+          a.btn.btn--primary(href="http://audiorah.com" target="_blank") Visit the website
+      .col.col--6
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/interface.png")
+    .spacer.spacer--75
     .row
-      .col.col--6.col--offset-3
+      .col.col--6
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/components.png")
-    .row
-      .col.col--6.col--offset-3
+      .col.col--6
         .spacer.spacer--25
         img(data-action="zoom" src="../images/audiorah/interface-1.png")
     .spacer.spacer--50
     .row
       .col.col--12
         :markdown-it
-          ##### Conclusion
-          While this is currently only a single page webiste with a handful of components, I hop to add a few more functional items if things test well:
+          ##### Conclusion and Next Steps
+          While this is currently only a single page webiste with a handful of components, I hope to add a few more functional items if things test well. Based on user feedback and industry trends, it might be worthwhile to work on future explorations to inspire larger engagement, more features, and more seamless integration of what users might want. As the content matures I should iterate on the website and make it simpler and more useful for our users.:
           - Newlsetter sign-up
           - Instagram feed integration
           - Video player
           - Detailed booking form
+          - Social media tracking
         .spacer.spacer--100
 .container
   .row

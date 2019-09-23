@@ -1,6 +1,6 @@
 mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
   li
-    strong= paramCo
+    strong.u-text-green= paramCo
     br
     strong= paramPos
     span= '   (' + timeStart + " - " + timeEnd + ")"
@@ -13,8 +13,12 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
   .spacer.spacer--100
   .row
     .col.col--8
+      span
+        a.link(href="../about/") About
+        | &nbsp;/ 
+      strong Resume
       :markdown-it
-        ### Hello, I'm Ryan. I'm a multidisciplinary designer and problem solver.
+        #### Hello, I'm Ryan. I'm a multidisciplinary designer and problem solver.
         I’m driven to learn why people do what they do so I can create experiences that are intuitive and successful. I’ve helped rethink, prototype and design solutions to help bring empathy and simplicty into complex problems.
 
         Currently, I am a Product Designer at Masonite where I help simplify the home remodeling experience for contractors and homeowners.
@@ -53,10 +57,10 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
       :markdown-it
         ##### Professional Experience
       ul(style="list-style-type: none;")
-        +xp('Product Designer', 'Masonite', 'March 2019', '', 'Working on multiple product experiences that may help flatten and simplify the home remodoling experience for homeowners and contractors.')
+        +xp('Product Designer', 'Masonite', 'March 2019', 'Present', 'Working on multiple product experiences that may help flatten and simplify the home remodeling experience for homeowners and contractors in new and emerging markets.')
         +xp('Product Designer', 'Chargebacks911', 'May 2016', 'March 2019', 'Lead designer working between multiple engineering, executive, and marketing teams. Led the design of two legacy applications and one new application for clients in the enterprise payments space. Worked on UX flows, design systems, rapid prototyping, user journeys, marketing assets, and live product. Increased qualified web traffic by 400% and inbound leads by 250%.')
         +xp('Freelance', 'GrapaLab', '2009', '', 'Managed  product  and  branding  projects  for  clients  like  World Rugby,  the governing body of rugby ,  LinkMe,  a meeting app startup,  and  Patellini\'s,  an Italian restaurant chain')
-        +xp('Healthcare Analyst', 'Xcenda', 'June 2015', 'May 2016', 'Analyzed data to measure pharmaceutical outcomes, investigated key business problems through quantitative analyses of  pharmaceutical cost data. ')
+        +xp('Healthcare Analyst', 'Xcenda', 'June 2013', 'May 2016', 'Analyzed data to measure pharmaceutical outcomes, investigated key business problems through quantitative analyses of pharmaceutical cost data. Helped forecast business decisions against market outcomes and parent company (AmerisourceBergen) goals. Verfied report data in relation to population demographics, cost, and insurance.')
   .row
     .col.col--3
       h5 Skills
@@ -88,14 +92,14 @@ mixin xp(paramPos, paramCo, timeStart, timeEnd, content)
     .col.col--8
       :markdown-it
         ##### Design Approach
-        **I believe that the smallest UX details greatly impact a product’s success.**
-        I have the ability to envision each product, regularly changing vantage points, from the smallest interaction to the design system it sits in, and how it impacts the larger strategy.
+        **Small Details vs. Business Needs.**
+        I like to envision products from end-to-end &mdash; from the smallest interaction to the design system it sits in, and how it impacts the larger business strategy.
         
-        **The magic happens in collaboration. I have the ability and desire to foster collaboration.**
-        I begin by connecting at the individual level and across silos, to bubble up different points of view. This results in a robust vision and shared point of view that everyone is excited to build.
+        **Collaboration**
+        I like connecting at the individual level and across silos, bubbling up different points of view. I think having a shared vision helps design a product that everyone is excited to build.
         
-        **One of my top priorities is to fully embody the person using the product.**
-        I have developed a range of thought exercises to ensure that I keep my beginner’s mind well-tuned. These allow me to consistently review and direct designs as if I was a brand new user.
+        **T-shaped**
+        I dont think designers are defined by the tools we use &mdash; I think our ability to be flexible in the tools we use and how we look at unique problems characterize a product designer. I think our toolbox should be defined by the problems-at-hand and how we can work with our surrounding teams.
   .row
     .col.col--6
       :markdown-it

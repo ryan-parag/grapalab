@@ -5,7 +5,7 @@
   .row
     .col.col--12
       h1 Hey, I'm Ryan
-      h3 Designer,  problem solver, and 
+      h4 Designer,  problem solver, and 
         span.u-text-green#textRotate
   .spacer.spacer--25
   .row
@@ -37,21 +37,42 @@
         |, 
         strike Sketch
         |, 
-        strong Figma, Atom, Bear Notes
+        strong Figma
+        | , 
+        strike Atom
+        | , 
+        strong VS Code, 
+        strike Bear Notes
+        | , 
+        strong Notion + Airtable
         | , 
         strike black coffee
         | , 
         strong green tea
       .spacer.spacer--50
+  .spacer.spacer--50
   hr
-  .spacer.spacer--25
+  .spacer.spacer--75
   .row
     .col.col--6
-      h4
+      h5
         span.u-text-pink
           include _icon-slider
         | &nbsp;Portfolio Style Guide
       p As a documentation nerd, I thought it would not only be fun to showcase the assets that help make this portfolio possible, but also be helpful to do a design inventory and build more efficient design patterns.
+      details
+        summary How was this portolio designed and developed?
+        div(style="padding:16px; background: rgba(0,0,0,0.07)")
+          .spacer.spacer--25
+          p Like any designer, my portfolio is really never finished and is in a constant state of having the code reworked. I put together this portfolio using Pug (HTML), SCSS (CSS), a little bit of Javascript, and help from the following front-end resources:
+          ul
+            li
+              a.link(target="_blank" href="http://bemskel.com/") BEM-flavored Grid and SCSS architecture from BEMSkel
+            li
+              a.link(target="_blank" href="https://fonts.google.com/specimen/IBM+Plex+Sans") IBM Plex Sans for typography
+            li
+              a.link(target="_blank" href="https://github.com/fat/zoom.js/") Zoom.js for some sweet zoom on images
+      .spacer.spacer--25
       p
         strong Keyboard Shortcuts:
       p
@@ -64,7 +85,7 @@
       a.btn.btn--primary(href="../style-guide") Check out the style guide!
       .spacer.spacer--50
     .col.col--6
-      h4
+      h5
         span.u-text-pink
           include _icon-slack
         | &nbsp;Slack it up!
@@ -81,25 +102,21 @@
       button.btn.btn--primary(onclick="slackTheme('light')") Light Theme
       button.btn.btn--secondary(onclick="slackTheme('dark')") Dark Theme
       #copyValidate.u-text-pink
+  .spacer.spacer--25
   hr
-  .spacer.spacer--25
   .row
-    .col.col--6
-      h4
-        include _icon-book-open
-        |&nbsp;What I'm reading.
-      p Just a few pieces of writing about design (and some tertiary stuff) that I enjoy, that I hope you might enjoy as well.
-  .spacer.spacer--25
-  include _reading
-  hr
-  .spacer.spacer--25
-  .row
-    .col.col--6
-      include _more-work
-      .spacer.spacer--100
     .col.col--6
       .spacer.spacer--50
-      h5 Current Interests:
+      h5
+        include _icon-book-open
+        |&nbsp;What I'm currently reading
+      include _reading
+    .col.col--6
+      .spacer.spacer--50
+      h5
+        span.u-text-pink
+          include _icon-user
+        |&nbsp;Current Interests
       .project__role.flex-grid.u-align-center
         .project__icon
           include _icon-user
@@ -110,10 +127,41 @@
         .project__icon
           include _icon-code
         .flex-grid__col
-          span Design system architecture with React and Vue
+          span Design system architecture with React, Figma, styled components, and content principles
       .project__role.flex-grid.u-align-center
         .project__icon
           include _icon-flag
         .flex-grid__col
           span Chillin' with my homies on the go-kart track
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-code
+        .flex-grid__col
+          span Learning 
+            a.link(href="https://developer.apple.com/xcode/swiftui/" target="_blank") SwiftUI
+            | &nbsp; to help build elegant and intuitive product experiences for mobile apps on iOS
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-mail
+        .flex-grid__col
+          span Probably collecting a ton of tabs in my browser, but am ironically an 
+            a.link(href="https://whatis.techtarget.com/definition/inbox-zero" target="_blank") inbox zero
+            | &nbsp;person 🤷
+      .spacer.spacer--75
+  hr
+  .spacer.spacer--25
+  .row
+    .col.col--6
+      include _more-work
+      .spacer.spacer--100
+    .col.col--6
+      .spacer.spacer--50
+      :markdown-it
+        ##### How can I help?
+
+        If you have a dope side project idea or want to trade project/portfolio feedback, I'd love to help out in any way I can. I probably won't always have answers, but I think I can be a helpful listener to bounce questions back and forth. If you have other design questions, that’s fine too!
+
+        If you're in the Tampa Bay area, I'd love to chat over coffee, tea, seltzer water, coke zero, whatever really ☕️ &mdash; [let's chat](mailto:parag.ryan@gmail.com)!
+
+        If I don't reply right away, please follow up – sometimes things slip through the cracks! But I'll do my best to reply quickly.
       .spacer.spacer--100

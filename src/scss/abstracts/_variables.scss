@@ -2,6 +2,75 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+$spacing-unit: 0.8rem;
+
+$type-margin: $spacing-unit*2;
+$base-font-size: 1.6rem;
+
+$typography: (
+	h1: (
+		font-size: 6.8rem,
+		line-height:111%,
+		font-weight: 700,
+	),
+	h2: (
+		font-size: 5.6rem,
+		line-height:135%,
+		font-weight: 700,
+	),
+	h3: (
+		font-size: 4.4rem,
+		line-height:135%,
+		font-weight: 700,
+	),
+	h4: (
+		font-size: 3.6rem,
+		line-height:135%,
+		font-weight: 700,
+	),
+	h5: (
+		font-size: 2.8rem,
+		line-height:135%,
+		font-weight: 600,
+	),
+	h6: (
+		font-size: $base-font-size,
+		line-height:135%,
+		font-weight: 600,
+	),
+	p: ( 
+		line-height:170%,
+		font-weight: 400,
+		margin-top: 0,
+		margin-bottom: $type-margin
+	),
+	small: (
+		font-size: 1.4rem,
+		font-weight: 400,
+	)
+);
+
+$typography-mobile: (
+	h1: (
+		font-size: 4.0rem,
+	),
+	h2: (
+		font-size: 3.6rem,
+	),
+	h3: (
+		font-size: 3.0rem,
+	),
+	h4: (
+		font-size: 2.4rem,
+	),
+	h5: (
+		font-size: 1.8rem,
+	),
+	h6: (
+		font-size: 1.5rem,
+	)
+);
+
 // Breakpoints
 $bp-larger-than-mobile    : "min-width: 400px" !default;
 $bp-larger-than-phablet   : "min-width: 550px" !default;
@@ -14,22 +83,40 @@ $line-height:            2.4rem !default;
 $global-radius:          .2rem !default;
 $border-color:            #bbb !default;
 
+$grey-900: hsla(220, 24%, 7%, 1);
+$grey-800: hsla(220, 21%, 13%, 1);
+$grey-700: hsla(220, 18%, 21%, 1);
+$grey-600: hsla(220, 15%, 29%, 1);
+$grey-500: hsla(220, 12%, 37%, 1);
+$grey-400: hsla(220, 9%, 68%, 1);
+$grey-300: hsla(220, 6%, 76%, 1);
+$grey-200: hsla(220, 3%, 91%, 1);
+$grey-100: hsla(0, 0%, 96%, 1);
 
 // Gray colors for theme
-$gray-lightest:          #F5F5F5;
+/*$gray-lightest:          #F5F5F5;
 $gray-lighter:           #E7E7E9;
 $gray-light:             #C2C1C3;
 $gray:                   #ADADB0;
 $gray-dark:              #595D64;
 $gray-darker:            #444951;
 $gray-darkest:           #2f353e;
-$near-black: 						#191e27;
-$border-color: 					rgba(black, .1);
+$near-black: 			 #191e27;*/
+$border-color: 			   rgba(black, .1);
+
+$gray-lightest:          $grey-100;
+$gray-lighter:           $grey-200;
+$gray-light:             $grey-300;
+$gray:                   $grey-400;
+$gray-dark:              $grey-600;
+$gray-darker:            $grey-700;
+$gray-darkest:           $grey-800;
+$near-black: 			 $grey-900;
 
 // Classic brand colors
-$color-green: 					#00d1b2;
-$color-blue: 						#79cbca;
-$color-pink: 						#e684ae;
+$color-green: 			 #00d1b2;
+$color-blue: 			 #79cbca;
+$color-pink: 			 #e684ae;
 
 $color-primary:         $color-green;
 $color-primary--dark:   darken($color-primary, 5%) !default;
@@ -71,7 +158,7 @@ $font-base:        $font-sans-serif;
 $font-color:       $text-color;
 
 // Dark Mode
-$text-dark: $white;
+$text-dark: $gray;
 $background-dark: $near-black;
 
 $font-size:                1.6rem !default;
