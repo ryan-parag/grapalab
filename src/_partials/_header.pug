@@ -1,0 +1,17 @@
+- var NavItems = [{'url':'../work/','title':'Work'},{'url':'../about/','title':'About'}];
+header.header
+	.header__stripe
+	.header__body
+		.container
+			.flex-grid.header__grid
+				include _logo
+				ul.nav
+					each page in NavItems
+						if pageID === page.title
+							li.nav__item
+								a.nav__link.active(data-type="page-transition" href= page.url)= page.title
+						else
+							li.nav__item
+								a.nav__link(data-type="page-transition" href= page.url)= page.title
+					li.nav__item
+						include _toggle

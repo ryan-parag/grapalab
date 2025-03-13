@@ -1,0 +1,59 @@
+@use "../abstracts" as theme;
+
+.toggle {
+	display:flex;
+	align-items: center;
+	max-width: 110px;
+	width: 100%;
+	justify-content: space-between;
+	cursor: pointer;
+	&:hover, &:focus {
+		opacity: .84;
+		transition: all 150ms ease;
+	}
+	&__input {
+		position: relative;
+		width: 46px;
+		height: 26px;
+		background: theme.$gray-light;
+		border-radius: 20px;
+		cursor: pointer;
+		margin: 0 .5rem;
+	}
+	&__handle {
+		position: absolute;
+		z-index: 1;
+		margin: 2px;
+		display: block;
+		width: 22px;
+		height: 22px;
+		background: theme.$white;
+		border-radius: 50%;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		transform: translateX(0px);
+		transition: all 0.4s ease;
+	}
+	.icon {
+		width: 18px;
+		transition: all 200ms ease-in-out;
+		&--moon {
+			opacity: .5
+		}
+	}
+	&.active {
+		.toggle__input {
+			background: theme.$color-green;
+		}
+		.toggle__handle {
+			transform: translateX(20px);
+		}
+		.icon {
+			&--sun {
+				opacity: .5;
+			}
+			&--moon {
+				opacity: 1;
+			}
+		}
+	}
+}

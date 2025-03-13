@@ -1,0 +1,167 @@
+.container
+  .row
+    .spacer.spacer--100
+    .spacer.spacer--100
+  .row
+    .col.col--12
+      h1 Hey, I'm Ryan
+      h4 Designer,  problem solver, and 
+        span.u-text-green#textRotate
+  .spacer.spacer--25
+  .row
+    .col.col--12
+      img(src="../images/about.png")
+  .spacer.spacer--50
+  .row
+    .col.col--7
+      :markdown-it
+        **I'm a product designer interested in building experiences that are logical, thoughtful, and accessible.**
+        
+        I currently reside in Tampa,FL, where I help simplify the home remodeling experience at [Masonite](https://masonite.com). Previously, I helped build a problem-solving platform for payments at [Chargebacks911](https://chargebacks911.com)  
+
+        I’m driven to learn why people do what they do so I can create experiences that are intuitive and successful. I’ve helped rethink, prototype and design solutions to help bring empathy and simplicty into complex problems - which is a fancier way of saying I help things make sense.
+        
+        If you'd like to see more of what I've been working on, take a look at my [CodePen](https://codepen.io/ryanparag), [Dribbble](https://dribbble.com/ryanparag), [Github](https://github.com/ryan-parag), and [Behance](https://behance.net/grapa). For a more in-depth look at my design process, [let's chat](mailto:parag.ryan@gmai.com).
+    .col.col--4.col--offset-1
+      include _connect-bar
+      .spacer.spacer--25
+      a.link(href="mailto:parag.ryan@gmail.com") parag.ryan@gmail.com
+      .spacer.spacer--25
+      a.link(href="tel:9417356602") 941.735.6602
+      .spacer.spacer--25
+      a.link(href="../resume/") My Résumé
+      .spacer.spacer--25
+      h6.u-text-green Favorite tools:
+      span
+        strike Illustrator
+        |, 
+        strike Sketch
+        |, 
+        strong Figma
+        | , 
+        strike Atom
+        | , 
+        strong VS Code, 
+        strike Bear Notes
+        | , 
+        strong Notion + Airtable
+        | , 
+        strike black coffee
+        | , 
+        strong green tea
+      .spacer.spacer--50
+  .spacer.spacer--50
+  hr
+  .spacer.spacer--75
+  .row
+    .col.col--6
+      h5
+        span.u-text-pink
+          include _icon-slider
+        | &nbsp;Portfolio Style Guide
+      p As a documentation nerd, I thought it would not only be fun to showcase the assets that help make this portfolio possible, but also be helpful to do a design inventory and build more efficient design patterns.
+      details
+        summary How was this portolio designed and developed?
+        div(style="padding:16px; background: rgba(0,0,0,0.07)")
+          .spacer.spacer--25
+          p Like any designer, my portfolio is really never finished and is in a constant state of having the code reworked. I put together this portfolio using Pug (HTML), SCSS (CSS), a little bit of Javascript, and help from the following front-end resources:
+          ul
+            li
+              a.link(target="_blank" href="http://bemskel.com/") BEM-flavored Grid and SCSS architecture from BEMSkel
+            li
+              a.link(target="_blank" href="https://fonts.google.com/specimen/IBM+Plex+Sans") IBM Plex Sans for typography
+            li
+              a.link(target="_blank" href="https://github.com/fat/zoom.js/") Zoom.js for some sweet zoom on images
+      .spacer.spacer--25
+      p
+        strong Keyboard Shortcuts:
+      p
+        code.u-bg-near-black.u-text-white d
+        | : Toggle dark mode
+      p
+        code.u-bg-near-black.u-text-white g
+        | : Toggle grid overlay
+      .spacer.spacer--25
+      a.btn.btn--primary(href="../style-guide") Check out the style guide!
+      .spacer.spacer--50
+    .col.col--6
+      h5
+        span.u-text-pink
+          include _icon-slack
+        | &nbsp;Slack it up!
+      p I use 
+        a(href="https://slack.com/" target="_blank") Slack
+        | &nbsp;on a daily basis and thought it would be fun to quickly map the theme colors of my portfolio to Slack's predefined utility variables. If you're like me and like switching themes on a weekly basis, try one of these themes made from this portfolio's color theme(s):
+      p Copy and paste these values to your 
+        strong Slack 
+        | settings in the 
+        a.link(href="https://get.slack.help/hc/en-us/articles/205166337-Customizing-your-Slack-theme" target="_blank") Sidebar Theme
+        | &nbsp;section:
+      input.u-full-width#slackThemeInput(type="text" value="Choose one of the themes below...")
+      .demo#demoStuff
+      button.btn.btn--primary(onclick="slackTheme('light')") Light Theme
+      button.btn.btn--secondary(onclick="slackTheme('dark')") Dark Theme
+      #copyValidate.u-text-pink
+  .spacer.spacer--25
+  hr
+  .row
+    .col.col--6
+      .spacer.spacer--50
+      h5
+        include _icon-book-open
+        |&nbsp;What I'm currently reading
+      include _reading
+    .col.col--6
+      .spacer.spacer--50
+      h5
+        span.u-text-pink
+          include _icon-user
+        |&nbsp;Current Interests
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-user
+        .flex-grid__col
+          span Learning how to better utilize data and 
+            a.link(href="https://johnmaeda.github.io/index.html#12" target="_blank") Computational Design Methods
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-code
+        .flex-grid__col
+          span Design system architecture with React, Figma, styled components, and content principles
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-flag
+        .flex-grid__col
+          span Chillin' with my homies on the go-kart track
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-code
+        .flex-grid__col
+          span Learning 
+            a.link(href="https://developer.apple.com/xcode/swiftui/" target="_blank") SwiftUI
+            | &nbsp; to help build elegant and intuitive product experiences for mobile apps on iOS
+      .project__role.flex-grid.u-align-center
+        .project__icon
+          include _icon-mail
+        .flex-grid__col
+          span Probably collecting a ton of tabs in my browser, but am ironically an 
+            a.link(href="https://whatis.techtarget.com/definition/inbox-zero" target="_blank") inbox zero
+            | &nbsp;person 🤷
+      .spacer.spacer--75
+  hr
+  .spacer.spacer--25
+  .row
+    .col.col--6
+      include _more-work
+      .spacer.spacer--100
+    .col.col--6
+      .spacer.spacer--50
+      :markdown-it
+        ##### How can I help?
+
+        If you have a dope side project idea or want to trade project/portfolio feedback, I'd love to help out in any way I can. I probably won't always have answers, but I think I can be a helpful listener to bounce questions back and forth. If you have other design questions, that’s fine too!
+
+        If you're in the Tampa Bay area, I'd love to chat over coffee, tea, seltzer water, coke zero, whatever really ☕️ &mdash; [let's chat](mailto:parag.ryan@gmail.com)!
+
+        If I don't reply right away, please follow up – sometimes things slip through the cracks! But I'll do my best to reply quickly.
+      .spacer.spacer--100

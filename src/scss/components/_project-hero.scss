@@ -1,0 +1,40 @@
+@use "../abstracts" as theme;
+@use "sass:color";
+
+@mixin gradient($color1, $color2) {
+	background: $color1;
+	background: linear-gradient(60deg, $color1, $color2);
+}
+
+.project__hero {
+	&--tampa {
+		@include gradient(#b8e3e5, #3bc1cd);
+	}
+  &--cb911 {
+		@include gradient(#000, #1f2024);
+	}
+  &--disputelab {
+		@include gradient(color.adjust(theme.$color-disputelab, $lightness: -15%), color.adjust(theme.$color-disputelab, $lightness: 15%));
+	}
+  &--capsule, &--utility {
+		@include gradient(hsl(0deg 0% 0%), hsl(0deg 0% 10%));
+	}
+  &--world-rugby {
+		@include gradient(#49aa00, #1e009b);
+	}
+  &--patellinis {
+		@include gradient(color.adjust(#bf001b, $lightness: -10%), color.adjust(#bf001b, $lightness: 10%));
+	}
+  &--linkme {
+		@include gradient(#2196f3, #9c27b0);
+	}
+   &--illustrations {
+		@include gradient(theme.$color-green, theme.$color-pink);
+	}
+  &--ux-drops {
+	@include gradient(color.adjust(#666fde, $lightness: -10%), color.adjust(#666fde, $lightness: 10%));
+  }
+  &--audiorah {
+    @include gradient(color.adjust(#344bf0, $lightness: -10%), color.adjust(#344bf0, $lightness: 10%));
+  }
+}

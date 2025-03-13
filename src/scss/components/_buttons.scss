@@ -1,0 +1,225 @@
+// Buttons
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@use "../abstracts" as theme;
+@use "sass:color";
+
+.btn,
+.button {
+  background-color: transparent;
+  border-radius: theme.$global-radius;
+  border: 1px solid theme.$border-color;
+  color: theme.$color-secondary;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 100;
+  height: 38px;
+  letter-spacing: .1rem;
+  line-height: 38px;
+  margin-bottom: 1rem;
+  padding: 0 30px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 200ms;
+  white-space: nowrap;
+  font-family: inherit;
+
+  &:focus,
+  &:hover {
+    @include theme.hover-style(theme.$gray-dark, color.adjust(theme.$gray-dark, $lightness: 33.3%));
+  }
+
+  &:focus{
+    outline: .1rem dotted theme.$gray;
+  }
+
+  &:active{
+    background-color: theme.$color-primary;
+  }
+}
+
+// Basic Colors
+//
+.btn--primary {
+  color: theme.$white;
+  background-color: theme.$color-primary;
+  border-color: theme.$color-primary;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: color.adjust(theme.$color-primary, $lightness: -10%);
+    border-color: theme.$color-primary;
+  }
+}
+
+.btn--secondary {
+  color: theme.$gray-lighter;
+  background-color: theme.$color-secondary;
+  border-color: theme.$color-secondary;
+
+  &:focus,
+  &:hover {
+    color: theme.$gray-lighter;
+    background-color: color.adjust(theme.$color-secondary, $lightness: -15%);
+    border-color: theme.$color-secondary;
+  }
+}
+
+.btn--success {
+  background-color: theme.$color-success;
+  border-color: theme.$color-success;
+  color: theme.$white;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: color.adjust(theme.$color-success, $lightness: -5%);
+    border-color: theme.$color-success;
+  }
+}
+
+.btn--info {
+  background-color: theme.$color-info;
+  border-color: theme.$color-info;
+  color: theme.$white;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: color.adjust(theme.$color-info, $lightness: -10%);
+    border-color: theme.$color-info;
+  }
+}
+
+.btn--warning {
+  background-color: theme.$color-warning;
+  border-color: theme.$color-warning;
+  color: theme.$white;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: color.adjust(theme.$color-warning, $lightness: -10%);
+    border-color: theme.$color-warning;
+  }
+}
+
+.btn--danger {
+  background-color: theme.$color-danger;
+  border-color: theme.$color-danger;
+  color: theme.$white;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: color.adjust(theme.$color-danger, $lightness: -10%);
+    border-color: theme.$color-danger;
+  }
+}
+
+// Outline Style
+
+.btn-outline--primary {
+  background-color: transparent;
+  border-color: theme.$color-primary;
+  color: theme.$color-primary;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: theme.$color-primary;
+    border-color: theme.$color-primary;
+  }
+}
+
+.btn-outline--secondary {
+  background-color: transparent;
+  border-color: theme.$color-secondary;
+  color: theme.$color-secondary;
+
+  &:focus,
+  &:hover {
+    color: theme.$gray-light;
+    background-color: theme.$gray-darker;
+    border-color: theme.$color-secondary;
+  }
+}
+
+
+.btn-outline--success {
+  background-color: transparent;
+  border-color: theme.$color-success;
+  color: theme.$color-success;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: theme.$color-success !important;
+    border-color: theme.$color-success;
+  }
+}
+
+.btn-outline--info {
+  background-color: transparent;
+  border-color: theme.$color-info;
+  color: theme.$color-info;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: theme.$color-info;
+    border-color: theme.$color-info;
+  }
+}
+
+.btn-outline--warning {
+  background-color: transparent;
+  border-color: theme.$color-warning;
+  color: theme.$color-warning;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: theme.$color-warning;
+    border-color: theme.$color-warning;
+  }
+}
+
+.btn-outline--danger {
+  background-color: transparent;
+  border-color: theme.$color-danger;
+  color: theme.$color-danger;
+
+  &:focus,
+  &:hover {
+    color: theme.$white;
+    background-color: theme.$color-danger;
+    border-color: theme.$color-danger;
+  }
+}
+
+
+// Large-Sized
+.btn--lg {
+  font-size: inherit;
+  font-weight: 100;
+  height: 5.8rem;
+  line-height: 5.8rem;
+  vertical-align: middle;
+  padding: 0 4rem;
+}
+
+// Raised Style
+.btn--raised {
+  border-width: 0;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(0,0,0,0.15);
+}
+
+[type="submit"],
+[type="reset"],
+[type="button"] {
+  @extend .btn;
+}

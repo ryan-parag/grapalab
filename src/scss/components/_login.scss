@@ -1,0 +1,46 @@
+@use "../abstracts" as theme;
+
+.login {
+  padding: 3rem;
+  border: 1px solid theme.$gray-light;
+  border-radius: theme.$global-radius;
+  background: theme.$white;
+  box-shadow: 0px 5px 12px rgba(theme.$near-black, .12);
+  &__card {
+    margin-bottom: 0;
+  }
+  input{
+    width: 100%;
+  }
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.error-text {
+  font-size: 1.4rem;
+}
+
+.form {
+    &--error {
+      border-color: theme.$color-pink !important;
+    }
+}
+
+.view-password {
+  font-size: 1.4rem;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  svg {
+    margin-right: .7rem;
+    width: 1.2em;
+    top: 3px;
+    height: 1.2em;
+    position: relative;
+  }
+  &:hover, &:focus {
+    color: theme.$color-green;
+  }
+}

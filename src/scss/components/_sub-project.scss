@@ -1,0 +1,100 @@
+@use "../abstracts" as theme;
+
+.sub-project {
+	width: 100%;
+	display: block;
+	background-color: theme.$gray-darkest;
+	background-size: cover;
+  	background-position: center;
+	color: theme.$white;
+	margin-bottom: 2rem;
+	border-radius: .2em;
+	border: 1px solid transparent;
+	overflow: hidden;
+	box-shadow: 0px 0px .1em rgba(theme.$near-black, .2);
+	&__body {
+		padding: 1rem 2rem;
+		top: 2.5rem;
+		position: relative;
+		text-shadow: 0px 3px 8px rgba(theme.$near-black, .2);
+		transition: all 300ms ease-out 0s;
+    @media screen and (max-width: 550px) {
+      top: 1rem;
+    }
+	}
+	p {
+		opacity: 0;
+		transition: all 300ms ease-out 0s;
+    @media screen and (max-width: 550px) {
+      opacity: .75;
+			color: theme.$white;
+    }
+	}
+	&__title {
+		position: relative;
+		color: theme.$white;
+		margin: 0;
+		transition: all 300ms ease-out 0s;
+		&:after {
+			border-bottom: 2px solid currentColor;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 0%;
+			content: '';
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
+		}
+	}
+	&__label {
+		position: relative;
+		margin-left: 1rem;
+		display: inline-block;
+		font-size: 1.6rem;
+		opacity: .5;
+		font-weight: 400;
+		left: 0;
+		transition: all 300ms ease-out 0s;
+    @media screen and (max-width: 550px) {
+      opacity: 0;
+			left: 3rem;
+    }
+	}
+	&:hover, &:focus {
+		.sub-project__body {
+			top: 1rem;
+		}
+		.sub-project__title {
+			&:after {
+				width: 100%;
+			}
+		}
+		p {
+			opacity: 1;
+			color: theme.$white;
+		}
+		.sub-project__label {
+			opacity: 0;
+			left: 3rem;
+		}
+	}
+	&.tampa {
+		background-image: url('../images/tampa-preview.png');
+	}
+	&.utility {
+		background-image: url('../images/utility-preview.jpg');
+	}
+	&.patellinis {
+		background-image: url('../images/patellinis-preview.png');
+	}
+	&.rugby {
+		background-image: url('../images/womens-rugby-preview.png');
+	}
+	&.linkme {
+		background-image: url('../images/linkme-preview.jpg');
+	}
+  &.illust{
+		background-image: url('../images/illust-preview.png');
+	}
+}

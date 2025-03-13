@@ -1,0 +1,342 @@
+// Contains all basic styles of elements.
+// -----------------------------------------------------------------------------
+// Make all elements from the DOM inherit from the parent box-sizing
+//  Since `*` has a specificity of 0, it does not override the `html` value
+//  making all elements inheriting from the root box-sizing value
+//  See:  https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+
+// Apply a natural box layout model to all elements, but allowing components
+// to change. Html is set to 62.5% so that all the REM measurements throughout
+// are based on 10px sizing. So basically 1.4rem = 14px
+
+// html {
+//   font-size: 62.5%;
+// }
+
+// body {
+//   font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
+//   line-height: 1.6;
+//   font-weight: 400;
+//   font-family: theme.$font-sans-serif;
+//   color: theme.$font-color;
+// }
+
+@use "sass:color";
+@use "../abstracts" as theme;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: theme.$base-font-size;
+  line-height: theme.$line-height;
+  font-weight: 400;
+  font-family: theme.$font-base;
+  color: theme.$font-color;
+	background: theme.$white;
+	&.dark {
+		color: theme.$text-dark;
+		background: theme.$background-dark;
+    input {
+      &[type="email"],
+      &[type="number"],
+      &[type="search"],
+      &[type="text"],
+      &[type="tel"],
+      &[type="url"],
+      &[type="password"] {
+        background-color: theme.$near-black;
+        color: theme.$white;
+        border-color:theme.$gray-dark;
+        &:focus {
+          border-color: theme.$color-primary;
+        }
+      }
+    }
+    .login {
+      border-color: theme.$gray-dark;
+      background: transparent;
+    }
+		h1,h2,h3,h4,h5,h6,.title {
+			color: theme.$gray-lightest;
+		}
+    .project__role {
+      border-color: theme.$gray-darkest;
+    }
+		.header, .footer {
+			background: theme.$background-dark;
+		}
+		.intro, .header, .main-project, .footer {
+			border-color: theme.$gray-darkest
+		}
+		.main-project, .sub-project {
+			&:hover, &:focus {
+				border-color: theme.$color-green;
+			}
+    }
+    .swatch {
+      border-color: theme.$gray-darkest;
+    }
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: theme.$near-black;
+  background: color.adjust(theme.$color-primary, $lightness: 10%)
+}
+
+::selection {
+	color: theme.$near-black;
+	background: color.adjust(theme.$color-primary, $lightness: 10%)
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: none;
+  word-wrap: break-word;
+
+  &:hover {
+    color: theme.$color-green;
+  }
+}
+
+// Details
+details {
+  summary {
+   cursor: pointer;
+   &:hover, &:focus {
+     background: theme.$border-color;
+   }
+   &:focus, &:active {
+    outline: 0;
+  } 
+  }
+}
+
+// Misc
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid theme.$border-color;
+}
+
+// Lists
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  ul, ol {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+}
+
+ol {
+  ol, ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-style: italic;
+}
+
+dd {
+  padding-left: 2rem;
+}
+
+// Images/Video
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+img,
+video {
+  display: table;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0 auto;
+  padding-bottom: 2.4rem;
+
+  img {
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+caption,
+figcaption {
+  font-size: theme.$font-size--sm;
+  font-style: italic;
+  text-align: center;
+}
+
+// Tables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+table {
+  // border-spacing: 0;
+  // border: 0;
+  border-collapse: collapse;
+  border-color: gray;
+  border-spacing: 2px;
+  max-width: 100%;
+  width: 100%;
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid theme.$gray-light;
+  }
+
+  th,
+  td {
+    padding: 0.6rem;
+    vertical-align: top;
+    border-top: 1px solid #ccc;
+  }
+
+  th,
+  tfoot td {
+    font-weight: 700;
+    text-align: left;
+  }
+
+  td {
+    border-bottom: 1px solid theme.$gray-light;
+    padding: .6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+// Forms
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+  background-color: #fff;
+  border: 1px solid color.adjust(theme.$border-color, $lightness: 8.8%);
+  border-radius: theme.$global-radius;
+  box-shadow: none;
+
+  &:focus {
+    border: 1px solid theme.$color-primary;
+    outline: 0;
+  }
+}
+
+// Removes awkward default styles on some inputs for iOS
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    appearance: none;
+    background-color: #ffffff;
+    border-radius: theme.$global-radius;
+    border: 1px solid color.adjust(theme.$border-color, $lightness: 8.8%);
+    box-shadow: none;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+      border: 1px solid theme.$color-primary;
+      outline: 0;
+    }
+  }
+}
+
+textarea {
+  appearance: none;
+  min-height: 65px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: inline;
+  }
+}
+
+label > .label-body {
+  display: inline-block;
+  font-weight: normal;
+  margin-left: .5rem;
+}
+
+// Code
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Contain overflow in all browsers.
+pre {
+  overflow: auto;
+}
+
+code {
+  background: color.adjust(theme.$gray-light, $lightness: 6.4%);
+  border-radius: theme.$global-radius;
+  border: 1px solid theme.$gray-light;
+  font-size: 90%;
+  margin: 0 .2rem;
+  padding: .2rem .5rem;
+  white-space: nowrap;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}

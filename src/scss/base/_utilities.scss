@@ -1,0 +1,162 @@
+// -----------------------------------------------------------------------------
+// CSS helper/utility classes used throughout the site/application
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as theme;
+
+.u-full-width {
+  width: 100%;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+}
+
+.u-pull--right {
+  float: right;
+}
+
+.u-pull--left {
+  float: left;
+}
+
+.u-disabled{
+  cursor: default;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.u-display-block {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Clear inner floats
+ */
+.u-clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.spacer {
+	display: block;
+	&--25{
+		height: 2.5rem;
+	}
+	&--50{
+		height: 5rem;
+	}
+	&--75{
+		height: 7.5rem;
+	}
+	&--100{
+		height: 7.5rem;
+		@media (theme.$bp-larger-than-phablet) {
+			height: 10rem;
+		}
+	}
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.u-hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Alignment
+
+.u-ta-left {
+  text-align: left;
+}
+
+.u-ta-center {
+  text-align: center;
+}
+
+.u-ta-right {
+  text-align: right;
+}
+
+.u-align-center {
+  align-items: center;
+}
+
+// Color
+
+.u-text-green { color: theme.$color-green !important; }
+.u-text-blue { color: theme.$color-blue !important; }
+.u-text-pink { color: theme.$color-pink !important; }
+.u-text-gray-lightest { color: theme.$gray-lightest !important; }
+.u-text-gray-lighter { color: theme.$gray-lighter !important; }
+.u-text-gray-light { color: theme.$gray-light !important; }
+.u-text-gray { color: theme.$gray !important; }
+.u-text-gray-dark { color: theme.$gray-dark !important; }
+.u-text-gray-darker { color: theme.$gray-darker !important; }
+.u-text-gray-darkest { color: theme.$gray-darkest !important; }
+.u-text-near-black { color: theme.$near-black !important; }
+.u-text-white { color: theme.$white !important; }
+
+.u-bg-green { background: theme.$color-green !important; }
+.u-bg-blue { background: theme.$color-blue !important; }
+.u-bg-pink { background: theme.$color-pink !important; }
+.u-bg-gray-lightest { background: theme.$gray-lightest !important; }
+.u-bg-gray-lighter { background: theme.$gray-lighter !important; }
+.u-bg-gray-light { background: theme.$gray-light !important; }
+.u-bg-gray { background: theme.$gray !important; }
+.u-bg-gray-dark { background: theme.$gray-dark !important; }
+.u-bg-gray-darker { background: theme.$gray-darker !important; }
+.u-bg-gray-darkest { background: theme.$gray-darkest !important; }
+.u-bg-near-black { background: theme.$near-black !important; }
+.u-bg-white { background: theme.$white !important; }
+
+// Project Links
+
+.link--cb911 {
+  $color: theme.$color-cb911;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}
+
+.link--disputelab {
+  $color: theme.$color-disputelab;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}
+
+.link--zakucons {
+  $color: theme.$color-zakucons;
+  &:hover, &:focus {
+    border-color: $color !important;
+    color: $color !important;
+  }
+}

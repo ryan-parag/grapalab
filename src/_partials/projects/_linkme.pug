@@ -1,0 +1,27 @@
+.project
+  .project__hero.project__hero--linkme
+    img.project__hero-image(src="../images/linkme/linkme-header.png")
+  .container
+    .row
+      .col.col--12
+        .project__header
+          .spacer.spacer--75
+          :markdown-it
+            ## LinkMe
+            ##### Making it easy for people to connect in-person
+          .project__border
+        .spacer.spacer--25
+    .project__role.flex-grid.u-align-center
+        .project__icon
+          include ../_icon-user
+        .flex-grid__col
+          strong.u-display-block My Role
+          span Branding, UI/UX, pitch deck, userflows
+    .spacer.spacer--50
+    .row
+      .col.col--12
+        img(src="../images/linkme/linkme-1.png" data-action="zoom")
+.container
+  .row
+    .col.col--6.col--offset-3
+      include ../_more-work

@@ -1,0 +1,61 @@
+@use "../abstracts" as theme;
+
+.project {
+	&__border {
+		background: theme.$gray-light;
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 3rem 0 3rem 0;
+	}
+	img {
+		//margin-bottom: 2rem;
+	}
+	&__hero {
+		width: 100%;
+		background: theme.$gray-lighter;
+		height: 300px;
+		position: relative;
+		margin-top: 7rem;
+	}
+	&__hero-image {
+		width: 150px;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+    opacity: 0;
+    @include theme.fadeIn(500ms, 500ms);
+	}
+  &__role {
+    padding: 1.5rem;
+    box-shadow: 0px 5px 12px rgba(theme.$near-black, .12);
+    border: 1px solid theme.$gray-lighter;
+    border-radius: theme.$global-radius;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      margin-bottom: 0;
+    }
+    @media (theme.$bp-larger-than-tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__icon {
+    $size: 30px;
+    width: $size;
+    height: $size;
+    color: theme.$color-primary;
+    margin-bottom: 1.5rem;
+    @media (theme.$bp-larger-than-tablet) {
+      margin-bottom: auto;
+    }
+    svg {
+      width: $size;
+      height: $size;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+/**
+ * Basic typography style for text
+ */
+
+@use "../abstracts" as theme;
+
+@each $header,$vals in theme.$typography {
+	#{$header}, .#{$header} {
+		@each $key,$val in $vals {
+			#{$key}: $val
+		}
+	}
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	margin-bottom: theme.$type-margin;
+	margin-top: theme.$type-margin;
+  word-wrap: break-word;
+  color: theme.$text-heading-color;
+  letter-spacing: -0.1rem;
+}
+
+@each $header,$vals in theme.$typography-mobile {
+	#{$header}, .#{$header} {
+		@media screen and (max-width: 1100px) {
+			@each $key,$val in $vals {
+				#{$key}: $val
+			}
+		}
+	}
+}
+
+.lead {
+  @media (theme.$bp-larger-than-phablet) {
+		font-size: 2rem;
+	}
+}
+
+.link, p a {
+	// border-bottom: 1px solid currentColor;
+	padding-bottom: .2em;
+  box-shadow: inset 0 -0.07em 0 theme.$color-primary;
+  transition: box-shadow 200ms ease;
+  &:hover, &:focus  {
+    box-shadow: inset 0 -1.4em 0 theme.$color-primary;
+    color: theme.$near-black;
+  }
+}
+
+blockquote {
+  margin: 0 0 2.4rem 1.2rem;
+  border-left: .3rem solid theme.$color-green;
+  padding: 2.4rem 1.2rem;
+
+  p:last-child{
+    padding-bottom: 0;
+  }
+}
+
+small,
+sub,
+sup {
+  font-size: theme.$font-size--sm;
+  line-height: 1;
+}
+
+caption,
+figcaption {
+  font-size: theme.$font-size--sm;
+  font-style: italic;
+  text-align: center;
+}
+
+em,
+cite,
+i {
+  font-style: italic;
+}
+
+q {
+  &:before {
+    content: "'";
+  }
+
+  &:after {
+    content: "'";
+  }
+
+  & > q {
+    font-style: italic;
+  }
+}
+
+dfn,
+abbr {
+  border-bottom: .1rem dotted theme.$gray-light;
+  cursor: default;
+}
+
+dfn,
+abbr {
+  border-bottom: .1rem dotted theme.$gray-light;
+  cursor: default;
+}
+
+input {
+  font-family: inherit;
+}
